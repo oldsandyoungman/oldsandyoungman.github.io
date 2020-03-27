@@ -11,10 +11,6 @@ description: 那些年我们走过的那些坑
 
 &emsp;
 
-&emsp;
-
-
-
 
 
 折腾了可能有3、4天，才用  [Jekyll](http://jekyllcn.com/) + [Next](https://github.com/Simpleyyt/jekyll-theme-next) 搭建好个人博客（`Windows` 配置 `Jekyll` 挺不友好的），其中参考了很多教程和博客，最后正常运行，但是其中的原理还是没有太明白。
@@ -25,11 +21,11 @@ description: 那些年我们走过的那些坑
 
 
 
-# 1 Windows下 Jekyll的Next主题搭建
+# Windows下 Jekyll的Next主题搭建
 
 
 
-### 1.1 安装Ruby
+### 安装Ruby
 
  - 下载[Ruby官网的Windows版本exe](https://rubyinstaller.org/)（菜菜的我爱着傻瓜式的exe）
    - [官方教程](http://jekyllcn.com/docs/windows/#installation)上是用[chocolatey](https://chocolatey.org/install)作为平台再安装Ruby的，但是后面的步骤遇到一些版本不匹配问题，所以我后来舍弃了。不同人的电脑配置不同，可以尝试。
@@ -41,7 +37,7 @@ description: 那些年我们走过的那些坑
 
 
 
-### 1.2 利用 gem 安装 nokogiri （不确定是不是必要项）
+### 利用 gem 安装 nokogiri （不确定是不是必要项）
 
  - 先换源：（完事第一步）
 
@@ -67,7 +63,7 @@ description: 那些年我们走过的那些坑
 
 
 
-### 1.3  利用gem安装Github-pages
+### 利用gem安装Github-pages
 
  - 安装bundle，输入如下命令行：
 
@@ -110,17 +106,17 @@ description: 那些年我们走过的那些坑
 
 
 
-# 2 修改配置 + 写博客
+# 修改配置 + 写博客
 
 
 
-### 2.1 修改配置
+### 修改配置
 
 这一部分就是在根目录下的_config.yml文件中进行修改，我列一些我用到的配置项（用文本编辑器打开，搜一个改一个 ~）
 
 
 
-#### 2.1.1 网站的基本信息：
+#### 网站的基本信息：
 
 ```yaml
 # Site
@@ -138,7 +134,7 @@ date_format: '%Y-%m-%d'
 
 
 
-#### 2.1.2 域名：
+#### 域名：
 
 ```yaml
 # URL
@@ -153,7 +149,7 @@ permalink: pretty
 
 
 
-#### 2.1.3 浏览器标签页的小标
+#### 浏览器标签页的小标
 
 ```yaml
 # Put your favicon.ico into `assets/` directory.
@@ -169,7 +165,7 @@ favicon: /assets/art_pig.jpg
 
 
 
-#### 2.1.4 菜单的内容和相应图标
+#### 菜单的内容和相应图标
 
 ```yaml
 # ---------------------------------------------------------------
@@ -208,7 +204,7 @@ menu_icons:
 
 
 
-#### 2.1.5 Next主题的几大样式选择
+#### Next主题的几大样式选择
 
 ```yaml
 
@@ -227,7 +223,7 @@ Pisces 是你当前看到的样式，分为左右两栏
 
 
 
-#### 2.1.6 菜单栏下方的联系方式及相应图标
+#### 菜单栏下方的联系方式及相应图标
 
 ```yaml
 # ---------------------------------------------------------------
@@ -264,7 +260,7 @@ social_icons:
 
 
 
-#### 2.1.7 你的头像
+#### 你的头像
 
 ```yaml
 # Sidebar Avatar
@@ -281,7 +277,7 @@ avatar: assets/art_pig.jpg
 
 
 
-#### 2.1.8 侧栏属性
+#### 侧栏属性
 
 ```yml
 sidebar:
@@ -315,7 +311,7 @@ sidebar:
 
 
 
-#### 2.1.9 其他社交链接
+#### 其他社交链接
 
 ```yaml
 # Blog rolls
@@ -332,7 +328,7 @@ links:
 
 
 
-#### 2.1.10 背景动画
+#### 背景动画
 
 ```yaml
 # Canvas-nest
@@ -373,7 +369,7 @@ canvas_ribbon: false
 
 
 
-# 3 Github 和 Gitee 上的配置
+# Github 和 Gitee 上的配置
 
 
 
@@ -383,7 +379,7 @@ canvas_ribbon: false
 
 
 
-### 3.1 Github篇
+### Github篇
 
 1. 新建一个Repository，命名为 xxxxx.github.io（xxxxx为你的用户名）
 
@@ -437,7 +433,7 @@ canvas_ribbon: false
 
 
 
-### 3.2 Gitee篇
+### Gitee篇
 
 
 
