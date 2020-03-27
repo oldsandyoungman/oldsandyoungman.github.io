@@ -9,10 +9,6 @@ tags:
 description: 那些年我们走过的那些坑
 ---
 
-&emsp;
-
-
-
 折腾了可能有3、4天，才用  [Jekyll](http://jekyllcn.com/) + [Next](https://github.com/Simpleyyt/jekyll-theme-next) 搭建好个人博客（`Windows` 配置 `Jekyll` 挺不友好的），其中参考了很多教程和博客，最后正常运行，但是其中的原理还是没有太明白。
 
 
