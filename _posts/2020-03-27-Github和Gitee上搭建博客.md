@@ -156,11 +156,11 @@ favicon: /assets/art_pig.jpg
 
 即浏览器标签页的小图标，就像这样：
 
-![favicon](/_posts/image/favicon.jpg)
+![favicon](/assets/images_sha/art_pig.jpg)
 
-![favicon](https://github.com/oldsandyoungman/oldsandyoungman.github.io/_posts/image/favicon.jpg)
+![favicon](https://github.com/oldsandyoungman/oldsandyoungman.github.io/assets/images_sha/art_pig.jpg)
 
-
+![art_pig](https://github.com/oldsandyoungman/oldsandyoungman.github.io/assets/images_sha/art_pig.jpg)
 
 #### 菜单的内容和相应图标
 
