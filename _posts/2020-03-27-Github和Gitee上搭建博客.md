@@ -11,11 +11,11 @@ typora-root-url: ..
 ---
 
 折腾了可能有3、4天，才用  [Jekyll](http://jekyllcn.com/) + [Next](https://github.com/Simpleyyt/jekyll-theme-next) 搭建好个人博客（`Windows` 配置 `Jekyll` 挺不友好的），其中参考了很多教程和博客，最后正常运行，但是其中的原理还是没有太明白。
-&emsp;
+<br>
 梳理下大概的流程，以后有时间在新系统上重新配置一遍：
-&emsp;
-&emsp;
-&emsp;
+<br>
+<br>
+<br>
 # Windows下 Jekyll的Next主题搭建
 ### 安装Ruby
  - 下载[Ruby官网的Windows版本exe](https://rubyinstaller.org/)（菜菜的我爱着傻瓜式的exe）
@@ -23,8 +23,8 @@ typora-root-url: ..
  - 运行exe到最后一步，先不启动Windows PowerShell（不打勾），换下源（不然速度太慢，参考 [this blog](https://blog.csdn.net/mscf/article/details/82627951)）
  - 管理员身份运行cmd，输入“ridk install”并回车，安装1和3
    - 看网上的说法2非必要，然后我自己装了2出现了点问题，卸载了单独装1+3才好的，我也解释不清楚。
-&emsp;
-&emsp;
+<br>
+<br>
 ### 利用 gem 安装 nokogiri （不确定是不是必要项）
  - 先换源：（完事第一步）
 
@@ -46,17 +46,16 @@ typora-root-url: ..
 
    - 这部分因为我反复卸载用了很多方法，不确定哪个奏效，留个坑
 
-&emsp;
-
-&emsp;
+<br>
+<br>
 
 ### 利用gem安装Github-pages
 
  - 安装bundle，输入如下命令行：
 
-   ```
+```
    gem install bundler
-   ```
+```
 
    - 关于[bundle的作用，和Gem的关系](https://www.jianshu.com/p/bcbb278e9208)
 
@@ -77,24 +76,23 @@ typora-root-url: ..
 
 - 按照道理，之后就可以正常运行了。启动：
 
-  ```
+   ```
   jekyll server
   ```
 
   - 如果出现“exec”啥的报错（具体不大记得了~~），就换下面的命令
 
-    ```
+  ```
     bundle exec jekyll server
-    ```
+  ```
 
-&emsp;
-&emsp;
-&emsp;
+<br>
+<br>
+<br>
 # 修改配置 + 写博客
-&emsp;
 ### 修改配置
 这一部分就是在根目录下的_config.yml文件中进行修改，我列一些我用到的配置项（用文本编辑器打开，搜一个改一个 ~）
-&emsp;
+<br>
 #### 网站的基本信息：
 ```yaml
 # Site
@@ -107,7 +105,8 @@ language: zh-Hans
 date_format: '%Y-%m-%d'
 ```
 注意：zh-Hans 即简体中文，名称的选取是源自 /_data/languages/ 目录下的文件名
-&emsp;
+<br>
+
 #### 域名：
 
 ```yaml
@@ -121,7 +120,7 @@ permalink: pretty
 
 如果之后挂载到 Gitee 上，那么需要配置（具体见 3.2 Gitee篇），Github实验下来貌似不需要。
 
-&emsp;
+<br>
 
 #### 浏览器标签页的小标
 
@@ -137,7 +136,7 @@ favicon: /assets/art_pig.jpg
 
 
 
-&emsp;
+<br>
 
 #### 菜单的内容和相应图标
 
@@ -176,7 +175,7 @@ menu_icons:
 
 ```
 
-&emsp;
+<br>
 
 #### Next主题的几大样式选择
 
@@ -195,7 +194,7 @@ scheme: Pisces
 
 Pisces 是你当前看到的样式，分为左右两栏
 
-&emsp;
+<br>
 
 #### 菜单栏下方的联系方式及相应图标
 
@@ -232,7 +231,7 @@ social_icons:
 
 这里我借鉴别人的，也是设置了 Github 和我大学的官网，也可以添加其他链接
 
-&emsp;
+<br>
 
 #### 你的头像
 
@@ -247,9 +246,7 @@ avatar: assets/art_pig.jpg
 
 可以用动图gif，我没试验hiahia
 
-&emsp;
-
-
+<br>
 
 #### 侧栏属性
 
@@ -283,7 +280,7 @@ sidebar:
 
 我关注的是 `display: always`，就是无论浏览哪个页面和如何滚动，都不会省略侧边栏
 
-&emsp;
+<br>
 
 #### 其他社交链接
 
@@ -300,7 +297,7 @@ links:
 
 我挂了个B站作为例子
 
-&emsp;
+<br>
 
 #### 背景动画
 
@@ -325,9 +322,9 @@ canvas_ribbon: false
 
 这个我玩得最起劲，觉得贼几把炫酷 ~~
 
-&emsp;
+<br>
 
-&emsp;
+<br>
 
 ---
 
@@ -339,13 +336,11 @@ canvas_ribbon: false
 
 ---
 
-&emsp;
+<br>
 
-&emsp;
+<br>
 
 ### 写博客
-
-&emsp;
 
 #### 写文章
 
@@ -376,7 +371,7 @@ canvas_ribbon: false
 
 3. 保存并且上传后，过一阵子刷新你的个人博客即可
 
-&emsp;
+<br>
 
 #### 加载图片
 
@@ -388,11 +383,11 @@ canvas_ribbon: false
 
 ![art_pig](https://github.com/oldsandyoungman/oldsandyoungman.github.io/blob/master/assets/images_sha/art_pig.jpg)
 
-&emsp;
+<br>
 
 但是我现在实验下来并没有成功（例如上面就是一个失败的案例，不知道阁下显示是否正常），后来在网上找到相对路径的方法倒是成功了，所以目前都用的相对路径来写博客。
 
-&emsp;
+<br>
 
 用相对路劲的话，我的markdown是 Typora 编辑器，在“格式”-“图像”-“设置图像根目录...”，选中本地博客的根目录，之后加载图片就可以用如下指令：
 
@@ -406,25 +401,17 @@ canvas_ribbon: false
 
 另外值得注意的是，当在 _post 文件夹下建立图片时，貌似 Github 上无法显示（知乎上 [这篇回答](https://www.zhihu.com/question/31123165/answer/274501351) 提到），所以建议不要在 _post 文件夹下放置图片
 
-
-
-&emsp;
-
-&emsp;
-
-&emsp;
-
-
+<br>
+<br>
+<br>
 
 # Github 和 Gitee 上的配置
-
-
 
 总体而言，Github配置较为简单，因为Github服务器的配置环境版本较新，我加载下来没有出现乱码啥的<sub>（当然速度较慢是必然的）</sub>；而Gitee的环境版本较为落后，所以有时候我加载下来不对，会让有些小烦躁。
 
 - 关于两者环境的具体说明：[this blog](https://www.cnblogs.com/xjtu-blacksmith/p/jekyll-of-pages.html)
 
-&emsp;
+<br>
 
 ### Github篇
 
@@ -476,22 +463,18 @@ canvas_ribbon: false
 
 3. 到这里其实就应该算结束了，如果不出意外，输入xxxxx.github.io就能看到你的博客了
 
-&emsp;
+<br>
 
-&emsp;
+<br>
 
 ### Gitee篇
-
-
 
 1. 首先，将本地博客根目录下的 _config.yml 文件中，url 等字段进行修改。
 
    例如我 Gitee 上个人博客的网址为：https://gitee.com/oldsandyoungman/blog，那么 _config.yml 文件中部分内容则修改如下：
 
-   
-
    ```yaml
-   # URL
+# URL
    
    ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
    
@@ -499,10 +482,10 @@ canvas_ribbon: false
    baseurl: /blog
    permalink: pretty
    ```
-
+   
    
 
-2. 之后的上传步骤同理，不过在添加远端名字时，需要将“Github”的网址，改成你Gitee上的相应网址，例如我 Gitee 上个人博客的网址为：https://gitee.com/oldsandyoungman/blog
+2. 之后的上传步骤同理，不过在添加远端名字时，需要将“Github”的网址，改成你Gitee上的相应网址，例如我 Gitee 上个人博客的网址为：https://gitee.com/oldsandyoungman/blog，
 
     
 
