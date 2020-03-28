@@ -6,25 +6,25 @@ tags:
 - GitHub / Gitee
 - Blog
 - Next主题
-description: 那些年我们走过的那些坑
+description: 那些年我们走过的那些坑。。。。不出意外的话，还是要来~来~回~回~踩~踩~的
 typora-root-url: ..
 ---
 
 折腾了可能有3、4天，才用  [Jekyll](http://jekyllcn.com/) + [Next](https://github.com/Simpleyyt/jekyll-theme-next) 搭建好个人博客（`Windows` 配置 `Jekyll` 挺不友好的），其中参考了很多教程和博客，最后正常运行，但是其中的原理还是没有太明白。
 
+&emsp;
 
 
 梳理下大概的流程，以后有时间在新系统上重新配置一遍：
 
-
-
-
-
+&emsp;
+&emsp;
+&emsp;
 
 
 # Windows下 Jekyll的Next主题搭建
 
-
+&emsp;
 
 ### 安装Ruby
 
@@ -34,9 +34,9 @@ typora-root-url: ..
  - 管理员身份运行cmd，输入“ridk install”并回车，安装1和3
    - 看网上的说法2非必要，然后我自己装了2出现了点问题，卸载了单独装1+3才好的，我也解释不清楚。
 
+&emsp;
 
-
-
+&emsp;
 
 ### 利用 gem 安装 nokogiri （不确定是不是必要项）
 
@@ -60,9 +60,9 @@ typora-root-url: ..
 
    - 这部分因为我反复卸载用了很多方法，不确定哪个奏效，留个坑
 
+&emsp;
 
-
-
+&emsp;
 
 ### 利用gem安装Github-pages
 
@@ -101,21 +101,21 @@ typora-root-url: ..
     bundle exec jekyll server
     ```
 
-    
+    &emsp;
 
+&emsp;
 
-
-
+&emsp;
 
 # 修改配置 + 写博客
 
-
+&emsp;
 
 ### 修改配置
 
 这一部分就是在根目录下的_config.yml文件中进行修改，我列一些我用到的配置项（用文本编辑器打开，搜一个改一个 ~）
 
-
+&emsp;
 
 #### 网站的基本信息：
 
@@ -133,7 +133,7 @@ date_format: '%Y-%m-%d'
 
 注意：zh-Hans 即简体中文，名称的选取是源自 /_data/languages/ 目录下的文件名
 
-
+&emsp;
 
 #### 域名：
 
@@ -148,7 +148,7 @@ permalink: pretty
 
 如果之后挂载到 Gitee 上，那么需要配置（具体见 3.2 Gitee篇），Github实验下来貌似不需要。
 
-
+&emsp;
 
 #### 浏览器标签页的小标
 
@@ -164,7 +164,7 @@ favicon: /assets/art_pig.jpg
 
 
 
-
+&emsp;
 
 #### 菜单的内容和相应图标
 
@@ -203,7 +203,7 @@ menu_icons:
 
 ```
 
-
+&emsp;
 
 #### Next主题的几大样式选择
 
@@ -222,7 +222,7 @@ scheme: Pisces
 
 Pisces 是你当前看到的样式，分为左右两栏
 
-
+&emsp;
 
 #### 菜单栏下方的联系方式及相应图标
 
@@ -259,7 +259,7 @@ social_icons:
 
 这里我借鉴别人的，也是设置了 Github 和我大学的官网，也可以添加其他链接
 
-
+&emsp;
 
 #### 你的头像
 
@@ -274,7 +274,7 @@ avatar: assets/art_pig.jpg
 
 可以用动图gif，我没试验hiahia
 
-
+&emsp;
 
 
 
@@ -310,7 +310,7 @@ sidebar:
 
 我关注的是 `display: always`，就是无论浏览哪个页面和如何滚动，都不会省略侧边栏
 
-
+&emsp;
 
 #### 其他社交链接
 
@@ -327,7 +327,7 @@ links:
 
 我挂了个B站作为例子
 
-
+&emsp;
 
 #### 背景动画
 
@@ -352,9 +352,9 @@ canvas_ribbon: false
 
 这个我玩得最起劲，觉得贼几把炫酷 ~~
 
+&emsp;
 
-
-
+&emsp;
 
 ---
 
@@ -366,13 +366,13 @@ canvas_ribbon: false
 
 ---
 
+&emsp;
 
-
-
+&emsp;
 
 ### 写博客
 
-
+&emsp;
 
 #### 写文章
 
@@ -403,7 +403,7 @@ canvas_ribbon: false
 
 3. 保存并且上传后，过一阵子刷新你的个人博客即可
 
-
+&emsp;
 
 #### 加载图片
 
@@ -415,11 +415,11 @@ canvas_ribbon: false
 
 ![art_pig](https://github.com/oldsandyoungman/oldsandyoungman.github.io/blob/master/assets/images_sha/art_pig.jpg)
 
-
+&emsp;
 
 但是我现在实验下来并没有成功（例如上面就是一个失败的案例，不知道阁下看得到嘛），后来在网上找到相对路径的方法倒是成功了，所以目前都用的相对路径来写博客。
 
-
+&emsp;
 
 用相对路劲的话，我的markdown是 Typora 编辑器，在“格式”-“图像”-“设置图像根目录...”，选中本地博客的根目录，之后加载图片就可以用如下指令：
 
@@ -429,11 +429,11 @@ canvas_ribbon: false
 
 ![art_pig](/assets/images_sha/art_pig.jpg)
 
+&emsp;
 
+&emsp;
 
-
-
-
+&emsp;
 
 
 
@@ -445,7 +445,7 @@ canvas_ribbon: false
 
 - 关于两者环境的具体说明：[this blog](https://www.cnblogs.com/xjtu-blacksmith/p/jekyll-of-pages.html)
 
-
+&emsp;
 
 ### Github篇
 
@@ -497,9 +497,9 @@ canvas_ribbon: false
 
 3. 到这里其实就应该算结束了，如果不出意外，输入xxxxx.github.io就能看到你的博客了
 
+&emsp;
 
-
-
+&emsp;
 
 ### Gitee篇
 
