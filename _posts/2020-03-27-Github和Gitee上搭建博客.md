@@ -480,41 +480,37 @@ canvas_ribbon: false
    例如我 Gitee 上个人博客的网址为：https://gitee.com/oldsandyoungman/blog，那么 _config.yml 文件中部分内容则修改如下：
 
    ```yaml
-# URL
-   
-   ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-   
-   url: http://oldsandyoungman.gitee.io/blog
-   baseurl: /blog
+   # URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
+	url: http://oldsandyoungman.gitee.io/blog
+baseurl: /blog
    permalink: pretty
-   ```
+```
    
    
-
+   
 2. 之后的上传步骤同理，不过在添加远端名字时，需要将“Github”的网址，改成你Gitee上的相应网址，例如我 Gitee 上个人博客的网址为：https://gitee.com/oldsandyoungman/blog，
 
     
 
     那么就将
 
-    ```
+   ```
     git remote add origin git@github.com:oldsandyoungman/oldsandyoungman.github.io.git
-    ```
-
+   ```
+   
     改为
-
+   
     ```
     git remote add origin git@gitee.com:oldsandyoungman/blog.git
     ```
-    
-     
-    
-    
-    
+
+
+
+
 3. 最后，在Gitee的你的仓库页面，点击“服务”，选中“Gitee Pages”，然后就可以生成你的博客啦 ~~
 
 
-​    
 
 
 
