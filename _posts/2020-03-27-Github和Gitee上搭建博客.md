@@ -18,6 +18,10 @@ typora-root-url: ..
 
 
 
+
+
+
+
 # Windows下 Jekyll的Next主题搭建
 
 
@@ -413,7 +417,7 @@ canvas_ribbon: false
 
 
 
-但是我现在实验下来并没有成功，后来在网上找到相对路径的方法倒是成功了，所以目前都用的相对路径来写博客。
+但是我现在实验下来并没有成功（例如上面就是一个失败的案例，不知道阁下看得到嘛），后来在网上找到相对路径的方法倒是成功了，所以目前都用的相对路径来写博客。
 
 
 
@@ -424,6 +428,12 @@ canvas_ribbon: false
 ```
 
 ![art_pig](/assets/images_sha/art_pig.jpg)
+
+
+
+
+
+
 
 
 
