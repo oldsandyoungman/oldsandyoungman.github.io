@@ -11,35 +11,21 @@ typora-root-url: ..
 ---
 
 折腾了可能有3、4天，才用  [Jekyll](http://jekyllcn.com/) + [Next](https://github.com/Simpleyyt/jekyll-theme-next) 搭建好个人博客（`Windows` 配置 `Jekyll` 挺不友好的），其中参考了很多教程和博客，最后正常运行，但是其中的原理还是没有太明白。
-
 &emsp;
-
-
 梳理下大概的流程，以后有时间在新系统上重新配置一遍：
-
 &emsp;
 &emsp;
 &emsp;
-
-
 # Windows下 Jekyll的Next主题搭建
-
-&emsp;
-
 ### 安装Ruby
-
  - 下载[Ruby官网的Windows版本exe](https://rubyinstaller.org/)（菜菜的我爱着傻瓜式的exe）
    - [官方教程](http://jekyllcn.com/docs/windows/#installation)上是用[chocolatey](https://chocolatey.org/install)作为平台再安装Ruby的，但是后面的步骤遇到一些版本不匹配问题，所以我后来舍弃了。不同人的电脑配置不同，可以尝试。
  - 运行exe到最后一步，先不启动Windows PowerShell（不打勾），换下源（不然速度太慢，参考 [this blog](https://blog.csdn.net/mscf/article/details/82627951)）
  - 管理员身份运行cmd，输入“ridk install”并回车，安装1和3
    - 看网上的说法2非必要，然后我自己装了2出现了点问题，卸载了单独装1+3才好的，我也解释不清楚。
-
 &emsp;
-
 &emsp;
-
 ### 利用 gem 安装 nokogiri （不确定是不是必要项）
-
  - 先换源：（完事第一步）
 
    ```
@@ -101,24 +87,15 @@ typora-root-url: ..
     bundle exec jekyll server
     ```
 
-    &emsp;
-
 &emsp;
-
 &emsp;
-
+&emsp;
 # 修改配置 + 写博客
-
 &emsp;
-
 ### 修改配置
-
 这一部分就是在根目录下的_config.yml文件中进行修改，我列一些我用到的配置项（用文本编辑器打开，搜一个改一个 ~）
-
 &emsp;
-
 #### 网站的基本信息：
-
 ```yaml
 # Site
 title: 沙沙响
@@ -128,13 +105,9 @@ author: 沙哥
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
 date_format: '%Y-%m-%d'
-
 ```
-
 注意：zh-Hans 即简体中文，名称的选取是源自 /_data/languages/ 目录下的文件名
-
 &emsp;
-
 #### 域名：
 
 ```yaml
