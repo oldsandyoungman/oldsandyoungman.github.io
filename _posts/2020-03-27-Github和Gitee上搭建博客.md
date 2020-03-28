@@ -403,15 +403,27 @@ canvas_ribbon: false
 
 #### 加载图片
 
-正常的markdown语言的加载图片，就是
+正常的markdown语言的加载图片，用的是全称网址，例如我在本地博客下的 assets 文件夹下建立 images_sha 来存放我用到的图片，那么加载图片的格式应该是：
 
 ```
-![名字](https://www.github.com/xxxx/xxxx.github.io/images/)
+![名字](https://www.github.com/xxxx/xxxx.github.io/assets/images_sha/xxx.jpg)
 ```
 
-![art_pig1](https://github.com/oldsandyoungman/oldsandyoungman.github.io/blob/master/assets/images_sha/art_pig.jpg)
+![art_pig](https://github.com/oldsandyoungman/oldsandyoungman.github.io/blob/master/assets/images_sha/art_pig.jpg)
 
 
+
+但是我现在实验下来并没有成功，后来在网上找到相对路径的方法倒是成功了，所以目前都用的相对路径来写博客。
+
+
+
+用相对路劲的话，我的markdown是 Typora 编辑器，在“格式”-“图像”-“设置图像根目录...”，选中本地博客的根目录，之后加载图片就可以用如下指令：
+
+```
+![名字](/assets/images_sha/xxx.jpg)
+```
+
+![art_pig](/assets/images_sha/art_pig.jpg)
 
 
 
