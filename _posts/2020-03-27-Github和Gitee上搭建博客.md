@@ -409,7 +409,7 @@ canvas_ribbon: false
 ![名字](https://www.github.com/xxxx/xxxx.github.io/images/)
 ```
 
-![art_pig1](https://www.github.com/oldsandyoungman/oldsandyoungman.github.io/_posts/image/art_pig.jpg)
+![art_pig1](https://github.com/oldsandyoungman/oldsandyoungman.github.io/blob/master/assets/images_sha/art_pig.jpg)
 
 
 
