@@ -11,20 +11,26 @@ typora-root-url: ..
 ---
 
 折腾了可能有3、4天，才用  [Jekyll](http://jekyllcn.com/) + [Next](https://github.com/Simpleyyt/jekyll-theme-next) 搭建好个人博客（`Windows` 配置 `Jekyll` 挺不友好的），其中参考了很多教程和博客，最后正常运行，但是其中的原理还是没有太明白。
-<br>
+<br><br>
 梳理下大概的流程，以后有时间在新系统上重新配置一遍：
 <br>
 <br>
 <br>
+
 # Windows下 Jekyll的Next主题搭建
 ### 安装Ruby
  - 下载[Ruby官网的Windows版本exe](https://rubyinstaller.org/)（菜菜的我爱着傻瓜式的exe）
+   
    - [官方教程](http://jekyllcn.com/docs/windows/#installation)上是用[chocolatey](https://chocolatey.org/install)作为平台再安装Ruby的，但是后面的步骤遇到一些版本不匹配问题，所以我后来舍弃了。不同人的电脑配置不同，可以尝试。
  - 运行exe到最后一步，先不启动Windows PowerShell（不打勾），换下源（不然速度太慢，参考 [this blog](https://blog.csdn.net/mscf/article/details/82627951)）
  - 管理员身份运行cmd，输入“ridk install”并回车，安装1和3
-   - 看网上的说法2非必要，然后我自己装了2出现了点问题，卸载了单独装1+3才好的，我也解释不清楚。
+   - 看网上的说法2非必要，然后我自己装了2出现了点问题，卸载了单独装1+3才好的，我也解释不清楚
+
+  
+
 <br>
 <br>
+
 ### 利用 gem 安装 nokogiri （不确定是不是必要项）
  - 先换源：（完事第一步）
 
