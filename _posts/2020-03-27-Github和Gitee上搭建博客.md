@@ -157,7 +157,7 @@ favicon: /assets/art_pig.jpg
 
 ![favicon](/_posts/image/favicon.jpg)
 
-![favicon](https://github.com/oldsandyoungman/oldsandyoungman.github.io/_posts/image/favicon.jpg)
+![favicon](https://raw.githubusercontent.com/oldsandyoungman/oldsandyoungman.github.io/_posts/image/favicon.jpg)
 
 
 
