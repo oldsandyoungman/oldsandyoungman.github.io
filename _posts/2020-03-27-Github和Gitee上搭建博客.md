@@ -1,5 +1,5 @@
 ---
-/_posts/image/art_pig.jpgtitle: 【记】Github和Gitee上搭建博客
+title: 【记】Github和Gitee上搭建博客
 date: 2020-03-27 14:32:20
 category: 程序员的优雅之路
 tags:
@@ -156,11 +156,11 @@ favicon: /assets/art_pig.jpg
 
 即浏览器标签页的小图标，就像这样：
 
-![favicon](/assets/images_sha/art_pig.jpg)
+![favicon](/assets/images_sha/favicon.jpg)
 
-![favicon](https://github.com/oldsandyoungman/oldsandyoungman.github.io/assets/images_sha/art_pig.jpg)
 
-![art_pig](https://github.com/oldsandyoungman/oldsandyoungman.github.io/assets/images_sha/art_pig.jpg)
+
+
 
 #### 菜单的内容和相应图标
 
@@ -366,6 +366,55 @@ canvas_ribbon: false
 
 
 
+### 写博客
+
+
+
+#### 写文章
+
+1. 在根目录的 _post 文件夹下，新建：年-月-日-标题（例如2020-03-27-我是标题）的md后缀文件
+
+2. 文件内容分为两部分。
+
+   - 第一部分是一些配置信息，例如我这篇博客列出了一些基本信息，按照格式填写即可：
+   
+     ```
+     title: 【记】Github和Gitee上搭建博客
+     date: 2020-03-27 14:32:20
+     category: 程序员的优雅之路
+     tags:
+     - GitHub / Gitee
+     - Blog
+     - Next主题
+     description: 那些年我们走过的那些坑
+     ```
+     
+     
+   
+   - 第二部分是正文，正常的markdown语言就行
+   
+     
+   
+
+
+3. 保存并且上传后，过一阵子刷新你的个人博客即可
+
+
+
+#### 加载图片
+
+正常的markdown语言的加载图片，就是
+
+```
+![名字](https://www.github.com/xxxx/xxxx.github.io/images/)
+```
+
+![art_pig1](https://www.github.com/oldsandyoungman/oldsandyoungman.github.io/_posts/image/art_pig.jpg)
+
+
+
+
+
 # Github 和 Gitee 上的配置
 
 
@@ -388,9 +437,9 @@ canvas_ribbon: false
 
    - 输入命令，初始化仓库：
 
-     ```
+```
      git init
-     ```
+```
 
    - 输入命令，将仓库所有东西 add 到本地的暂存区
 
