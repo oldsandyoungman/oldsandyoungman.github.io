@@ -19,23 +19,26 @@ typora-root-url: ..
 
 # Windows下 Jekyll的Next主题搭建
 ### 安装Ruby
- - 下载[Ruby官网的Windows版本exe](https://rubyinstaller.org/)（菜菜的我爱着傻瓜式的exe）
-   
+
+1. 下载[Ruby官网的Windows版本exe](https://rubyinstaller.org/)（菜菜的我爱着傻瓜式的exe）
    - [官方教程](http://jekyllcn.com/docs/windows/#installation)上是用[chocolatey](https://chocolatey.org/install)作为平台再安装Ruby的，但是后面的步骤遇到一些版本不匹配问题，所以我后来舍弃了。不同人的电脑配置不同，可以尝试。
- - 运行exe到最后一步，先不启动Windows PowerShell（不打勾），换下源（不然速度太慢，参考 [this blog](https://blog.csdn.net/mscf/article/details/82627951)）
- - 管理员身份运行cmd，输入“ridk install”并回车，安装1和3
-   - 看网上的说法2非必要，然后我自己装了2出现了点问题，卸载了单独装1+3才好的，我也解释不清楚
+
+2. 运行exe到最后一步，先不启动Windows PowerShell（不打勾），换下源（不然速度太慢，参考 [this blog](https://blog.csdn.net/mscf/article/details/82627951)）
+
+3. 管理员身份运行cmd，输入“ridk install”并回车，安装1和3
+
+4. 看网上的说法2非必要，然后我自己装了2出现了点问题，卸载了单独装1+3才好的，我也解释不清楚
 
 <br>
 
 ### 利用 gem 安装 nokogiri （不确定是不是必要项）
- - 先换源：（完事第一步）
+1. 先换源：（完事第一步）
 
    ```
    gem sources -a http://gems.ruby-china.com/
    ```
 
- - [官方教程](http://jekyllcn.com/docs/windows/#installation)的说法是很多参数的命令行：
+2. [官方教程](http://jekyllcn.com/docs/windows/#installation)的说法是很多参数的命令行：
 
    ```
    gem install nokogiri --^
@@ -53,7 +56,7 @@ typora-root-url: ..
 
 ### 利用gem安装Github-pages
 
-- 安装bundle，输入如下命令行：
+1. 安装bundle，输入如下命令行：
 
    ```
    gem install bundler
@@ -61,7 +64,7 @@ typora-root-url: ..
 
    - 关于[bundle的作用，和Gem的关系](https://www.jianshu.com/p/bcbb278e9208)
 
- - 本地博客的根目录下，手动建立名为“Gemfile”的无后缀文件，在该文件中写入
+2. 本地博客的根目录下，手动建立名为“Gemfile”的无后缀文件，在该文件中写入
 
    ```
    source 'http://rubygems.org'
@@ -70,23 +73,23 @@ typora-root-url: ..
 
    - 如果是用别人的模板（比如在下，git了[Next主题](https://github.com/Simpleyyt/jekyll-theme-next)的模板，然后在上面改），那么就下载好文件到你的博客目录下，里面自带“Gemfile”文件的。
 
- - 命令行切换到本地博客的根目录，输入： 
+3. 命令行切换到本地博客的根目录，输入： 
 
    ```
    bundle install
    ```
 
-- 按照道理，之后就可以正常运行了。启动：
+4.  按照道理，之后就可以正常运行了。启动：
 
    ```
-  jekyll server
-  ```
+   jekyll server
+   ```
 
-  - 如果出现“exec”啥的报错（具体不大记得了~~），就换下面的命令
+5. 如果出现“exec”啥的报错（具体不大记得了~~），就换下面的命令
 
-  ```
-    bundle exec jekyll server
-  ```
+   ```
+   bundle exec jekyll server
+   ```
 
 <br>
 <br>
