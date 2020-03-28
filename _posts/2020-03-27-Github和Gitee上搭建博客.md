@@ -26,9 +26,6 @@ typora-root-url: ..
  - 管理员身份运行cmd，输入“ridk install”并回车，安装1和3
    - 看网上的说法2非必要，然后我自己装了2出现了点问题，卸载了单独装1+3才好的，我也解释不清楚
 
-  
-
-<br>
 <br>
 
 ### 利用 gem 安装 nokogiri （不确定是不是必要项）
@@ -52,7 +49,6 @@ typora-root-url: ..
 
    - 这部分因为我反复卸载用了很多方法，不确定哪个奏效，留个坑
 
-<br>
 <br>
 
 ### 利用gem安装Github-pages
@@ -389,9 +385,7 @@ canvas_ribbon: false
 
 ![art_pig](https://github.com/oldsandyoungman/oldsandyoungman.github.io/blob/master/assets/images_sha/art_pig.jpg)
 
-<br>
-
-但是我现在实验下来并没有成功（例如上面就是一个失败的案例，不知道阁下显示是否正常），后来在网上找到相对路径的方法倒是成功了，所以目前都用的相对路径来写博客。
+但是我现在实验下来并没有成功（**例如上面就是一个失败的案例，不知道阁下显示是否正常**），后来在网上找到相对路径的方法倒是成功了，所以目前都用的相对路径来写博客。
 
 <br>
 
@@ -425,15 +419,15 @@ canvas_ribbon: false
 
 2. 将你本地的博客全部 push 上去（关于 git 的概念和操作，建议从头学一遍[廖雪峰大佬的博客](https://www.liaoxuefeng.com/wiki/896043488029600)，毕竟作为程序员之后将与 git 常相伴随 ~~ ），具体而言
 
-    - 安装好 git 
+   - 安装好 git 
 
    - 在 git bash 中，进入你的博客所在的根目录
 
    - 输入命令，初始化仓库：
 
-```
+     ```
      git init
-```
+     ```
 
    - 输入命令，将仓库所有东西 add 到本地的暂存区
 
@@ -481,11 +475,11 @@ canvas_ribbon: false
 
    ```yaml
    # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-	url: http://oldsandyoungman.gitee.io/blog
-baseurl: /blog
+   ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
+   url: http://oldsandyoungman.gitee.io/blog
+   baseurl: /blog
    permalink: pretty
-```
+   ```
    
    
    
