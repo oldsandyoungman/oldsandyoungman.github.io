@@ -53,11 +53,11 @@ typora-root-url: ..
 
 ### 利用gem安装Github-pages
 
- - 安装bundle，输入如下命令行：
+- 安装bundle，输入如下命令行：
 
-```
+   ```
    gem install bundler
-```
+   ```
 
    - 关于[bundle的作用，和Gem的关系](https://www.jianshu.com/p/bcbb278e9208)
 
