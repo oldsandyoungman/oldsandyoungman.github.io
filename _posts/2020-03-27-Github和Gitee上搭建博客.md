@@ -79,7 +79,7 @@ typora-root-url: ..
    bundle install
    ```
 
-4.  按照道理，之后就可以正常运行了。启动：
+4. 按照道理，之后就可以正常运行了。启动：
 
    ```
    jekyll server
