@@ -1,26 +1,22 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.0.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/art_pig.jpg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/art_pig.jpg">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/art_pig.jpg">
-  <link rel="mask-icon" href="/images/art_pig.jpg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"oldsandyoungman.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="那些年我们走过的那些坑。。。。不出意外的话，还是要来~来~回~回~踩~踩~的~">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="那些年我们走过的那些坑。。。。不出意外的话，还是要来~来~回~回~踩~踩~的~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【记】Github和Gitee上搭建博客">
 <meta property="og:url" content="https://oldsandyoungman.github.io/2020/03/27/2020-03-27-Github%E5%92%8CGitee%E4%B8%8A%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
@@ -37,218 +33,219 @@
 <meta property="article:tag" content="Blog">
 <meta property="article:tag" content="Next主题">
 <meta property="article:tag" content="Jekyll">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/favicon.jpg">
+  
+  
+  <title>【记】Github和Gitee上搭建博客 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
 
-<link rel="canonical" href="https://oldsandyoungman.github.io/2020/03/27/2020-03-27-Github%E5%92%8CGitee%E4%B8%8A%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
 
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
 
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://oldsandyoungman.github.io/2020/03/27/2020-03-27-Github%E5%92%8CGitee%E4%B8%8A%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/","path":"2020/03/27/2020-03-27-Github和Gitee上搭建博客/","title":"【记】Github和Gitee上搭建博客"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【记】Github和Gitee上搭建博客 | 沙沙响</title>
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
 
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
 
-  <div class="site-meta">
+<link  rel="stylesheet" href="/css/main.css" />
 
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">沙沙响</p>
-      <i class="logo-line"></i>
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-      <p class="site-subtitle" itemprop="description">Rustling</p>
-  </div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
   </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
-  </ul>
 </nav>
 
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【记】Github和Gitee上搭建博客">
+              
+            </span>
 
-
-
-</div>
-        
+            
+              <div class="mt-3">
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows%E4%B8%8B-Jekyll%E7%9A%84Next%E4%B8%BB%E9%A2%98%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">Windows下 Jekyll的Next主题搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Ruby"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装Ruby</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-gem-%E5%AE%89%E8%A3%85-nokogiri-%EF%BC%88%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E5%BF%85%E8%A6%81%E9%A1%B9%EF%BC%89"><span class="nav-number">1.0.2.</span> <span class="nav-text">利用 gem 安装 nokogiri （不确定是不是必要项）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8gem%E5%AE%89%E8%A3%85Github-pages"><span class="nav-number">1.0.3.</span> <span class="nav-text">利用gem安装Github-pages</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%EF%BC%9A"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">域名：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%A0%87%E7%AD%BE%E9%A1%B5%E7%9A%84%E5%B0%8F%E6%A0%87"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">浏览器标签页的小标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8F%9C%E5%8D%95%E7%9A%84%E5%86%85%E5%AE%B9%E5%92%8C%E7%9B%B8%E5%BA%94%E5%9B%BE%E6%A0%87"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">菜单的内容和相应图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Next%E4%B8%BB%E9%A2%98%E7%9A%84%E5%87%A0%E5%A4%A7%E6%A0%B7%E5%BC%8F%E9%80%89%E6%8B%A9"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">Next主题的几大样式选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B8%8B%E6%96%B9%E7%9A%84%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F%E5%8F%8A%E7%9B%B8%E5%BA%94%E5%9B%BE%E6%A0%87"><span class="nav-number">1.0.3.5.</span> <span class="nav-text">菜单栏下方的联系方式及相应图标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%A0%E7%9A%84%E5%A4%B4%E5%83%8F"><span class="nav-number">1.0.3.6.</span> <span class="nav-text">你的头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%A7%E6%A0%8F%E5%B1%9E%E6%80%A7"><span class="nav-number">1.0.3.7.</span> <span class="nav-text">侧栏属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5"><span class="nav-number">1.0.3.8.</span> <span class="nav-text">其他社交链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%8A%A8%E7%94%BB"><span class="nav-number">1.0.3.9.</span> <span class="nav-text">背景动画</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-number">1.0.4.</span> <span class="nav-text">写博客</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%99%E6%96%87%E7%AB%A0"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">写文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A0%E8%BD%BD%E5%9B%BE%E7%89%87"><span class="nav-number">1.0.4.2.</span> <span class="nav-text">加载图片</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-%E5%92%8C-Gitee-%E4%B8%8A%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">Github 和 Gitee 上的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Github%E7%AF%87"><span class="nav-number">2.0.1.</span> <span class="nav-text">Github篇</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gitee%E7%AF%87"><span class="nav-number">2.0.2.</span> <span class="nav-text">Gitee篇</span></a></li></ol></li></ol></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="沙路为"
-      src="/images/art_pig.jpg">
-  <p class="site-author-name" itemprop="name">沙路为</p>
-  <div class="site-description" itemprop="description">佛曰：God bless you~~</div>
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-03-27 14:32" pubdate>
+        2020年3月27日 下午
+      </time>
+    </span>
+  
 </div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">7</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">分类</span>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">13</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      undefined 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      NaN 分钟
+    </span>
+  
+
+  
+  
 </div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/oldsandyoungman" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;oldsandyoungman" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
 
+            
+          </div>
 
-
+          
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
+  </header>
 
-
-    </header>
-
+  <main>
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+      
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://oldsandyoungman.github.io/2020/03/27/2020-03-27-Github%E5%92%8CGitee%E4%B8%8A%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/art_pig.jpg">
-      <meta itemprop="name" content="沙路为">
-      <meta itemprop="description" content="佛曰：God bless you~~">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="沙沙响">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          【记】Github和Gitee上搭建博客
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-03-27 14:32:20" itemprop="dateCreated datePublished" datetime="2020-03-27T14:32:20+08:00">2020-03-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-01-01 18:32:51" itemprop="dateModified" datetime="2021-01-01T18:32:51+08:00">2021-01-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%BC%98%E9%9B%85%E4%B9%8B%E8%B7%AF/" itemprop="url" rel="index"><span itemprop="name">程序员的优雅之路</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-            <div class="post-description">那些年我们走过的那些坑。。。。不出意外的话，还是要来~来~回~回~踩~踩~的~</div>
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>折腾了可能有3、4天，才用  <a target="_blank" rel="noopener" href="http://jekyllcn.com/">Jekyll</a> + <a target="_blank" rel="noopener" href="https://github.com/Simpleyyt/jekyll-theme-next">Next</a> 搭建好个人博客（<code>Windows</code> 配置 <code>Jekyll</code> 挺不友好的），其中参考了很多教程和博客，最后正常运行，但是其中的原理还是没有太明白。<br><br><br><br>梳理下大概的流程，以后有时间在新系统上重新配置一遍：<br><br><br><br><br><br></p>
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【记】Github和Gitee上搭建博客</h1>
+            
+            <div class="markdown-body">
+              <p>折腾了可能有3、4天，才用  <a target="_blank" rel="noopener" href="http://jekyllcn.com/">Jekyll</a> + <a target="_blank" rel="noopener" href="https://github.com/Simpleyyt/jekyll-theme-next">Next</a> 搭建好个人博客（<code>Windows</code> 配置 <code>Jekyll</code> 挺不友好的），其中参考了很多教程和博客，最后正常运行，但是其中的原理还是没有太明白。<br><br><br><br>梳理下大概的流程，以后有时间在新系统上重新配置一遍：<br><br><br><br><br><br></p>
 <h1 id="Windows下-Jekyll的Next主题搭建"><a href="#Windows下-Jekyll的Next主题搭建" class="headerlink" title="Windows下 Jekyll的Next主题搭建"></a>Windows下 Jekyll的Next主题搭建</h1><h3 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h3><ol>
 <li><p>下载<a target="_blank" rel="noopener" href="https://rubyinstaller.org/">Ruby官网的Windows版本exe</a>（菜菜的我爱着傻瓜式的exe）</p>
 <ul>
@@ -319,7 +316,7 @@
 <h4 id="浏览器标签页的小标"><a href="#浏览器标签页的小标" class="headerlink" title="浏览器标签页的小标"></a>浏览器标签页的小标</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Put your favicon.ico into `assets/` directory.</span></span><br><span class="line"><span class="attr">favicon:</span> <span class="string">/assets/art_pig.jpg</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>即浏览器标签页的小图标，就像这样：</p>
-<p><img src="/assets/images_sha/favicon.jpg" alt="favicon"></p>
+<p><img src="/assets/images_sha/favicon.jpg" srcset="/img/loading.gif" lazyload alt="favicon"></p>
 <br>
 
 <h4 id="菜单的内容和相应图标"><a href="#菜单的内容和相应图标" class="headerlink" title="菜单的内容和相应图标"></a>菜单的内容和相应图标</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Menu Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -&gt; archives)</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml</span></span><br><span class="line">  <span class="comment">#commonweal: /404.html</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable/Disable menu icons.</span></span><br><span class="line"><span class="comment"># Icon Mapping:</span></span><br><span class="line"><span class="comment">#   Map a menu item to a specific FontAwesome icon name.</span></span><br><span class="line"><span class="comment">#   Key is the name of menu item and value is the name of FontAwesome icon. Key is case-senstive.</span></span><br><span class="line"><span class="comment">#   When an question mask icon presenting up means that the item has no mapping icon.</span></span><br><span class="line"><span class="attr">menu_icons:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment">#KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">home</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">user</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">th</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">calendar</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">tags</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">archive</span></span><br><span class="line">  <span class="attr">sitemap:</span> <span class="string">sitemap</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">heartbeat</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -387,14 +384,14 @@
 <h4 id="加载图片"><a href="#加载图片" class="headerlink" title="加载图片"></a>加载图片</h4><p>正常的markdown语言的加载图片，用的是全称网址，例如我在本地博客下的 assets 文件夹下建立 images_sha 来存放我用到的图片，那么加载图片的格式应该是：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![名字](https://www.github.com/xxxx/xxxx.github.io/assets/images_sha/xxx.jpg)</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://github.com/oldsandyoungman/oldsandyoungman.github.io/blob/master/assets/images_sha/art_pig.jpg" alt="art_pig"></p>
+<p><img src="https://github.com/oldsandyoungman/oldsandyoungman.github.io/blob/master/assets/images_sha/art_pig.jpg" srcset="/img/loading.gif" lazyload alt="art_pig"></p>
 <p>但是我现在实验下来并没有成功（<strong>例如上面就是一个失败的案例，不知道阁下显示是否正常</strong>），后来在网上找到相对路径的方法倒是成功了，所以目前都用的相对路径来写博客。</p>
 <br>
 
 <p>用相对路劲的话，我的markdown是 Typora 编辑器，在“格式”-“图像”-“设置图像根目录…”，选中本地博客的根目录，之后加载图片就可以用如下指令：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![名字](/assets/images_sha/xxx.jpg)</span><br></pre></td></tr></table></figure>
 
-<p><img src="/assets/images_sha/art_pig.jpg" alt="art_pig"></p>
+<p><img src="/assets/images_sha/art_pig.jpg" srcset="/img/loading.gif" lazyload alt="art_pig"></p>
 <p>另外值得注意的是，当在 _post 文件夹下建立图片时，貌似 Github 上无法显示（知乎上 <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/31123165/answer/274501351">这篇回答</a> 提到），所以建议不要在 _post 文件夹下放置图片</p>
 <br>
 <br>
@@ -451,68 +448,156 @@
 <li>最后，在Gitee的你的仓库页面，点击“服务”，选中“Gitee Pages”，然后就可以生成你的博客啦 ~~</li>
 </ol>
 
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%BC%98%E9%9B%85%E4%B9%8B%E8%B7%AF/">程序员的优雅之路</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/GitHub-Gitee/">GitHub / Gitee</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Blog/">Blog</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Next%E4%B8%BB%E9%A2%98/">Next主题</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Jekyll/">Jekyll</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/03/27/2020-03-27-markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">【记】markdown基本语法总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
     </div>
-
     
-    
-    
-
-    <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/GitHub-Gitee/" rel="tag"># GitHub / Gitee</a>
-              <a href="/tags/Blog/" rel="tag"># Blog</a>
-              <a href="/tags/Next%E4%B8%BB%E9%A2%98/" rel="tag"># Next主题</a>
-              <a href="/tags/Jekyll/" rel="tag"># Jekyll</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-            </div>
-            <div class="post-nav-item">
-                <a href="/2020/03/27/2020-03-27-markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/" rel="next" title="【记】markdown基本语法总结">
-                  【记】markdown基本语法总结 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
 </div>
 
-
-
-
-
-
+      </div>
+    
+  </div>
 </div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">沙路为</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
   </div>
-
-    </div>
-  </footer>
-
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 
+  
+</footer>
 
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
@@ -520,6 +605,51 @@
 
 
 
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
 
 
 </body>
