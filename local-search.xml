@@ -4,7 +4,7 @@
   
   
   <entry>
-    <title>【记】装Ubuntu系统</title>
+    <title>【苦】装Ubuntu系统</title>
     <link href="/2021/12/21/2021-12-21-%E8%A3%85Ubuntu%E7%B3%BB%E7%BB%9F/"/>
     <url>/2021/12/21/2021-12-21-%E8%A3%85Ubuntu%E7%B3%BB%E7%BB%9F/</url>
     
@@ -31,7 +31,7 @@
   
   
   <entry>
-    <title>【记】重启博客</title>
+    <title>【省】重启博客</title>
     <link href="/2021/12/20/2021-12-20-%E9%87%8D%E5%90%AF%E5%8D%9A%E5%AE%A2/"/>
     <url>/2021/12/20/2021-12-20-%E9%87%8D%E5%90%AF%E5%8D%9A%E5%AE%A2/</url>
     
@@ -134,11 +134,11 @@
     
     <tags>
       
+      <tag>markdown</tag>
+      
       <tag>Blog</tag>
       
       <tag>Jekyll</tag>
-      
-      <tag>markdown</tag>
       
       <tag>Typora</tag>
       
