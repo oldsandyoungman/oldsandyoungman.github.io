@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/20211225/DSC06536.jpg">
 <meta property="article:published_time" content="2021-12-25T02:22:43.000Z">
-<meta property="article:modified_time" content="2021-12-30T08:50:34.642Z">
+<meta property="article:modified_time" content="2021-12-30T08:55:06.715Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="GitHub &#x2F; Gitee">
 <meta property="article:tag" content="Blog">
@@ -204,7 +204,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.2k 字
+      2.4k 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      19 分钟
+      20 分钟
     </span>
   
 
@@ -292,7 +292,7 @@
 <li><p>复制 <code>./themes/fluid/_config.yml</code> 到博客根目录下，并改名为 <code>_config.fluid.yml</code> </p>
 </li>
 <li><p>修改 <code>_config_yml</code> 中的 <code> theme</code> 和 <code>language</code></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">theme: fluid  <span class="hljs-comment"># 指定主题</span><br>language: zh-CN  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span>  <span class="hljs-comment"># 指定主题</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span>  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure></li>
 <li><p>启动并测试，同样访问：<a href="http://localhost:4000，测试成功">http://localhost:4000，测试成功</a>~~</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># g: generate，编译生成可执行文件</span><br>hexo g<br><span class="hljs-comment"># s: server，本地测试</span><br>hexo s<br></code></pre></td></tr></table></figure></li>
 </ol>
@@ -302,6 +302,15 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo new page about<br></code></pre></td></tr></table></figure></li>
 <li><p>修改关于页面内容：<code>/source/about/index.md</code></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: about<br>date: 2020-02-23 19:20:33<br><span class="hljs-section">layout: about</span><br><span class="hljs-section">---</span><br><br>这里写关于页的正文，支持 Markdown, HTML<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="普通日志"><a href="#普通日志" class="headerlink" title="普通日志"></a>普通日志</h3><ol>
+<li><p>修改 Hexo 博客目录中的 <code>_config.yml</code>，打开这个配置是为了在生成文章的时候生成一个同名的资源目录用于存放图片文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure></li>
+<li><p>生成普通日志</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo new post xxxx-xx-xx-xxxxxxxxxx<br></code></pre></td></tr></table></figure>
+
+<p>执行完即可在<code>source/_posts</code>目录下生成了一个md文件和一个同名的资源目录(用于存放图片)</p>
+</li>
 </ol>
 <h3 id="CefSharp"><a href="#CefSharp" class="headerlink" title="CefSharp"></a>CefSharp</h3><p>搜到3个老旧库之后，于是把搜索时间缩短到1年之内，果然搜到了目前的选择：CefSharp。看了它的 <a target="_blank" rel="noopener" href="https://github.com/cefsharp/CefSharp/">github</a>，最近一直在更新，于是顺利确定</p>
 <h1 id="搭建工程并测试"><a href="#搭建工程并测试" class="headerlink" title="搭建工程并测试"></a>搭建工程并测试</h1><p>一开始参考这些教程：<a target="_blank" rel="noopener" href="https://www.eskysky.com/1645.html">网址1</a>、<a target="_blank" rel="noopener" href="https://www.cnblogs.com/SavionZhang/p/15169863.html">网址2</a></p>
@@ -393,9 +402,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/12/29/2021-12-29-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B5%8C%E5%A5%97%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8CSharp+WinForm+Cefsharp/">
+                      <a href="/2021/12/26/2021-12-26-%E5%85%B3%E4%BA%8E%E4%BB%A3%E7%90%86%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【苦】客户端嵌套浏览器内核：C#+WinForm+Cefsharp</span>
+                        <span class="hidden-mobile">2021-12-26-关于代理的那些事儿</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
