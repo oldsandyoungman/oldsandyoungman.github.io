@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/20211225/DSC06536.jpg">
 <meta property="article:published_time" content="2021-12-25T02:22:43.000Z">
-<meta property="article:modified_time" content="2021-12-30T08:45:10.966Z">
+<meta property="article:modified_time" content="2021-12-30T08:50:34.642Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="GitHub &#x2F; Gitee">
 <meta property="article:tag" content="Blog">
@@ -204,7 +204,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.1k 字
+      2.2k 字
     </span>
   
 
@@ -213,7 +213,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      27 分钟
+      19 分钟
     </span>
   
 
@@ -301,8 +301,51 @@
 <li><p>生成 “关于” 页面</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">hexo new page about<br></code></pre></td></tr></table></figure></li>
 <li><p>修改关于页面内容：<code>/source/about/index.md</code></p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><code class="hljs markdown">   ---<br>   title: about<br>   date: 2020-02-23 19:20:33<br>   layout: about<br>   ---<br>   <br>   这里写关于页的正文，支持 Markdown, HTML<br>   <br><br><span class="hljs-section">### CefSharp</span><br><br>搜到3个老旧库之后，于是把搜索时间缩短到1年之内，果然搜到了目前的选择：CefSharp。看了它的 [<span class="hljs-string">github</span>](<span class="hljs-link">https://github.com/cefsharp/CefSharp/</span>)，最近一直在更新，于是顺利确定<br><br><br><br><br><br><span class="hljs-section"># 搭建工程并测试</span><br><br>一开始参考这些教程：[<span class="hljs-string">网址1</span>](<span class="hljs-link">https://www.eskysky.com/1645.html</span>)、[<span class="hljs-string">网址2</span>](<span class="hljs-link">https://www.cnblogs.com/SavionZhang/p/15169863.html</span>)<br><br>确实能成功运行，访问一些静态网站，但是对于我的Mediasoup项目（有一些JavaScript交互的），画面却一直卡住<br><br>于是继续去官网索罗，发现官方提供一个最小化配置的[<span class="hljs-string">工程demo</span>](<span class="hljs-link">https://github.com/cefsharp/CefSharp.MinimalExample</span>)，在这个基础上你可以继续搭建你要的东西，于是开心下载，直接运行并访问我的服务器地址，成功，贼开心<br><br><span class="hljs-quote">&gt; 注：</span><br><span class="hljs-quote">&gt;</span><br><span class="hljs-quote">&gt; 如果Visual Studio里打开工程文件，里面有很多报错提示，可以不用管，直接运行是成功的。</span><br><span class="hljs-quote">&gt;</span><br><span class="hljs-quote">&gt; - 如果实在看不顺眼，可以将 `Any CPU` 改成 `x64` 或者 `x86` ，报错就会消失</span><br><br><br><br><br><br><span class="hljs-section"># 坎坷的插曲</span><br><br>成功运行之后，第一件想做的事就是让软件初始化的时候，直接访问我的服务器地址，而不是 Google，想当然以为把代码里所有涉及到 <span class="hljs-code">`www.google.com`</span> 的地方直接改成我的服务器IP地址， 结果跑下来并不对<br><br>于是想当然以为应该需要更深层次的修改，于是搜索关键词 <span class="hljs-code">`&quot;cefsharp网址&quot;`</span> ，结果当时跳出来的都是关于“重定向”的，一开始没多细想，觉得重定向也行，判断当前访问的google网址的话，重定向到我的服务器就行。结果一顿搜，一顿试，一顿失败，整个人都丧了起来<br><br><span class="hljs-quote">&gt; 记录下对于“重定向”而言有用的网址，基本都提到要重写一个接口函数：</span><br><span class="hljs-quote">&gt;</span><br><span class="hljs-quote">&gt; - 个人博客类</span><br><span class="hljs-quote">&gt;   - [<span class="hljs-string">网址1</span>](<span class="hljs-link">https://blog.csdn.net/little_code/article/details/105515747</span>)</span><br><span class="hljs-quote">&gt;   - [<span class="hljs-string">网址2</span>](<span class="hljs-link">http://www.cocoachina.com/articles/103105</span>)</span><br><span class="hljs-quote">&gt;   - [<span class="hljs-string">网址3</span>](<span class="hljs-link">https://magpcss.org/ceforum/viewtopic.php?f=10&amp;t=13320#p27200</span>)</span><br><span class="hljs-quote">&gt; - 官方文档类</span><br><span class="hljs-quote">&gt;   - [<span class="hljs-string">网址1</span>](<span class="hljs-link">[https://github.com/cefsharp/CefSharp/wiki/CefSharp%E4%B8%AD%E6%96%87%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3#a1](https://github.com/cefsharp/CefSharp/wiki/CefSharp中文帮助文档#a1</span>))</span><br><span class="hljs-quote">&gt;   - [<span class="hljs-string">网址2</span>](<span class="hljs-link">https://github.com/cefsharp/CefSharp/wiki/General-Usage#request-handling</span>)</span><br><span class="hljs-quote">&gt; - 可能不对口类</span><br><span class="hljs-quote">&gt;   - [<span class="hljs-string">网址1</span>](<span class="hljs-link">https://www.yesdotnet.com/archive/post/1619002218.html</span>)</span><br><span class="hljs-quote">&gt;   - [<span class="hljs-string">网址2</span>](<span class="hljs-link">https://www.codebye.com/chromiumwebbrowser-loadpageasync.html</span>)</span><br><br>后来准备放弃了，盯着界面发呆，突然发现我界面没有按钮，但是代码是写了按钮，这才发现我运行的不是我改的程序，惊呼WC~~<br><br><span class="hljs-section">#### 所以教训来了~~</span><br><br>Visual Studio里的解决方案可能包含多个工程文件，而你运行只会运行其中一个（粗体名字的那个），所以当你想运行另外一个文件时，就需要右键那个工程文件，点击 <span class="hljs-code">`设为启动项目`</span> <br><br><span class="hljs-quote">&gt; 所以改初始化的地址，就只需要把初始化browser的网址换掉就行</span><br><br><span class="hljs-code">```C#</span><br><span class="hljs-code">browser = new ChromiumWebBrowser(&quot;www.google.com&quot;);</span><br><span class="hljs-code">// 换成服务器IP即可</span><br><span class="hljs-code">browser = new ChromiumWebBrowser(&quot;服务器IP&quot;)</span><br></code></pre></td></tr></table></figure></li>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: about<br>date: 2020-02-23 19:20:33<br><span class="hljs-section">layout: about</span><br><span class="hljs-section">---</span><br><br>这里写关于页的正文，支持 Markdown, HTML<br></code></pre></td></tr></table></figure></li>
 </ol>
+<h3 id="CefSharp"><a href="#CefSharp" class="headerlink" title="CefSharp"></a>CefSharp</h3><p>搜到3个老旧库之后，于是把搜索时间缩短到1年之内，果然搜到了目前的选择：CefSharp。看了它的 <a target="_blank" rel="noopener" href="https://github.com/cefsharp/CefSharp/">github</a>，最近一直在更新，于是顺利确定</p>
+<h1 id="搭建工程并测试"><a href="#搭建工程并测试" class="headerlink" title="搭建工程并测试"></a>搭建工程并测试</h1><p>一开始参考这些教程：<a target="_blank" rel="noopener" href="https://www.eskysky.com/1645.html">网址1</a>、<a target="_blank" rel="noopener" href="https://www.cnblogs.com/SavionZhang/p/15169863.html">网址2</a></p>
+<p>确实能成功运行，访问一些静态网站，但是对于我的Mediasoup项目（有一些JavaScript交互的），画面却一直卡住</p>
+<p>于是继续去官网索罗，发现官方提供一个最小化配置的<a target="_blank" rel="noopener" href="https://github.com/cefsharp/CefSharp.MinimalExample">工程demo</a>，在这个基础上你可以继续搭建你要的东西，于是开心下载，直接运行并访问我的服务器地址，成功，贼开心</p>
+<blockquote>
+<p>注：</p>
+<p>如果Visual Studio里打开工程文件，里面有很多报错提示，可以不用管，直接运行是成功的。</p>
+<ul>
+<li>如果实在看不顺眼，可以将 <code>Any CPU</code> 改成 <code>x64</code> 或者 <code>x86</code> ，报错就会消失</li>
+</ul>
+</blockquote>
+<h1 id="坎坷的插曲"><a href="#坎坷的插曲" class="headerlink" title="坎坷的插曲"></a>坎坷的插曲</h1><p>成功运行之后，第一件想做的事就是让软件初始化的时候，直接访问我的服务器地址，而不是 Google，想当然以为把代码里所有涉及到 <code>www.google.com</code> 的地方直接改成我的服务器IP地址， 结果跑下来并不对</p>
+<p>于是想当然以为应该需要更深层次的修改，于是搜索关键词 <code>&quot;cefsharp网址&quot;</code> ，结果当时跳出来的都是关于“重定向”的，一开始没多细想，觉得重定向也行，判断当前访问的google网址的话，重定向到我的服务器就行。结果一顿搜，一顿试，一顿失败，整个人都丧了起来</p>
+<blockquote>
+<p>记录下对于“重定向”而言有用的网址，基本都提到要重写一个接口函数：</p>
+<ul>
+<li>个人博客类<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/little_code/article/details/105515747">网址1</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.cocoachina.com/articles/103105">网址2</a></li>
+<li><a target="_blank" rel="noopener" href="https://magpcss.org/ceforum/viewtopic.php?f=10&t=13320#p27200">网址3</a></li>
+</ul>
+</li>
+<li>官方文档类<ul>
+<li><a href="%5Bhttps://github.com/cefsharp/CefSharp/wiki/CefSharp%E4%B8%AD%E6%96%87%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3#a1%5D(https://github.com/cefsharp/CefSharp/wiki/CefSharp%E4%B8%AD%E6%96%87%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3#a1)">网址1</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/cefsharp/CefSharp/wiki/General-Usage#request-handling">网址2</a></li>
+</ul>
+</li>
+<li>可能不对口类<ul>
+<li><a target="_blank" rel="noopener" href="https://www.yesdotnet.com/archive/post/1619002218.html">网址1</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.codebye.com/chromiumwebbrowser-loadpageasync.html">网址2</a></li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>后来准备放弃了，盯着界面发呆，突然发现我界面没有按钮，但是代码是写了按钮，这才发现我运行的不是我改的程序，惊呼WC~~</p>
+<h4 id="所以教训来了"><a href="#所以教训来了" class="headerlink" title="所以教训来了~~"></a>所以教训来了~~</h4><p>Visual Studio里的解决方案可能包含多个工程文件，而你运行只会运行其中一个（粗体名字的那个），所以当你想运行另外一个文件时，就需要右键那个工程文件，点击 <code>设为启动项目</code> </p>
+<blockquote>
+<p>所以改初始化的地址，就只需要把初始化browser的网址换掉就行</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs C#">browser = new ChromiumWebBrowser(&quot;www.google.com&quot;);<br>// 换成服务器IP即可<br>browser = new ChromiumWebBrowser(&quot;服务器IP&quot;)<br></code></pre></td></tr></table></figure>
+
+
+
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>咋说呢，感觉这种很蠢的问题，真正要解决，都是在突然驻足的无意间发现的，不可复制</p>
 <p>所以累了的时候，被打击了的时候，歇歇也不是坏事，说不定发个呆就发现问题在哪儿了hhh</p>
 <h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
@@ -350,9 +393,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/12/28/2020-03-28-%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%E6%89%8B%E5%86%8C/">
+                      <a href="/2021/12/29/2021-12-29-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B5%8C%E5%A5%97%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8CSharp+WinForm+Cefsharp/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">【苦】客户端嵌套浏览器内核：C#+WinForm+Cefsharp</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
