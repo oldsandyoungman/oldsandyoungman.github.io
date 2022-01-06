@@ -1,0 +1,570 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="跟着东哥走，问候题目安否~~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【冲】labuladong的21天算法挑战Day2_前缀和">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/01/06/2022-01-06-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day2_%E5%89%8D%E7%BC%80%E5%92%8C/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="跟着东哥走，问候题目安否~~">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-01-06-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day2_%E5%89%8D%E7%BC%80%E5%92%8C/DSC09919.jpg">
+<meta property="article:published_time" content="2022-01-06T02:44:23.000Z">
+<meta property="article:modified_time" content="2022-01-06T03:03:42.855Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="labuladong">
+<meta property="article:tag" content="链表">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-01-06-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day2_%E5%89%8D%E7%BC%80%E5%92%8C/DSC09919.jpg">
+  
+  
+  <title>【冲】labuladong的21天算法挑战Day2_前缀和 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-01-06-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day2_%E5%89%8D%E7%BC%80%E5%92%8C/DSC09919.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【冲】labuladong的21天算法挑战Day2_前缀和">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-01-06 10:44" pubdate>
+        2022年1月6日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.5k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      30 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【冲】labuladong的21天算法挑战Day2_前缀和</h1>
+            
+            <div class="markdown-body">
+              <p>东哥的21天算法挑战，第2天，冲！</p>
+<h1 id="Day2：前缀和"><a href="#Day2：前缀和" class="headerlink" title="Day2：前缀和"></a>Day2：前缀和</h1><p>打卡地：<a target="_blank" rel="noopener" href="https://github.com/labuladong/challenge/issues/26">东哥 Github</a></p>
+<p>专题详解内容：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/EwAH3JDs5WFO6-LFmI3-2Q">小而美的算法技巧：前缀和数组</a></p>
+<h3 id="303-区域和检索-数组不可变"><a href="#303-区域和检索-数组不可变" class="headerlink" title="303. 区域和检索 - 数组不可变"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/range-sum-query-immutable/">303. 区域和检索 - 数组不可变</a></h3><blockquote>
+<p>给定一个整数数组  nums，求出数组从索引 i 到 j（i ≤ j）范围内元素的总和，包含 i、j 两点。</p>
+<p>实现 NumArray 类：</p>
+<ul>
+<li>NumArray(int[] nums) 使用数组 nums 初始化对象</li>
+<li>int sumRange(int i, int j) 返回数组 nums 从索引 i 到 j（i ≤ j）范围内元素的总和，包含 i、j 两点（也就是 sum(nums[i], nums[i + 1], … , nums[j])）</li>
+</ul>
+<p>提示：</p>
+<ul>
+<li>0 &lt;= nums.length &lt;= 104</li>
+<li>-105 &lt;= nums[i] &lt;= 105</li>
+<li>0 &lt;= i &lt;= j &lt; nums.length</li>
+<li>最多调用 104 次 sumRange 方法</li>
+</ul>
+</blockquote>
+<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>前缀和的基本使用，构造preSum来避免O(n^2)的复杂度</p>
+<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5><ol>
+<li>preSum的大小要+1，多了个base case：preSum[0]=0</li>
+<li>最终输出的时候，右边界要+1</li>
+</ol>
+<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NumArray</span> </span>&#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] preSum;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">NumArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = nums.length;<br>        preSum = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n+<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;<br>        <span class="hljs-comment">// preSum[0] = 0;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n; i++)&#123;<br>            sum += nums[i-<span class="hljs-number">1</span>];<br>            preSum[i] = sum;<br>        &#125;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumRange</span><span class="hljs-params">(<span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> right)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> preSum[right+<span class="hljs-number">1</span>]-preSum[left];<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Your NumArray object will be instantiated and called as such:</span><br><span class="hljs-comment"> * NumArray obj = new NumArray(nums);</span><br><span class="hljs-comment"> * int param_1 = obj.sumRange(left,right);</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="304-二维区域和检索-矩阵不可变"><a href="#304-二维区域和检索-矩阵不可变" class="headerlink" title="304. 二维区域和检索 - 矩阵不可变"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/range-sum-query-2d-immutable/">304. 二维区域和检索 - 矩阵不可变</a></h3><blockquote>
+<p>给定一个二维矩阵 matrix，以下类型的多个请求：</p>
+<ul>
+<li>计算其子矩形范围内元素的总和，该子矩阵的 左上角 为 (row1, col1) ，右下角 为 (row2, col2) 。</li>
+</ul>
+<p>实现 NumMatrix 类：</p>
+<ul>
+<li>NumMatrix(int[][] matrix) 给定整数矩阵 matrix 进行初始化</li>
+<li>int sumRegion(int row1, int col1, int row2, int col2) 返回 左上角 (row1, col1) 、右下角 (row2, col2) 所描述的子矩阵的元素 总和 。</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li>m == matrix.length</li>
+<li>n == matrix[i].length</li>
+<li>1 &lt;= m, n &lt;= 200</li>
+<li>-105 &lt;= matrix[i][j] &lt;= 105</li>
+<li>0 &lt;= row1 &lt;= row2 &lt; m</li>
+<li>0 &lt;= col1 &lt;= col2 &lt; n</li>
+<li>最多调用 104 次 sumRegion 方法</li>
+</ul>
+</blockquote>
+<h5 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h5><p>前缀和的二维版本，初始化preSum和最后输出都会稍微复杂点</p>
+<h5 id="注意点-1"><a href="#注意点-1" class="headerlink" title="注意点"></a>注意点</h5><ol>
+<li><p>同样preSum的大小要+1，多了个base case：preSum[0] [0] = 0;</p>
+</li>
+<li><p>初始化的操作：preSum[i] [j] = preSum[i-1] [j] + preSum[i] [j-1] + matrix[i-1] [j-1] - preSum[i-1] [j-1];</p>
+<blockquote>
+<p>注意：</p>
+<p>matrix[i-1] [j-1] 普遍要比 preSum[i] [j]的序号要-1</p>
+</blockquote>
+</li>
+<li><p>最后输出的操作：return preSum[row2+1] [co2+1] + preSum[row1] [col1] - preSum[row2+1] [col1]  - preSum[row1] [col2+1];</p>
+<blockquote>
+<p>注意：</p>
+<p>大的边界row2/col2是要+1的，小的row1/col1是不需要的</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NumMatrix</span> </span>&#123;<br>    <br>    <span class="hljs-keyword">int</span>[][] preSum;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">NumMatrix</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> m = matrix.length;<br>        <span class="hljs-keyword">int</span> n = matrix[<span class="hljs-number">0</span>].length;<br>        preSum = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[m+<span class="hljs-number">1</span>][n+<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=m; i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>; j&lt;=n; j++)&#123;<br>                preSum[i][j] = preSum[i-<span class="hljs-number">1</span>][j]+preSum[i][j-<span class="hljs-number">1</span>]+matrix[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>]-preSum[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>];<br>            &#125;<br>        &#125;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumRegion</span><span class="hljs-params">(<span class="hljs-keyword">int</span> row1, <span class="hljs-keyword">int</span> col1, <span class="hljs-keyword">int</span> row2, <span class="hljs-keyword">int</span> col2)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> preSum[row2+<span class="hljs-number">1</span>][col2+<span class="hljs-number">1</span>]+preSum[row1][col1]-preSum[row1][col2+<span class="hljs-number">1</span>]-preSum[row2+<span class="hljs-number">1</span>][col1];<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Your NumMatrix object will be instantiated and called as such:</span><br><span class="hljs-comment"> * NumMatrix obj = new NumMatrix(matrix);</span><br><span class="hljs-comment"> * int param_1 = obj.sumRegion(row1,col1,row2,col2);</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h3 id="560-和为-K-的子数组"><a href="#560-和为-K-的子数组" class="headerlink" title="560. 和为 K 的子数组"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/subarray-sum-equals-k/">560. 和为 K 的子数组</a></h3><blockquote>
+<p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你统计并返回该数组中和为 <code>k</code> 的连续子数组的个数。</p>
+<p><strong>提示：</strong></p>
+<ul>
+<li>1 &lt;= nums.length &lt;= 2 * 104</li>
+<li>-1000 &lt;= nums[i] &lt;= 1000</li>
+<li>-107 &lt;= k &lt;= 107</li>
+</ul>
+</blockquote>
+<h5 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h5><p>使用前缀和后，最直觉的思路还是双层循环，但可以借助HashMap来记录sum为x的个数，这样就能减掉一层循环</p>
+<p>综上，流程如下：</p>
+<ol>
+<li>初始化HashMap&lt;Integer, Integer&gt;，存一个(0,1)，这样如果左边界为0的sum就能res+1了</li>
+<li>进入循环，每次先（1）计算当前的sum；（2）然后减去目标k，得到的target，去HashMap里取值，加入到res里；（3）将当前的sum也加入到HashMap中</li>
+<li>最终返回res</li>
+</ol>
+<h5 id="注意点-2"><a href="#注意点-2" class="headerlink" title="注意点"></a>注意点</h5><ol>
+<li><p>更新当前的sum到HashMap中时，要在(2)之后进行，不然答案会多加</p>
+<blockquote>
+<p>例如：数组为{1}，k=0，显然最后的结果 res=0</p>
+<p>那么进入循环，sum=1，然后将sum加入到HashMap中（目前HashMap中有(0,1)和(1,1)），计算 target = sum - k = 1，那么查询HashMap就会res+1了</p>
+</blockquote>
+</li>
+<li><p>可以优化掉前缀和数组，因为循环每一轮得到的东西都会记录在HashMap中，所以没必要保留数组</p>
+</li>
+</ol>
+<h5 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">subarraySum</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> k)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = nums.length;<br>        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;<br>        HashMap&lt;Integer, Integer&gt; m = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();<br>        m.put(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n; i++)&#123;<br>            sum += nums[i-<span class="hljs-number">1</span>];<br>            <br>            <span class="hljs-keyword">int</span> target = sum - k;<br>            <span class="hljs-keyword">if</span>(m.containsKey(target))&#123;<br>                res += m.get(target);<br>            &#125;<br>            <br>            m.put(sum, m.getOrDefault(sum, <span class="hljs-number">0</span>)+<span class="hljs-number">1</span>);<br>            <br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> res;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>21天挑战第2天，学文章+做题+写总结，还是花了快2个小时（虽然只有3题），不过这个过程还是必要的，即使不一定能加深理解，但是至少能记录些我的一些手误点和思考积疾，坚持住~~</p>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>王村村的视频<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1c34y1z7Pu">《中年男性的独居生活01（浪漫主义无聊）》</a></p>
+<p>有一天我睡觉的时候，听到蚊子在我耳边噪响，我从被子里面伸手，扇自己耳朵，过了一会儿明显感觉到这个蚊子飞进了我的被窝，我拼命裹紧被子，在床上打滚，早上起来，床上有一小撮干了的血渍，后来我把那块带了血渍的床单裁了下来，做了个框，然后写了这么一句话，我说：我与生活搏斗过，那摊血，应该是我的，但流血的，不是我</p>
+</blockquote>
+<p>最近关注的一个up，这段很有感觉就抄下来了，希望多年以后自己的中年生活，也能在破碎中觅得诗意聊以慰藉</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E5%86%85%E5%8A%9F%E4%BF%AE%E7%82%BC/">程序缘的内功修炼</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+                    
+                      <a class="hover-with-bg" href="/tags/labuladong/">labuladong</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%93%BE%E8%A1%A8/">链表</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/01/05/2022-01-05-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day1_%E9%93%BE%E8%A1%A8%E5%9F%BA%E6%93%8D/">
+                        <span class="hidden-mobile">【冲】labuladong的21天算法挑战Day1_链表基操</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
