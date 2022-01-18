@@ -18,23 +18,25 @@
   <meta name="author" content="沙路为">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在很久很久以前，沙某人立下一个flag，想做一个鬼畜，终于拖拖拖拖拖拖拖拖拖拖到现在完成啦~~">
+    <meta name="description" content="洗了个澡，神清气爽~~">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【待】博客进阶手册">
-<meta property="og:url" content="https://oldsandyoungman.github.io/2020/03/28/2020-03-28-%E5%8D%9A%E5%AE%A2%E8%BF%9B%E9%98%B6%E6%89%8B%E5%86%8C/index.html">
+<meta property="og:title" content="【冲】labuladong的21天算法挑战Day12_图论算法基础">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/01/16/2022-01-16-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day12_%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="沙沙响">
-<meta property="og:description" content="在很久很久以前，沙某人立下一个flag，想做一个鬼畜，终于拖拖拖拖拖拖拖拖拖拖到现在完成啦~~">
+<meta property="og:description" content="洗了个澡，神清气爽~~">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-03-28T10:32:20.000Z">
-<meta property="article:modified_time" content="2021-12-30T08:49:18.610Z">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-01-16-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day12_%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/DSC00015.jpg">
+<meta property="article:published_time" content="2022-01-16T05:31:33.000Z">
+<meta property="article:modified_time" content="2022-01-17T06:14:12.962Z">
 <meta property="article:author" content="沙路为">
-<meta property="article:tag" content="Blog">
-<meta property="article:tag" content="Jekyll">
-<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="labuladong">
+<meta property="article:tag" content="图论">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-01-16-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day12_%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/DSC00015.jpg">
   
   
-  <title>【待】博客进阶手册 - 沙沙响</title>
+  <title>【冲】labuladong的21天算法挑战Day12_图论算法基础 - 沙沙响</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -175,12 +177,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/assets/images_sha/2022-01-16-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day12_%E5%9B%BE%E8%AE%BA%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/DSC00015.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="【待】博客进阶手册">
+            <span class="h2" id="subtitle" title="【冲】labuladong的21天算法挑战Day12_图论算法基础">
               
             </span>
 
@@ -190,8 +192,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-03-28 18:32" pubdate>
-        2020年3月28日 晚上
+      <time datetime="2022-01-16 13:31" pubdate>
+        2022年1月16日 下午
       </time>
     </span>
   
@@ -201,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      225 字
+      2k 字
     </span>
   
 
@@ -210,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2 分钟
+      17 分钟
     </span>
   
 
@@ -239,25 +241,49 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">【待】博客进阶手册</h1>
+            <h1 style="display: none">【冲】labuladong的21天算法挑战Day12_图论算法基础</h1>
             
             <div class="markdown-body">
-              <p>从搭建博客到现在写了两三篇博文，自己花了很多时间成本，试验出一些能在Github上正确显示的写法，但依然有很多小问题没能解决（现在的状态是勉强让我的审美强迫症安分下来，hia）</p>
-<p>之后的进阶或是小问题的解决，其实就是不断地学习基础知识了，路漫漫修远哉 ~~</p>
-<p>先列出以后要学的东西，至于实不实现，可能要到好久以后bia ~~</p>
-<blockquote>
+              <p>东哥的21天算法挑战，第12天，开始回血！</p>
+<h1 id="Day12：图论算法基础"><a href="#Day12：图论算法基础" class="headerlink" title="Day12：图论算法基础"></a>Day12：图论算法基础</h1><p>打卡地：<a target="_blank" rel="noopener" href="https://github.com/labuladong/challenge/issues/37">东哥 Github</a></p>
+<p>专题详解内容：<a href="https://labuladong.gitee.io/plugin-v3/?qno=797&target=gitee&_=1642288864543">图论算法基础</a></p>
+<h3 id="797-所有可能的路径"><a href="#797-所有可能的路径" class="headerlink" title="797. 所有可能的路径"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/all-paths-from-source-to-target/">797. 所有可能的路径</a></h3><blockquote>
+<p>给你一个有 n 个节点的 有向无环图（DAG），请你找出所有从节点 0 到节点 n-1 的路径并输出（不要求按特定顺序）</p>
+<p>二维数组的第 i 个数组中的单元都表示有向图中 i 号节点所能到达的下一些节点，空就是没有下一个结点了。</p>
+<p>译者注：有向图是有方向的，即规定了 a→b 你就不能从 b→a 。</p>
+<p>提示：</p>
 <ul>
-<li>HTML语言</li>
-<li>CSS</li>
-<li>Jekyll（<a target="_blank" rel="noopener" href="http://jekyllcn.com/docs/home/">官方文档</a>）</li>
-<li>Typora（<a target="_blank" rel="noopener" href="https://sspai.com/post/54912">大佬的博客</a>，<a target="_blank" rel="noopener" href="http://support.typora.io/">官方文档（有太多细节）</a>）</li>
+<li>n == graph.length</li>
+<li>2 &lt;= n &lt;= 15</li>
+<li>0 &lt;= graph[i][j] &lt; n</li>
+<li>graph[i][j] != i（即，不存在自环）</li>
+<li>graph[i] 中的所有元素 互不相同</li>
+<li>保证输入为 有向无环图（DAG）</li>
 </ul>
 </blockquote>
-<br>
+<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>图论的题目思路类似BFS，但本题更类似于回溯法的变形（其实只用回溯法也是可以做出来的）</p>
+<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5><ul>
+<li>如果用回溯法，因为回溯法是不记录开头节点，所以需要额外添加头结点到路径中</li>
+<li>如果用图的遍历方法，注意到达终点处的return前，要先remove（或者说只要进入当前的递归，不管从哪个地方return出去，都要path.add和path.remove数量相等）</li>
+</ul>
+<h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><ol>
+<li>纯回溯版本</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; allPathsSourceTarget(<span class="hljs-keyword">int</span>[][] graph) &#123;<br>        <span class="hljs-keyword">int</span> n = graph.length;<br>        res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        LinkedList&lt;Integer&gt; path = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();<br>        path.addLast(<span class="hljs-number">0</span>);<br>        backtrack(graph, path, n);<br>        <br>        <span class="hljs-keyword">return</span> res;<br><br><br>    &#125;<br><br>    List&lt;List&lt;Integer&gt;&gt; res;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">backtrack</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] graph, LinkedList&lt;Integer&gt; path, <span class="hljs-keyword">int</span> n)</span></span>&#123;<br>        <span class="hljs-keyword">int</span> cur = path.getLast();<br>        <span class="hljs-keyword">if</span>(cur==n-<span class="hljs-number">1</span>)&#123;<br>            res.add(<span class="hljs-keyword">new</span> LinkedList&lt;&gt;(path));<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> next : graph[cur])&#123;<br>            path.addLast(next);<br>            backtrack(graph, path, n);<br>            path.removeLast();<br>        &#125;<br><br>    &#125;<br><br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>图的遍历版本</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; allPathsSourceTarget(<span class="hljs-keyword">int</span>[][] graph) &#123;<br>        res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        LinkedList&lt;Integer&gt; path = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();<br>        backtrack(graph, <span class="hljs-number">0</span>, path);<br>        <span class="hljs-keyword">return</span> res;<br><br>    &#125;<br>    List&lt;List&lt;Integer&gt;&gt; res;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">backtrack</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] graph, <span class="hljs-keyword">int</span> src, LinkedList&lt;Integer&gt; path)</span></span>&#123;<br><br>        path.addLast(src);<br><br>        <span class="hljs-keyword">int</span> n = graph.length;<br>        <span class="hljs-keyword">if</span>(src==n-<span class="hljs-number">1</span>)&#123;<br>            res.add(<span class="hljs-keyword">new</span> ArrayList&lt;&gt;(path));<br>            path.removeLast();<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> next : graph[src])&#123;<br>            backtrack(graph, next, path);<br>        &#125;<br><br>        path.removeLast();<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
-<p>要忙一段时间学习啦，这个暂且丢下，来日再见~~</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>21天挑战第12天，看完医生，开了些药，向我的肠胃菌开战~~</p>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>确认成见 Confirmation Bias</p>
+<p>个人无论合乎事实与否，偏好支持自己的成见、猜想的倾向。人们在脑中选择性地回忆、搜集有利细节，忽略矛盾的信息，并加以片面诠释</p>
+</blockquote>
+<p>挺矛盾的，一方面我们的人性天性，会要求我们用一套逻辑自洽的理论，解释分析身边的世界，不然我们会迷茫无所适从。但当我们真正分析起来，世界的复杂性、我们可收集信息的有限性、认知的狭隘性，最终导致我们找不到一个完美的理论，而在不完美的压迫下为了躲避这种痛苦，我们就会使用了确认成见。所以真正的成长成熟，其实是要我们克服很多痛苦违背些人性</p>
 
             </div>
             <hr>
@@ -267,7 +293,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%BC%98%E9%9B%85%E4%B9%8B%E8%B7%AF/">程序员的优雅之路</a>
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E5%86%85%E5%8A%9F%E4%BF%AE%E7%82%BC/">程序缘的内功修炼</a>
                     
                   </div>
                 
@@ -275,11 +301,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Blog/">Blog</a>
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
                     
-                      <a class="hover-with-bg" href="/tags/Jekyll/">Jekyll</a>
+                      <a class="hover-with-bg" href="/tags/labuladong/">labuladong</a>
                     
-                      <a class="hover-with-bg" href="/tags/markdown/">markdown</a>
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E8%AE%BA/">图论</a>
                     
                   </div>
                 
@@ -296,9 +322,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/03/28/2020-03-28-%E5%88%9D%E9%81%87%E9%AC%BC%E7%95%9C/">
+                      <a href="/2022/01/17/2022-01-17-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day13_%E4%BA%8C%E5%88%86%E5%9B%BE%E5%88%A4%E5%AE%9A%E7%AE%97%E6%B3%95/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【记】鬼畜沙哥成长记</span>
+                        <span class="hidden-mobile">【冲】labuladong的21天算法挑战Day13_二分图判定算法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -306,8 +332,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/03/27/2020-03-27-markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/">
-                        <span class="hidden-mobile">【记】markdown基本语法总结</span>
+                      <a href="/2022/01/15/2022-01-15-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day11_%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
+                        <span class="hidden-mobile">【冲】labuladong的21天算法挑战Day11_二叉搜索树基础操作</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
