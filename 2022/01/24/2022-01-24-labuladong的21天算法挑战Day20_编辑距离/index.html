@@ -18,25 +18,25 @@
   <meta name="author" content="沙路为">
   <meta name="keywords" content="">
   
-    <meta name="description" content="南方二月雨夜，天亮了会是春天，我很年轻，所以要穿薄薄的衣服，我要早起，我要充满活力地去呼吸">
+    <meta name="description" content="我与月亮，进行了一次深夜谈话，它与我谈论太阳，而我与它谈论你~~">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【冲】labuladong的21天算法挑战Day19_动态规划设计方法">
-<meta property="og:url" content="https://oldsandyoungman.github.io/2022/01/23/2022-01-23-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day19_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="【冲】labuladong的21天算法挑战Day20_编辑距离">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/01/24/2022-01-24-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day20_%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/index.html">
 <meta property="og:site_name" content="沙沙响">
-<meta property="og:description" content="南方二月雨夜，天亮了会是春天，我很年轻，所以要穿薄薄的衣服，我要早起，我要充满活力地去呼吸">
+<meta property="og:description" content="我与月亮，进行了一次深夜谈话，它与我谈论太阳，而我与它谈论你~~">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-01-23-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day19_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/DSC05780.jpg">
-<meta property="article:published_time" content="2022-01-23T01:19:19.000Z">
-<meta property="article:modified_time" content="2022-01-24T06:54:54.062Z">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-01-24-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day20_%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/DSC00378.jpg">
+<meta property="article:published_time" content="2022-01-24T08:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-24T09:16:03.533Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="labuladong">
 <meta property="article:tag" content="动态规划">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-01-23-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day19_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/DSC05780.jpg">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-01-24-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day20_%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/DSC00378.jpg">
   
   
-  <title>【冲】labuladong的21天算法挑战Day19_动态规划设计方法 - 沙沙响</title>
+  <title>【冲】labuladong的21天算法挑战Day20_编辑距离 - 沙沙响</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -177,12 +177,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/assets/images_sha/2022-01-23-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day19_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/DSC05780.jpg') no-repeat center center;
+         style="background: url('/assets/images_sha/2022-01-24-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day20_%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/DSC00378.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="【冲】labuladong的21天算法挑战Day19_动态规划设计方法">
+            <span class="h2" id="subtitle" title="【冲】labuladong的21天算法挑战Day20_编辑距离">
               
             </span>
 
@@ -192,8 +192,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-01-23 09:19" pubdate>
-        2022年1月23日 上午
+      <time datetime="2022-01-24 16:00" pubdate>
+        2022年1月24日 下午
       </time>
     </span>
   
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.6k 字
+      1.7k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      14 分钟
+      15 分钟
     </span>
   
 
@@ -241,53 +241,56 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">【冲】labuladong的21天算法挑战Day19_动态规划设计方法</h1>
+            <h1 style="display: none">【冲】labuladong的21天算法挑战Day20_编辑距离</h1>
             
             <div class="markdown-body">
-              <p>东哥的21天算法挑战，第19天，芜湖~~</p>
-<h1 id="Day19：动态规划设计方法"><a href="#Day19：动态规划设计方法" class="headerlink" title="Day19：动态规划设计方法"></a>Day19：动态规划设计方法</h1><p>打卡地：<a target="_blank" rel="noopener" href="https://github.com/labuladong/challenge/issues/44">东哥 Github</a></p>
-<p>专题详解内容：<a target="_blank" rel="noopener" href="https://labuladong.gitee.io/plugin-v3/?qno=300">最长递增子序列</a></p>
-<h3 id="300-最长递增子序列"><a href="#300-最长递增子序列" class="headerlink" title="300. 最长递增子序列"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-increasing-subsequence/">300. 最长递增子序列</a></h3><blockquote>
-<p>给你一个整数数组 nums ，找到其中最长严格递增子序列的长度。</p>
-<p>子序列是由数组派生而来的序列，删除（或不删除）数组中的元素而不改变其余元素的顺序。例如，[3,6,2,7] 是数组 [0,3,1,6,2,2,7] 的子序列。</p>
-<p>提示：</p>
-<p>1 &lt;= nums.length &lt;= 2500<br>-104 &lt;= nums[i] &lt;= 104</p>
-<p>进阶：</p>
-<p>你可以设计时间复杂度为 O(n2) 的解决方案吗？<br>你能将算法的时间复杂度降低到 O(n log(n)) 吗?</p>
-</blockquote>
-<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>本题关键是要找到dp数组的定义：dp[i]表示以nums[i]为结尾的最长递增子序列的长度</p>
-<p>在明确dp的定义之后，就自然而然地找到递推关系了：遍历0&lt;j&lt;i，dp[i] = Math.max(dp[i], dp[j]+1)</p>
-<blockquote>
-<p>另外一个patience sorting方法，复杂度O(NlogN)，但不容易想到，具体流程如下：</p>
+              <p>东哥的21天算法挑战，第20天，乌拉~~</p>
+<h1 id="Day20：编辑距离"><a href="#Day20：编辑距离" class="headerlink" title="Day20：编辑距离"></a>Day20：编辑距离</h1><p>打卡地：<a target="_blank" rel="noopener" href="https://github.com/labuladong/challenge/issues/45">东哥 Github</a></p>
+<p>专题详解内容：<a target="_blank" rel="noopener" href="https://labuladong.gitee.io/plugin-v3/?qno=72">编辑距离</a></p>
+<h3 id="72-编辑距离"><a href="#72-编辑距离" class="headerlink" title="72. 编辑距离"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/edit-distance/">72. 编辑距离</a></h3><blockquote>
+<p>给你两个单词 word1 和 word2，请你计算出将 word1 转换成 word2 所使用的最少操作数 。</p>
+<p>你可以对一个单词进行如下三种操作：</p>
 <ul>
-<li>遍历数组里的每个数，如果各堆顶的数有比当前数大的，就放在最左边的那个；如果没有，就新建一个堆放上去</li>
-<li>遍历完成后，堆的数量就是答案</li>
+<li>插入一个字符</li>
+<li>删除一个字符</li>
+<li>替换一个字符</li>
+</ul>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>0 &lt;= word1.length, word2.length &lt;= 500</code></li>
+<li><code>word1</code> 和 <code>word2</code> 由小写英文字母组成</li>
 </ul>
 </blockquote>
-<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5><ul>
-<li><p>对于方法一，dp[i]初始化为1，因为至少本身可以作为一个递增子序列</p>
+<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>dp的定义很容易想到，即word1[0,i]变成word2[0,j]所需的最少步数</p>
+<p>比较难想通的是递推关系：</p>
+<ul>
+<li><p>如果<code>word1[i]</code>==<code>word2[j]</code>，那么<code>dp[i][j]</code>=<code>dp[i-1][j-1]</code></p>
 </li>
-<li><p>对于方法二，二分查找的框架借用找左边界，while结束后判断left是否超过右边界，超过则表明要新建堆</p>
+<li><p>如果<code>word1[i]</code>!=<code>word2[j]</code>，那么<code>dp[i][j]</code>取<code>dp[i-1][j-1]</code>，<code>dp[i][j-1]</code>，<code>dp[i-1][j]</code>中的最小值再加1</p>
 </li>
 </ul>
+<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5><p>如果进行空间压缩，可以将复杂度降低到O(min(m, n))。注意如果word2的长度为0时，空间压缩会报错</p>
+<blockquote>
+<p>例如，word1=”b”，word2=””</p>
+</blockquote>
 <h5 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h5><ol>
-<li>方法一，动态规划</li>
+<li>不压缩空间复杂度</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">lengthOfLIS</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = nums.length;<br>        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];<br>        Arrays.fill(dp, <span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;n; i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>; j&lt;i; j++)&#123;<br>                <span class="hljs-keyword">if</span>(nums[j]&lt;nums[i])&#123;<br>                    dp[i] = Math.max(dp[i], dp[j]+<span class="hljs-number">1</span>);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">int</span> res = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)&#123;<br>            res = Math.max(res, dp[i]);<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minDistance</span><span class="hljs-params">(String word1, String word2)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n1 = word1.length();<br>        <span class="hljs-keyword">int</span> n2 = word2.length();<br>        <span class="hljs-keyword">int</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n1+<span class="hljs-number">1</span>][n2+<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n1; i++)&#123;<br>            dp[i][<span class="hljs-number">0</span>] = i;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n2; i++)&#123;<br>            dp[<span class="hljs-number">0</span>][i] = i;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n1; i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>; j&lt;=n2; j++)&#123;<br>                <span class="hljs-keyword">if</span>(word1.charAt(i-<span class="hljs-number">1</span>)==word2.charAt(j-<span class="hljs-number">1</span>))&#123;<br>                    dp[i][j] = dp[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>];<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    dp[i][j] = Math.min(Math.min(dp[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>, dp[i-<span class="hljs-number">1</span>][j]+<span class="hljs-number">1</span>), dp[i][j-<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>);<br>                &#125;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> dp[n1][n2];<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <ol start="2">
-<li>方法二，patience sorting</li>
+<li>压缩空间复杂度</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">lengthOfLIS</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = nums.length;<br>        <span class="hljs-keyword">int</span> piles = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span>[] top = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> num : nums)&#123;<br>            <br>            <span class="hljs-keyword">int</span> left = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">int</span> right = piles-<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">while</span>(left&lt;=right)&#123;<br>                <span class="hljs-keyword">int</span> mid = left + (right-left)/<span class="hljs-number">2</span>;<br>                <span class="hljs-keyword">if</span>(top[mid]&lt;num)&#123;<br>                    left = mid + <span class="hljs-number">1</span>;<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    right = mid - <span class="hljs-number">1</span>;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(left&gt;=piles)&#123;<br>                piles++;<br>            &#125;<br>            top[left] = num;<br><br>        &#125;<br><br>        <span class="hljs-keyword">return</span> piles;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minDistance</span><span class="hljs-params">(String word1, String word2)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n1 = word1.length();<br>        <span class="hljs-keyword">int</span> n2 = word2.length();<br>        <span class="hljs-keyword">if</span>(n1&gt;n2)&#123;<br>            <span class="hljs-keyword">int</span> tmp = n1;<br>            n1 = n2;<br>            n2 = tmp;<br>            String ss = word1;<br>            word1 = word2;<br>            word2 = ss;<br>        &#125;<br>        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n2+<span class="hljs-number">1</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n2; i++)&#123;<br>            dp[i] = i;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n1; i++)&#123;<br>            <span class="hljs-keyword">int</span> top_left = i-<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">int</span> left = i;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>; j&lt;=n2; j++)&#123;<br>                <span class="hljs-keyword">int</span> tmp = dp[j];<br>                <span class="hljs-keyword">if</span>(word1.charAt(i-<span class="hljs-number">1</span>)==word2.charAt(j-<span class="hljs-number">1</span>))&#123;<br>                    dp[j] = top_left;<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    dp[j] = Math.min(Math.min(top_left+<span class="hljs-number">1</span>, dp[j]+<span class="hljs-number">1</span>), left+<span class="hljs-number">1</span>);<br>                &#125;<br>                top_left = tmp;<br>                left = dp[j];<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> dp[n2];<br><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>21天挑战第19天，做完微软的笔试了，难度感觉海星，虽然有一题复杂度肯定爆表，但好歹算是都做出来了，毕竟一部分case跑通也是有分的。先告一段落，休整下继续刷题</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>21天挑战第20天，快接近尾声了，希望能圆满结束</p>
 <h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://b23.tv/5bjd3R3">【b站网友也太有才华了，我被整破防了！-哔哩哔哩】</a></p>
-<p>南方二月雨夜，天亮了会是春天，我很年轻，所以要穿薄薄的衣服，我要早起，我要充满活力地去呼吸</p>
+<p>S.L.Gray</p>
+<p>我与月亮，进行了一次深夜谈话，它与我谈论太阳，而我与它谈论你</p>
 </blockquote>
-<p>很有张力，感觉自己现在死气沉沉的，活得很累很麻木，紧赶慢赶地学着工作需要的东西，浑浑噩噩。可能自己要做点自己喜欢的事情，改变一下色调</p>
+<p>很生动，很含蓄，很静美</p>
 
             </div>
             <hr>
@@ -326,18 +329,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/01/24/2022-01-24-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day20_%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">【冲】labuladong的21天算法挑战Day20_编辑距离</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/01/22/2022-01-22-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day18_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86/">
-                        <span class="hidden-mobile">【冲】labuladong的21天算法挑战Day18_动态规划核心原理</span>
+                      <a href="/2022/01/23/2022-01-23-labuladong%E7%9A%8421%E5%A4%A9%E7%AE%97%E6%B3%95%E6%8C%91%E6%88%98Day19_%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/">
+                        <span class="hidden-mobile">【冲】labuladong的21天算法挑战Day19_动态规划设计方法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
