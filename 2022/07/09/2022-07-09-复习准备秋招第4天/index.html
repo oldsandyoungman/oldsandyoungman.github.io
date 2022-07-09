@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-09-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC4%E5%A4%A9/DSC00438.jpg">
 <meta property="article:published_time" content="2022-07-09T12:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-09T12:21:27.628Z">
+<meta property="article:modified_time" content="2022-07-09T15:58:17.290Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
@@ -201,7 +201,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.8k 字
+      2.3k 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15 分钟
+      19 分钟
     </span>
   
 
@@ -265,7 +265,8 @@
 
 
 
-<h4 id="P150"><a href="#P150" class="headerlink" title="P150"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=150">P150</a></h4><p>二维数组只指定行数，如果直接调用某个元素，会报空指针错误（因为内存没有分配具体的地址，找不到对应的地方）</p>
+<h4 id="P150"><a href="#P150" class="headerlink" title="P150"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=150">P150</a></h4><p>二维数组只指定行数，如果直接调用某个元素<code>arr[0][0]</code>，会报空指针错误（因为内存没有分配具体的地址，找不到对应的地方）</p>
+<p>打印 <code>arr[0]</code> 输出是null</p>
 <h4 id="P152"><a href="#P152" class="headerlink" title="P152"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=152">P152</a></h4><p>打印数组的地址值，格式有规律</p>
 <blockquote>
 <p>例1：[[ I @15DB9742</p>
@@ -310,6 +311,11 @@
 <li>空间复杂度：用了多少辅助内存</li>
 <li>稳定性：关键字值相等，是否保留原来的先后次序（应用：销量高到低排序后，再价格低到高排序，如果价格相等，希望原来的销量排序不要变化，后面会再讲）</li>
 </ul>
+<p>排序的分类：</p>
+<ul>
+<li>内部排序（内存里排序即可）</li>
+<li>外部排序（需要额外借助磁盘）</li>
+</ul>
 <p>十大排序算法：</p>
 <ul>
 <li>选择排序<ul>
@@ -341,7 +347,46 @@
 
 <h4 id="P170"><a href="#P170" class="headerlink" title="P170"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=170">P170</a></h4><p>排序算法对比</p>
 <p><img src="/2022/07/09/2022-07-09-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC4%E5%A4%A9/%E4%B8%8D%E5%90%8C%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94.png" srcset="/img/loading.gif" lazyload alt="不同排序算法对比"></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第三天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P145开头，晚上9点半就发困了，一天比一天看得少，不得劲</p>
+<p><img src="/2022/07/09/2022-07-09-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC4%E5%A4%A9/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E7%9A%84%E9%80%89%E6%8B%A9.png" srcset="/img/loading.gif" lazyload alt="排序算法的选择"></p>
+<h4 id="P171"><a href="#P171" class="headerlink" title="P171"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=171">P171</a></h4><p>数组的常用工具类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-keyword">boolean</span> r1 = Arrays.equals(a1, a2);<br>String r2 = Arrays.toString(a1);<br>Arrays.fill(a1, <span class="hljs-number">10</span>);<br>Arrays.sort(a1);<br><span class="hljs-keyword">int</span> index = Arrays.binarySearch(a1, target); <span class="hljs-comment">//(找不到返回一个负数)</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h4 id="P177"><a href="#P177" class="headerlink" title="P177"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=177">P177</a></h4><p>关于面向对象，大象塞冰箱的伪代码非常形象，可以再看看</p>
+<h4 id="P183"><a href="#P183" class="headerlink" title="P183"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=183">P183</a></h4><p>JVM的全貌</p>
+<p><img src="/2022/07/09/2022-07-09-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC4%E5%A4%A9/JVM%E7%BB%93%E6%9E%84.png" srcset="/img/loading.gif" lazyload alt="JVM结构"></p>
+<h4 id="P184"><a href="#P184" class="headerlink" title="P184"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=184">P184</a></h4><p>属性/成员变量 和 局部变量 的区别：</p>
+<ul>
+<li>位置：<ul>
+<li>属性：类的大括号内定义</li>
+<li>局部变量：方法内，方法的形参，代码块，构造器，构造器的形参</li>
+</ul>
+</li>
+<li>权限修饰符<ul>
+<li>属性：可以用 public、protected、private 等权限修饰符</li>
+<li>局部变量：不可以用权限修饰符</li>
+</ul>
+</li>
+<li>默认初始值<ul>
+<li>属性：有默认初始值</li>
+<li>局部变量：没有默认初始化值，因此用前一定要赋值</li>
+</ul>
+</li>
+<li>内存中加载位置：<ul>
+<li>属性：堆空间（static除外，在方法区）</li>
+<li>局部变量：栈空间</li>
+</ul>
+</li>
+</ul>
+<p>​    </p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第四天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P187开头，早点睡了，明天早点起弄弄</p>
 <h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
 <p>抬头望窗外，满目清凉</p>
 </blockquote>
