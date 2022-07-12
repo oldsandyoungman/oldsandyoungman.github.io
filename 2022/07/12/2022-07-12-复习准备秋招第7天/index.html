@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-12-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC7%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103317.jpg">
 <meta property="article:published_time" content="2022-07-12T12:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-12T03:01:33.473Z">
+<meta property="article:modified_time" content="2022-07-12T14:42:32.552Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
@@ -201,7 +201,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.9k 字
+      4k 字
     </span>
   
 
@@ -210,7 +210,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      17 分钟
+      34 分钟
     </span>
   
 
@@ -288,6 +288,87 @@
 
 
 <h4 id="P244"><a href="#P244" class="headerlink" title="P244"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=244">P244</a></h4><p>eclipse的快捷键，可以看看</p>
+<h4 id="P260"><a href="#P260" class="headerlink" title="P260"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=260">P260</a></h4><p>继承的好处：</p>
+<ul>
+<li>提高复用，减少冗余</li>
+<li>便于功能扩展（直接加在父类里）</li>
+<li>为多态的使用提供前提</li>
+</ul>
+<h4 id="P261"><a href="#P261" class="headerlink" title="P261"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=261">P261</a></h4><p>父类的私有属性/方法，子类也能继承到，只是不能直接调用而已</p>
+<h4 id="P262"><a href="#P262" class="headerlink" title="P262"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=262">P262</a></h4><ul>
+<li>Java中类只能单继承</li>
+<li>直接继承的叫直接父类，间接继承的叫间接父类</li>
+</ul>
+<h4 id="P273"><a href="#P273" class="headerlink" title="P273"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=273">P273</a></h4><p>重写：</p>
+<ul>
+<li>方法的方法名和形参列表相同</li>
+<li>权限修饰符：子类比父类更宽松</li>
+<li>特别的，private修饰的方法不能被重写（你写了也不报错，编译器不会识别，并且运行的也是父类的方法）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;Person eat&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">walk</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;Person walk&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">person_test</span><span class="hljs-params">()</span></span>&#123;<br>        walk();<br>    &#125;<br><br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Person</span></span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;Student eat&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">walk</span><span class="hljs-params">()</span></span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;Student walk&quot;</span>);<br>    &#125;<br><br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test_person_student</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Student s = <span class="hljs-keyword">new</span> Student();<br><br>        <span class="hljs-comment">// 正常的覆盖：显示&quot;Student eat&quot;</span><br>        s.eat();<br>        <span class="hljs-comment">// 没有覆盖：显示&quot;Person walk&quot;</span><br>        s.person_test();<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>返回值类型：</p>
+<ul>
+<li>如果父类是void，子类重写也只能是void</li>
+<li>如果父类是A类型，子类可以是A或者A的子类</li>
+<li>如果父类是基本数据类型，子类也得是相同的基本数据类型</li>
+</ul>
+</li>
+<li><p>异常：子类的异常也要是父类异常的平级或子类</p>
+</li>
+<li><p>关于static：同名同参数的方法，要么都加static，要么都不加（加了static，已经不叫重写了，重写特指非static）</p>
+</li>
+</ul>
+<h4 id="P276"><a href="#P276" class="headerlink" title="P276"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=276">P276</a></h4><p>子父类，有同名属性，是共存而非覆盖，用super+this（可省略）来区分</p>
+<ul>
+<li>this过程：现在本类中找，优先子类，找不到再去父类找，再找不到再上移找</li>
+<li>super过程：跳过本类，直接去父类找，找不到再去更上层的父类找</li>
+</ul>
+<p><strong>存疑：</strong></p>
+<p>多级父类的爷变量咋调用，测试了不能super.super</p>
+<h4 id="P277"><a href="#P277" class="headerlink" title="P277"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=277">P277</a></h4><p>super调用构造器，只能放在首行</p>
+<ul>
+<li>因此和this()调用构造器冲突，只能2选1</li>
+</ul>
+<p>如果构造器既没有super又没有this，其实默认是调用了父类的空参构造器super()</p>
+<ul>
+<li>因此有时候报错是因为父类子类没有同时都有空参构造器</li>
+</ul>
+<p>子类构造器（非object都算），多个构造器中至少有一个是用super的</p>
+<h4 id="P278"><a href="#P278" class="headerlink" title="P278"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=278">P278</a></h4><p>之所以子类能继承父类的各种结构，是因为子类的任意一个构造器，都会直接间接用到super构造器（如果this()构造，那么this指向的构造器也会直接间接指向super），因此这样一直循环到调用到object的构造器，因为就会加载所有的父类结构，因此所有父类的所有属性，都会被继承在堆中分配了空间</p>
+<h4 id="P280"><a href="#P280" class="headerlink" title="P280"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=280">P280</a></h4><p>对象的多态性：父类的引用，指向子类的对象</p>
+<p>多态的使用：虚拟方法的调用（虚拟方法只父类方法，因为运行时都是执行子类方法，所以谓之虚）</p>
+<ul>
+<li>编译期，只能调用父类中声明的方法（因此如果只有子类有的方法，是无法通过父类引用调用的）</li>
+<li>运行期，实际执行的是子类重写父类的方法</li>
+</ul>
+<p>（编译看左，执行看右）</p>
+<p>多态性的使用前提：</p>
+<ul>
+<li>类的继承关系</li>
+<li>方法的重写</li>
+</ul>
+<h4 id="P281"><a href="#P281" class="headerlink" title="P281"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=281">P281</a></h4><p>多态后面两个例子可以再领悟，确实重载+多态能节省很多代码量</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 数据库例子</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">connectSql</span><span class="hljs-params">(Connection con)</span></span>&#123;<br>  con.method1();<br>  con.method2();<br>  con.method3();<br>&#125;<br><br><span class="hljs-comment">//真正在使用的时候，con传的都是子类，比如mysqlConnection, oracleConnection，然后因为重载+多态，同样的上述代码，能在不同的数据上获得数据，所以很方便</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P282"><a href="#P282" class="headerlink" title="P282"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=282">P282</a></h4><p>多态不适用于属性：</p>
+<ul>
+<li>如果是父类子类都有同名的属性，不管编译还是运行，都是父类的属性</li>
+</ul>
+<p>（编译运行，都看左边）</p>
+<h4 id="P283"><a href="#P283" class="headerlink" title="P283"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=283">P283</a></h4><p>重载和重写的区别：</p>
+<ul>
+<li>重载本质上是不同的方法，编译期已经确定了它们各自不同的地址，方法调用前已经知道代码要调用哪个方法，称为”早绑定“或“静态绑定”<ul>
+<li>子类也可以重载父类的方法</li>
+</ul>
+</li>
+<li>重写，或者进一步讲是多态这个层面，只有等到调用那一刻，解释运行器才知道调用哪个方法，称为“晚绑定”或”动态绑定“</li>
+</ul>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
