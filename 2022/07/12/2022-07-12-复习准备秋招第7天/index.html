@@ -27,9 +27,10 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-12-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC7%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103317.jpg">
 <meta property="article:published_time" content="2022-07-12T12:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-12T14:42:32.552Z">
+<meta property="article:modified_time" content="2022-07-13T02:13:21.944Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Java">
+<meta property="article:tag" content="Leetcode">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-12-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC7%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103317.jpg">
   
@@ -201,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4k 字
+      4.9k 字
     </span>
   
 
@@ -210,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      34 分钟
+      41 分钟
     </span>
   
 
@@ -349,8 +350,8 @@
 <li>类的继承关系</li>
 <li>方法的重写</li>
 </ul>
-<h4 id="P281"><a href="#P281" class="headerlink" title="P281"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=281">P281</a></h4><p>多态后面两个例子可以再领悟，确实重载+多态能节省很多代码量</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 数据库例子</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">connectSql</span><span class="hljs-params">(Connection con)</span></span>&#123;<br>  con.method1();<br>  con.method2();<br>  con.method3();<br>&#125;<br><br><span class="hljs-comment">//真正在使用的时候，con传的都是子类，比如mysqlConnection, oracleConnection，然后因为重载+多态，同样的上述代码，能在不同的数据上获得数据，所以很方便</span><br></code></pre></td></tr></table></figure>
+<h4 id="P281"><a href="#P281" class="headerlink" title="P281"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=281">P281</a></h4><p>多态后面两个例子可以再领悟，确实重写+多态能节省很多代码量</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 数据库例子</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">connectSql</span><span class="hljs-params">(Connection con)</span></span>&#123;<br>  con.method1();<br>  con.method2();<br>  con.method3();<br>&#125;<br><br><span class="hljs-comment">//真正在使用的时候，con传的都是子类，比如mysqlConnection, oracleConnection，然后因为重写+多态，同样的上述代码，能在不同的数据上获得数据，所以很方便</span><br></code></pre></td></tr></table></figure>
 
 
 
@@ -372,22 +373,18 @@
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
-<h4 id="543-Diameter-of-Binary-Tree"><a href="#543-Diameter-of-Binary-Tree" class="headerlink" title="543. Diameter of Binary Tree"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/diameter-of-binary-tree/">543. Diameter of Binary Tree</a></h4><p>最大深度来计算最长路径，不需要-2</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * public class TreeNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     TreeNode left;</span><br><span class="hljs-comment"> *     TreeNode right;</span><br><span class="hljs-comment"> *     TreeNode() &#123;&#125;</span><br><span class="hljs-comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span><br><span class="hljs-comment"> *         this.val = val;</span><br><span class="hljs-comment"> *         this.left = left;</span><br><span class="hljs-comment"> *         this.right = right;</span><br><span class="hljs-comment"> *     &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">diameterOfBinaryTree</span><span class="hljs-params">(TreeNode root)</span> </span>&#123;<br>        maxDia = <span class="hljs-number">0</span>;<br>        maxDep(root);<br>        <span class="hljs-keyword">return</span> maxDia;<br>    &#125;<br>    <br>    <span class="hljs-keyword">int</span> maxDia;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxDep</span><span class="hljs-params">(TreeNode root)</span></span>&#123;<br>        <span class="hljs-keyword">if</span>(root==<span class="hljs-keyword">null</span>)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>        <br>        <span class="hljs-keyword">int</span> maxLeft = maxDep(root.left);<br>        <span class="hljs-keyword">int</span> maxRight = maxDep(root.right);<br>        <br>        maxDia = Math.max(maxDia, maxLeft+maxRight);<br>        <br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span> + Math.max(maxLeft, maxRight);<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="46-Permutations"><a href="#46-Permutations" class="headerlink" title="46. Permutations"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/permutations/">46. Permutations</a></h4><p>不重复元素的全排列，记录哪个元素被用过，建一个boolean数组，而不是用list的contains函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; permute(<span class="hljs-keyword">int</span>[] nums) &#123;<br>        res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        List&lt;Integer&gt; path = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <span class="hljs-keyword">boolean</span>[] used = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[nums.length];<br>        backtrack(path, nums, used);<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>    <br>    List&lt;List&lt;Integer&gt;&gt; res;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">backtrack</span><span class="hljs-params">(List&lt;Integer&gt; path, <span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">boolean</span>[] used)</span></span>&#123;<br>        <span class="hljs-keyword">if</span>(path.size()==nums.length)&#123;<br>            res.add(<span class="hljs-keyword">new</span> ArrayList&lt;&gt;(path));<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;nums.length; i++)&#123;<br>            <span class="hljs-keyword">if</span>(!used[i])&#123;<br>                path.add(nums[i]);<br>                used[i] = <span class="hljs-keyword">true</span>;<br>                backtrack(path, nums, used);<br>                path.remove(path.size()-<span class="hljs-number">1</span>);<br>                used[i] = <span class="hljs-keyword">false</span>;<br>            &#125;<br>        &#125;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
 
 
-<h4 id="322-Coin-Change"><a href="#322-Coin-Change" class="headerlink" title="322. Coin Change"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/coin-change/">322. Coin Change</a></h4><ul>
-<li><p>不需要排序</p>
-</li>
-<li><p>最开始记得赋初值，最大值</p>
-</li>
-<li><p>最后的结果要判断是不是初值，是的话变成-1</p>
-</li>
+<h4 id="51-N-Queens"><a href="#51-N-Queens" class="headerlink" title="51. N-Queens"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/n-queens/">51. N-Queens</a></h4><ul>
+<li>for循环里，两个int定义只要写一个int就行</li>
+<li>for循环里，条件判断用&amp;&amp;</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">coinChange</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] coins, <span class="hljs-keyword">int</span> amount)</span> </span>&#123;<br>        <span class="hljs-comment">// Arrays.sort(coins);</span><br>        <br>        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[amount+<span class="hljs-number">1</span>];<br>        <br>        Arrays.fill(dp, amount+<span class="hljs-number">1</span>);<br>        dp[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=amount; i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> coin : coins)&#123;<br>                <span class="hljs-keyword">if</span>(i&gt;=coin)&#123;<br>                    dp[i] = Math.min(dp[i], dp[i-coin] + <span class="hljs-number">1</span>);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> dp[amount]==amount+<span class="hljs-number">1</span>?-<span class="hljs-number">1</span>:dp[amount];<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;String&gt;&gt; solveNQueens(<span class="hljs-keyword">int</span> n) &#123;<br>        res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        List&lt;String&gt; path = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        backtrack(path, <span class="hljs-number">0</span>, n);<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>    <br>    List&lt;List&lt;String&gt;&gt; res;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">backtrack</span><span class="hljs-params">(List&lt;String&gt; path, <span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> n)</span></span>&#123;<br>        <span class="hljs-keyword">if</span>(row==n)&#123;<br>            res.add(<span class="hljs-keyword">new</span> ArrayList&lt;&gt;(path));<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)&#123;<br>            <span class="hljs-keyword">if</span>(isValid(path, row, i, n))&#123;<br>                StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();<br>                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>; j&lt;i; j++)&#123;<br>                    sb.append(<span class="hljs-string">&#x27;.&#x27;</span>);<br>                &#125;<br>                sb.append(<span class="hljs-string">&#x27;Q&#x27;</span>);<br>                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=i+<span class="hljs-number">1</span>; j&lt;n; j++)&#123;<br>                    sb.append(<span class="hljs-string">&#x27;.&#x27;</span>);<br>                &#125;<br>                <br>                path.add(sb.toString());<br>                <br>                backtrack(path, row+<span class="hljs-number">1</span>, n);<br>                <br>                path.remove(path.size()-<span class="hljs-number">1</span>);<br>                <br>            &#125;<br>        &#125;<br>        <br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isValid</span><span class="hljs-params">(List&lt;String&gt; path, <span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col, <span class="hljs-keyword">int</span> n)</span></span>&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;row; i++)&#123;<br>            <span class="hljs-keyword">if</span>(path.get(i).charAt(col)==<span class="hljs-string">&#x27;Q&#x27;</span>)&#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>            &#125;<br>        &#125;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> r = row - <span class="hljs-number">1</span>, c = col - <span class="hljs-number">1</span>; r&gt;=<span class="hljs-number">0</span> &amp;&amp; c&gt;=<span class="hljs-number">0</span>; r--, c--)&#123;<br>            <span class="hljs-keyword">if</span>(path.get(r).charAt(c)==<span class="hljs-string">&#x27;Q&#x27;</span>)&#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>            &#125;<br>        &#125;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> r = row - <span class="hljs-number">1</span>, c = col + <span class="hljs-number">1</span>; r&gt;=<span class="hljs-number">0</span> &amp;&amp; c&lt;n; r--, c++)&#123;<br>            <span class="hljs-keyword">if</span>(path.get(r).charAt(c)==<span class="hljs-string">&#x27;Q&#x27;</span>)&#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>            &#125;<br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>        <br>    &#125;<br>    <br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
@@ -401,25 +398,13 @@
 
 
 
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第七天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P233开头，刷题如下：</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第七天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P284开头，刷题如下：</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-depth-of-binary-tree/">104. 二叉树的最大深度</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-preorder-traversal/">144. 二叉树的前序遍历</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/diameter-of-binary-tree/">543. 二叉树的直径</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/er-cha-shu-de-shen-du-lcof/">剑指 Offer 55 - I. 二叉树的深度</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/coin-change/">322. 零钱兑换</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/fibonacci-number/">509. 斐波那契数</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/gaM7Ch/">剑指 Offer II 103. 最少的硬币数目</a></p>
-</li>
-<li></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/permutations/">46. 全排列</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/n-queens/">51. N 皇后</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/VvJkup/">剑指 Offer II 083. 没有重复元素集合的全排列</a></li>
 </ul>
-<p>早点睡了，明天早点起弄弄</p>
+<p>中途浪了一段时间，不然进度可以再往前推一推，感觉必须在7.20之前解决掉那个视频系列，好有太多东西要弄</p>
 <h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
 <p>我是烈火，也是枯枝，一部分的我消耗着另一部分</p>
 </blockquote>
@@ -442,6 +427,8 @@
                     
                       <a class="hover-with-bg" href="/tags/Java/">Java</a>
                     
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
                   </div>
                 
               </div>
@@ -456,6 +443,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/07/13/2022-07-13-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC8%E5%A4%A9/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">【归】复习准备秋招第8天</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
