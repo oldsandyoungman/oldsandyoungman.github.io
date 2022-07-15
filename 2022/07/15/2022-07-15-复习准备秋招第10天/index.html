@@ -1,0 +1,683 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="太在意别人的视线和评价，才会不断寻求别人的认可。对认可的追求，才扼杀了自由">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【归】复习准备秋招第8天">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/07/15/2022-07-15-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC10%E5%A4%A9/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="太在意别人的视线和评价，才会不断寻求别人的认可。对认可的追求，才扼杀了自由">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-15-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC10%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103212.jpg">
+<meta property="article:published_time" content="2022-07-15T12:40:40.000Z">
+<meta property="article:modified_time" content="2022-07-15T15:44:02.584Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Leetcode">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-15-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC10%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103212.jpg">
+  
+  
+  <title>【归】复习准备秋招第8天 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-07-15-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC10%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103212.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【归】复习准备秋招第8天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-15 20:40" pubdate>
+        2022年7月15日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.2k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      44 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【归】复习准备秋招第8天</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第10天，给爷学</p>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Java研发"><a href="#Java研发" class="headerlink" title="Java研发"></a>Java研发</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a></p>
+</blockquote>
+<h4 id="P367"><a href="#P367" class="headerlink" title="P367"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=367">P367</a></h4><p>abstract：只能修饰类和方法，不能修饰属性，构造器</p>
+<ul>
+<li>不能修饰final，因为final的类不允许继承，final的方法不允许重写</li>
+<li>不能修饰static（static修饰的方法不能被重写；static能被类名直接调用，但abstract还只是声明没内容调不了）</li>
+<li>不能修饰private，因为private对子类不可见，因此子类调不了abstract方法</li>
+</ul>
+<h4 id="P368"><a href="#P368" class="headerlink" title="P368"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=368">P368</a></h4><p>抽象类和接口的异同：</p>
+<p>相同点：都不能实例化，都可以包含抽象方法</p>
+<p>不同点：</p>
+<ul>
+<li><p>定义，结构：</p>
+<ul>
+<li><p>抽象类</p>
+<ul>
+<li>有构造器</li>
+</ul>
+</li>
+<li><p>接口</p>
+<ul>
+<li>没有构造器</li>
+<li>JDK7及之前，只能有全局常亮和抽象方法，JDK8可以出现静态方法和默认方法，JDK9可以出现私有方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>继承性：</p>
+<ul>
+<li>抽象类：只能单继承</li>
+<li>接口：多继承</li>
+<li>抽象类和接口：多实现</li>
+</ul>
+</li>
+</ul>
+<h4 id="P369"><a href="#P369" class="headerlink" title="P369"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=369">P369</a></h4><p>不管是成员内部类，还是局部内部类，都会生成对应的字节码文件</p>
+<blockquote>
+<p>成员内部类：Person$Dog.class</p>
+<p>局部内部类：Person$1AA.class。（中间的数字是因为，局部内部类可以出现好多次，可能重名）</p>
+</blockquote>
+<h4 id="P370"><a href="#P370" class="headerlink" title="P370"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=370">P370</a></h4><p>局部内部类如果要用外面的属性，外面的属性只能是final类型（毕竟是两个字节码文件，理论上是不该有联系，但是硬要用也行，那就只能用它的副本，不能改）</p>
+<ul>
+<li>JDK7及之前，要显示声明 final</li>
+<li>JDK8及之后，可以省略不写</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span></span>&#123;<br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> num = <span class="hljs-number">10</span>;<br>    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AA</span></span>&#123;<br>      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span></span>&#123;<br>        num = <span class="hljs-number">20</span>; <span class="hljs-comment">// 会报错</span><br>        System.out.println(num); <br>      &#125;  <br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意，Android开发里，onCreate函数里，设定按钮监听，就是这种东西</strong></p>
+<h4 id="P371"><a href="#P371" class="headerlink" title="P371"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=371">P371</a></h4><p>Error：Java虚拟机无法解决的问题</p>
+<ul>
+<li>JVM系统内部错误</li>
+<li>系统资源耗尽：栈溢出 java.lang.StackOverFlowError，堆溢出 java.lang.OutOfMemoryError</li>
+</ul>
+<p>Throwable</p>
+<ul>
+<li>Error</li>
+<li>Exception<ul>
+<li>编译时异常(checked)<ul>
+<li>IOException<ul>
+<li>FileNotFoundException</li>
+</ul>
+</li>
+<li>ClassNotFoundException</li>
+</ul>
+</li>
+<li>运行时异常(unchecked)：RuntimeException<ul>
+<li>NullPointerException：null.属性</li>
+<li>ArrayIndexOutOfBoundsException：下标超界</li>
+<li>ClassCastException：Object o = new Date(); String s = (String)o</li>
+<li>NumberFormatException：Integer.parseInt(“abc”)</li>
+<li>InputMismatchException：scanner.nextInt()，结果输入一个字符</li>
+<li>ArithmeticException：10/0</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="P374"><a href="#P374" class="headerlink" title="P374"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=374">P374</a></h4><p>异常处理：抓抛模型</p>
+<ul>
+<li><p>抛</p>
+<ul>
+<li>一旦出现异常，会在异常代码处生成一个对应异常类的对象，并将对象抛出</li>
+<li>抛出后，其它代码就不再执行</li>
+</ul>
+</li>
+<li><p>抓：有两种处理方式</p>
+<ul>
+<li>Try - catch - finally<ul>
+<li>catch可以有多个</li>
+<li>finally不一定要有</li>
+<li>第一个catch命中，直接跳出</li>
+<li>父类exception放在上面，会报子类exception无法到达</li>
+<li>两个常用函数：e.getMessage() 和 e.printStackTrace()，前面只是报错信息，后面会具体到哪行报错</li>
+<li>try - catch 只是把编译报错延迟到运行时（即还是可能会报错），<strong>编译异常变成运行异常，运行异常就不处理，因为反正都是要报一堆信息的</strong></li>
+<li>finally必执行，即使try或catch中有return，即使catch还有异常</li>
+<li>finally中如果有return，优先级高于try或catch里的return</li>
+<li>finally的实际应用在于，对于数据库连接，IO流，socket等，JVM无法自动回收，就得放到finally里</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">readFile</span><span class="hljs-params">()</span></span>&#123;<br>  <br>  FileInputStream fi = <span class="hljs-keyword">null</span>;<br>        <br>        <span class="hljs-keyword">try</span>&#123;<br>            File file = <span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;hello.txt&quot;</span>);<br>            fi = <span class="hljs-keyword">new</span> FileInputStream(file);<br><br>            <span class="hljs-keyword">int</span> data = fi.read();<br><br>            <span class="hljs-keyword">while</span>(data!=-<span class="hljs-number">1</span>)&#123;<br><br>                System.out.print((<span class="hljs-keyword">char</span>)data);<br>                data = fi.read();<br><br>            &#125;<br>            <br>        &#125; <span class="hljs-keyword">catch</span> (FileNotFoundException e) &#123;<br>            e.printStackTrace();<br>        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>            e.printStackTrace();<br>        &#125;<span class="hljs-keyword">finally</span> &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                <span class="hljs-keyword">if</span>(fi!=<span class="hljs-keyword">null</span>)&#123;<br>                    fi.close();<br>                &#125;<br>            &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br><br>        &#125;<br>  <br>  <br>  <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>throws<ul>
+<li>只是把异常抛给调用者，没有处理异常</li>
+<li>异常一旦抓住，后面就不再执行，没有finally类似的东西</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="P379"><a href="#P379" class="headerlink" title="P379"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=379">P379</a></h4><p>异常的继承关系：子类的异常，也得是父类异常的儿子</p>
+<ul>
+<li>理解：比如父类引用，写的代码处理的都是父亲异常，即使你多态导致父类引用指向的是子类，那么子类也是更小的异常，原来的代码框架也能hold住</li>
+</ul>
+<h4 id="P380"><a href="#P380" class="headerlink" title="P380"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=380">P380</a></h4><p>Try-catch 和 throws 的选择问题</p>
+<ul>
+<li>如果父类没有throws，则子类更不能throws，因此只能try-catch</li>
+<li>如果a方法中调用了别的b，c方法，建议b，c 往上throws，a统一try-catch处理（因为一旦出错，其实即使b，c中try-catch处理了，得出的数据也没啥用，不如统一到a中处理）</li>
+</ul>
+<h4 id="P381"><a href="#P381" class="headerlink" title="P381"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=381">P381</a></h4><p>手动抛出异常的时候</p>
+<ul>
+<li>如果是个运行时异常，那么不需要throws来处理</li>
+<li>如果不是运行时异常（大类Exception也算），那么当前函数要throws处理，并且上层函数要么再throws，要么自己try-catch解决</li>
+</ul>
+<h4 id="P382"><a href="#P382" class="headerlink" title="P382"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=382">P382</a></h4><p>自定义异常的三要素</p>
+<ul>
+<li>static final long serialVersionUID</li>
+<li>空参构造器</li>
+<li>String参数构造器</li>
+</ul>
+<h4 id="P383"><a href="#P383" class="headerlink" title="P383"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=383">P383</a></h4><p>try-catch也可以不用catch</p>
+<ul>
+<li>意义：针对运行时异常，虽然不做处理，但是依然能在finally里做一些必要操作</li>
+</ul>
+<h4 id="P384"><a href="#P384" class="headerlink" title="P384"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=384">P384</a></h4><p>运行时异常，可以处理也可以不处理，看需求</p>
+<h4 id="P385"><a href="#P385" class="headerlink" title="P385"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=385">P385</a></h4><p>throw和throws的区别</p>
+<ul>
+<li>throw：生成一个异常，在方法体内，属于“抛”</li>
+<li>throws：抛出一个异常，是异常的处理方式，在方法的声明处，属于“抓”</li>
+</ul>
+<h4 id="P391"><a href="#P391" class="headerlink" title="P391"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=391">P391</a></h4><p>枚举类的替代方法：多利模式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Status</span></span>&#123;<br>  <br>  <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String NAME;<br>  <br>  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Status</span><span class="hljs-params">(String name)</span></span>&#123;<br>    NAME = name;<br>  &#125;<br>  <br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Status BUSY = <span class="hljs-keyword">new</span> Status(<span class="hljs-string">&quot;BUSY&quot;</span>);<br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Status FREE = <span class="hljs-keyword">new</span> Status(<span class="hljs-string">&quot;FREE&quot;</span>);<br>  <br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P392"><a href="#P392" class="headerlink" title="P392"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=392">P392</a></h4><p>导入某包下类的所有静态结构，就可以省略包名的前缀</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> com.xxx.xxx.xxx.Data.*;<br><br><span class="hljs-keyword">int</span> n = Data.EMPOLYEE.length; <span class="hljs-comment">// 原来写法</span><br><span class="hljs-keyword">int</span> n = EMPOLYEE.length; <span class="hljs-comment">// 现在写法</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>Switch 里，多用常量的名字，而非数字表示，这样之后要改直接改常量的定义即可</p>
+<h4 id="P414"><a href="#P414" class="headerlink" title="P414"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=414">P414</a></h4><p>定义快捷键模板：类似psvm</p>
+<ul>
+<li>两个位置，位置2才能自定义</li>
+</ul>
+<p><img src="/%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%A8%A1%E6%9D%BF%E4%BD%8D%E7%BD%AE1.png" srcset="/img/loading.gif" lazyload alt="快捷键模板位置1"></p>
+<p><img src="/%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%A8%A1%E6%9D%BF%E4%BD%8D%E7%BD%AE2.png" srcset="/img/loading.gif" lazyload alt="快捷键模板位置2"></p>
+<h4 id="P415"><a href="#P415" class="headerlink" title="P415"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=415">P415</a></h4><p>程序：一段静态代码</p>
+<p>进程：正在运行的一个程序，是动态的</p>
+<ul>
+<li>进程是系统资源分配的单位（eg. 内存区域）</li>
+</ul>
+<p>线程：一个程序内部的执行路径</p>
+<ul>
+<li>调度和执行的单位</li>
+<li>每个线程有独立的栈和程序计数器</li>
+<li>不同线程共享堆和方法区，因此线程间通信效率更高</li>
+</ul>
+<p>单核CPU和多核CPU的理解：</p>
+<ul>
+<li>单核CPU是一种假的多线程</li>
+<li>一个java程序，至少有3个进程：main()主线程，gc()垃圾回收线程，异常处理线程</li>
+</ul>
+<p>并行和并发：</p>
+<ul>
+<li>并行：多个人同时做多个事情</li>
+<li>并发：一个CPU（采用时间片）同时执行多个事情</li>
+</ul>
+<h4 id="P417"><a href="#P417" class="headerlink" title="P417"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=417">P417</a></h4><h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
+</blockquote>
+<h4 id="90-Subsets-II"><a href="#90-Subsets-II" class="headerlink" title="90. Subsets II"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/subsets-ii/">90. Subsets II</a></h4><ul>
+<li>集合题目，遍历二叉树的每一步其实都要输出，看情况加别的条件</li>
+<li>如果原来的数组有重复元素，先排序，再用 <code>if(i&gt;start &amp;&amp; nums[i]==nums[i-1])&#123; continue;&#125;</code> 来剪枝</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; subsetsWithDup(<span class="hljs-keyword">int</span>[] nums) &#123;<br>        <br>        Arrays.sort(nums);<br><br>        res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        List&lt;Integer&gt; path = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br><br>        backtrack(path, nums, <span class="hljs-number">0</span>);<br><br>        <span class="hljs-keyword">return</span> res;<br><br>    &#125;<br><br>    List&lt;List&lt;Integer&gt;&gt; res;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">backtrack</span><span class="hljs-params">(List&lt;Integer&gt; path, <span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> start)</span></span>&#123;<br><br>        <span class="hljs-comment">// if(start&gt;=nums.length)&#123;</span><br>        <span class="hljs-comment">//     res.add(new ArrayList&lt;&gt;(path));</span><br>        <span class="hljs-comment">//     return;</span><br>        <span class="hljs-comment">// &#125;</span><br><br>        res.add(<span class="hljs-keyword">new</span> ArrayList&lt;&gt;(path));<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=start; i&lt;nums.length; i++)&#123;<br>          	<span class="hljs-comment">// 如何剪枝的重要步骤</span><br>            <span class="hljs-keyword">if</span>(i&gt;start &amp;&amp; nums[i]==nums[i-<span class="hljs-number">1</span>])&#123;<br>                <span class="hljs-keyword">continue</span>;<br>            &#125;<br><br>            path.add(nums[i]);<br><br>            backtrack(path, nums, i+<span class="hljs-number">1</span>);<br><br>            path.remove(path.size()-<span class="hljs-number">1</span>);<br><br>        &#125;<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>此类题目总结：重复？反复选？</strong></p>
+<ul>
+<li>集合<ul>
+<li>不重复 + 单选：start来防止重复，下次递归传 i+1，无条件加入res</li>
+<li>不重复 + 多选：start来防止重复，下次递归传 i，无条件加入res</li>
+<li>重复 + 单选：排序， <code>if(i&gt;start &amp;&amp; nums[i]==nums[i-1])&#123; continue;&#125;</code> 防止重复</li>
+</ul>
+</li>
+<li>组合<ul>
+<li>不重复 + 单选：start来防止重复，下次递归传 i+1，path有k个加入res</li>
+<li>不重复 + 多选：start来防止重复，下次递归传 i，path有k个加入res</li>
+<li>重复 + 单选：排序， <code>if(i&gt;start &amp;&amp; nums[i]==nums[i-1])&#123; continue;&#125;</code> 防止重复</li>
+</ul>
+</li>
+<li>排序<ul>
+<li>不重复 + 单选：boolean[] used 来防止重</li>
+<li>不重复 + 多选：貌似啥也不需要</li>
+<li>重复 + 单选：排序， <code>if(i&gt;start &amp;&amp; nums[i]==nums[i-1] &amp;&amp; !used[i-1])&#123; continue;&#125;</code> 防止重复</li>
+</ul>
+</li>
+</ul>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第10天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P366开头，刷题如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/combination-sum-iii/">216. 组合总和 III</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/combination-sum/">39. 组合总和</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/combination-sum-ii/">40. 组合总和 II</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/permutations/">46. 全排列</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/permutations-ii/">47. 全排列 II</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/combinations/">77. 组合</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/subsets/">78. 子集</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/subsets-ii/">90. 子集 II</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/TVdhkn/">剑指 Offer II 079. 所有子集</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/uUsW3B/">剑指 Offer II 080. 含有 k 个元素的组合</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/Ygoe9J/">剑指 Offer II 081. 允许重复选择元素的组合</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/4sjJUc/">剑指 Offer II 082. 含有重复元素集合的组合</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/VvJkup/">剑指 Offer II 083. 没有重复元素集合的全排列</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/7p8L0Z/">剑指 Offer II 084. 含有重复元素集合的全排列</a></li>
+</ul>
+<p>感觉今天也没怎么浪，但却看得很少，可能确实越往后面我越不熟悉，速度明显放缓了，经常重放或者慢速，坚持住，然后每天多花点时间</p>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>《被讨厌的勇气》阿德勒</p>
+<p>太在意别人的视线和评价，才会不断寻求别人的认可。对认可的追求，才扼杀了自由。由于不想被任何人讨厌，才选择了不自由的生活方式</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%BD%E6%A0%91/">程序缘的技能栽树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/14/2022-07-14-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC9%E5%A4%A9/">
+                        <span class="hidden-mobile">【归】复习准备秋招第8天</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
