@@ -1,0 +1,555 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一个非常珍视的故事，就会用漫不经心来掩饰它的重要性，以免听故事的人冷淡无情">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【归】复习准备秋招第11天">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/07/16/2022-07-16-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC11%E5%A4%A9/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="一个非常珍视的故事，就会用漫不经心来掩饰它的重要性，以免听故事的人冷淡无情">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-16-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC11%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103148.jpg">
+<meta property="article:published_time" content="2022-07-16T12:40:40.000Z">
+<meta property="article:modified_time" content="2022-07-16T15:31:51.434Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Leetcode">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-16-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC11%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103148.jpg">
+  
+  
+  <title>【归】复习准备秋招第11天 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-07-16-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC11%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103148.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【归】复习准备秋招第11天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-16 20:40" pubdate>
+        2022年7月16日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      33 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【归】复习准备秋招第11天</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第10天，给爷学</p>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Java研发"><a href="#Java研发" class="headerlink" title="Java研发"></a>Java研发</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a></p>
+</blockquote>
+<h4 id="P417"><a href="#P417" class="headerlink" title="P417"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=417">P417</a></h4><p>多线程的优点：（即使单核CPU多线程更慢，也要多线程）</p>
+<ul>
+<li>提高用户体验（如果只能执行一个，用户只能呆等）</li>
+<li>多核CPU，多线程会让CPU利用率更高，不会有CPU空闲</li>
+<li>代码结构会更清晰</li>
+</ul>
+<p>多线程的应用场景：</p>
+<ul>
+<li>同时执行多个任务</li>
+<li>任务需要等待时（用户输入，文件读写，网络，搜索）</li>
+<li>需要一些后台运行的程序（gc回收）</li>
+</ul>
+<h4 id="P419"><a href="#P419" class="headerlink" title="P419"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=419">P419</a></h4><p>Thread 的 start() 方法有两个作用：</p>
+<ul>
+<li><p>启动当前线程</p>
+</li>
+<li><p>调用 run() 方法</p>
+<ul>
+<li>如果只调用run() 方法，那么还是只有主线程执行而已</li>
+</ul>
+</li>
+<li><p>一个线程对象被start以后，内部threadStatus 值会非0，进而抛出异常</p>
+</li>
+<li><p>匿名子类的简单写法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<br>  <span class="hljs-keyword">new</span> Thread()&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span>&#123;<br>      <span class="hljs-comment">//........</span><br>    &#125;<br>  &#125;.start();<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="P421"><a href="#P421" class="headerlink" title="P421"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=421">P421</a></h4><p>Thread 的 方法：</p>
+<ul>
+<li>yield()：释放CPU的执行权（但下一次还是有可能又被分配到执行权）</li>
+<li>join()：线程a中调用线程b的join()，a进入阻塞状态，直到b的run()执行结束，a结束阻塞状态，才能等待CPU分配资源</li>
+<li>Stop()：强制结束线程（<strong>已过时</strong>）</li>
+<li>Sleep()：（静态方法）阻塞一段时间，结束后才能等待CPU分配资源</li>
+<li>isAlive()：是否存活</li>
+</ul>
+<h4 id="P422"><a href="#P422" class="headerlink" title="P422"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=422">P422</a></h4><p>Thread设置了优先级只是概率，实测很有可能还是反的</p>
+<h4 id="P424"><a href="#P424" class="headerlink" title="P424"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=424">P424</a></h4><p>第二种创建多线程方式:</p>
+<ul>
+<li>创建Runnable接口的自定义类</li>
+<li>创建自定义类的对象，传入Thread构造器中</li>
+<li>Thread构造出的对象，照样 start() 一下即可</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyThread</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Thread</span></span>&#123;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;123&quot;</span>);<br>    &#125;<br>&#125;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyRunnable</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span></span>&#123;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;666&quot;</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test_multi_thread</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>        <span class="hljs-comment">// 方式一：</span><br>        MyThread t11 = <span class="hljs-keyword">new</span> MyThread();<br>        t11.start();<br>      	MyThread t12 = <span class="hljs-keyword">new</span> MyThread();<br>        t12.start();<br><br>        <span class="hljs-comment">// 方式二：</span><br>        MyRunnable r = <span class="hljs-keyword">new</span> MyRunnable();<br>        Thread t21 = <span class="hljs-keyword">new</span> Thread(r);<br>        t21.start();<br>      	Thread t22 = <span class="hljs-keyword">new</span> Thread(r);<br>        t22.start();<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>注意：Runnbale接口的对象可以反复使用</p>
+<h4 id="P426"><a href="#P426" class="headerlink" title="P426"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=426">P426</a></h4><p>两种多线程方式的区别：</p>
+<ul>
+<li>不同点：优先选择第二种<ul>
+<li>第一种有单继承的局限性（如果你本身就是一个子类，那么久无法再继承Thread）</li>
+<li>第二种天然实现多个线程共享数据，不需要额外加static</li>
+</ul>
+</li>
+<li>相同点 / 联系<ul>
+<li>都实现了 Runnable 接口，Thread 本身就实现了 Runnable 接口</li>
+<li>都重写了Runnable接口中的 run()方法，将核心逻辑写入其中</li>
+</ul>
+</li>
+</ul>
+<h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
+</blockquote>
+<h4 id="160-Intersection-of-Two-Linked-Lists"><a href="#160-Intersection-of-Two-Linked-Lists" class="headerlink" title="160. Intersection of Two Linked Lists"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/intersection-of-two-linked-lists/">160. Intersection of Two Linked Lists</a></h4><ul>
+<li>并不是下一个节点是null才换链表，而是本身等于null，不然会一直死循环</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode(int x) &#123;</span><br><span class="hljs-comment"> *         val = x;</span><br><span class="hljs-comment"> *         next = null;</span><br><span class="hljs-comment"> *     &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">getIntersectionNode</span><span class="hljs-params">(ListNode headA, ListNode headB)</span> </span>&#123;<br>        ListNode l1 = headA;<br>        ListNode l2 = headB;<br>        <span class="hljs-keyword">while</span>(l1!=l2)&#123;<br>            <span class="hljs-keyword">if</span>(l1==<span class="hljs-keyword">null</span>)&#123;<br>                l1 = headB;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                l1 = l1.next;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(l2==<span class="hljs-keyword">null</span>)&#123;<br>                l2 = headA;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                l2 = l2.next;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> l1;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="23-Merge-k-Sorted-Lists"><a href="#23-Merge-k-Sorted-Lists" class="headerlink" title="23. Merge k Sorted Lists"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/merge-k-sorted-lists/">23. Merge k Sorted Lists</a></h4><ul>
+<li>PriorityQueue的定义，new后面的也要加 <code>&lt;&gt;</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">mergeKLists</span><span class="hljs-params">(ListNode[] lists)</span> </span>&#123;<br>        ListNode dum = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);<br><br>        PriorityQueue&lt;ListNode&gt; pq = <span class="hljs-keyword">new</span> PriorityQueue&lt;&gt;((o1, o2) -&gt; &#123;<br>            <span class="hljs-keyword">return</span> Integer.compare(o1.val, o2.val);<br>        &#125;);<br><br>        <span class="hljs-keyword">for</span>(ListNode tmp : lists)&#123;<br>            <span class="hljs-keyword">if</span>(tmp!=<span class="hljs-keyword">null</span>)&#123;<br>                pq.add(tmp);<br>            &#125;<br>        &#125;<br><br>        ListNode cur = dum;<br><br>        <span class="hljs-keyword">while</span>(!pq.isEmpty())&#123;<br>            ListNode tmp = pq.poll();<br>            cur.next = tmp;<br>            <span class="hljs-keyword">if</span>(tmp.next!=<span class="hljs-keyword">null</span>)&#123;<br>                pq.add(tmp.next);<br>            &#125;<br>            cur = cur.next;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> dum.next;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="86-Partition-List"><a href="#86-Partition-List" class="headerlink" title="86. Partition List"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/partition-list/">86. Partition List</a></h4><p>前面都没啥问题，最后别忘了big.next要置为null，不然成环了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">partition</span><span class="hljs-params">(ListNode head, <span class="hljs-keyword">int</span> x)</span> </span>&#123;<br>        ListNode dum1 = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);<br>        ListNode dum2 = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);<br><br>        ListNode small = dum1;<br>        ListNode big = dum2;<br><br>        ListNode cur = head;<br><br>        <span class="hljs-keyword">while</span>(cur!=<span class="hljs-keyword">null</span>)&#123;<br>            <span class="hljs-keyword">if</span>(cur.val&lt;x)&#123;<br>                small.next = cur;<br>                small = small.next;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                big.next = cur;<br>                big = big.next;<br>            &#125;<br>            cur = cur.next;<br>        &#125;<br><br>        big.next = <span class="hljs-keyword">null</span>;<br><br>        small.next = dum2.next;<br><br>        <span class="hljs-keyword">return</span> dum1.next;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第10天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P366开头，刷题如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle/">141. 环形链表</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">142. 环形链表 II</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">19. 删除链表的倒数第 N 个结点</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-k-sorted-lists/">23. 合并K个升序链表</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-list/">86. 分隔链表</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/">剑指 Offer 25. 合并两个排序的链表</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/">剑指 Offer 52. 两个链表的第一个公共节点</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/SLwz0R/">剑指 Offer II 021. 删除链表的倒数第 n 个结点</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/c32eOV/">剑指 Offer II 022. 链表中环的入口节点</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/3u1WK4/">剑指 Offer II 023. 两个链表的第一个重合节点</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/vvXgSW/">剑指 Offer II 078. 合并排序链表</a></li>
+</ul>
+<p>感觉今天也没怎么浪，但却看得很少，可能确实越往后面我越不熟悉，速度明显放缓了，经常重放或者慢速，坚持住，然后每天多花点时间</p>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>《偷书贼》 </p>
+<p>一个非常珍视的故事，就会用漫不经心来掩饰它的重要性，以免听故事的人冷淡无情</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%BD%E6%A0%91/">程序缘的技能栽树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/15/2022-07-15-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC10%E5%A4%A9/">
+                        <span class="hidden-mobile">【归】复习准备秋招第10天</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
