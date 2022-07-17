@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-16-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC11%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103148.jpg">
 <meta property="article:published_time" content="2022-07-16T12:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-16T15:59:58.845Z">
+<meta property="article:modified_time" content="2022-07-17T15:30:51.099Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Leetcode">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.2k 字
+      4.4k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      36 分钟
+      37 分钟
     </span>
   
 
@@ -275,7 +275,7 @@
 </ul>
 <h4 id="P421"><a href="#P421" class="headerlink" title="P421"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=421">P421</a></h4><p>Thread 的 方法：</p>
 <ul>
-<li>yield()：释放CPU的执行权（但下一次还是有可能又被分配到执行权）</li>
+<li>yield()：释放CPU的执行权（但下一次还是有可能又被分配到执行权），注意，如果涉及到同步的锁，这里并没有释放锁</li>
 <li>join()：线程a中调用线程b的join()，a进入阻塞状态，直到b的run()执行结束，a结束阻塞状态，才能等待CPU分配资源</li>
 <li>Stop()：强制结束线程（<strong>已过时</strong>）</li>
 <li>Sleep()：（静态方法）阻塞一段时间，结束后才能等待CPU分配资源</li>
@@ -323,6 +323,11 @@
 </ul>
 <p>线程的生命周期</p>
 <p><img src="/%E7%BA%BF%E7%A8%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" srcset="/img/loading.gif" lazyload alt="线程生命周期"></p>
+<h4 id="P432"><a href="#P432" class="headerlink" title="P432"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=432">P432</a></h4><p>线程安全问题：例如卖车票的重票错票问题（可以通过加sleep来提高线程插队的概率，进而提高重票错票的概率）</p>
+<ul>
+<li>原因：某个线程操作共享数据到一半，另一个线程进来了，操作了共享数据</li>
+<li>解决方法：线程a操作共享数据的时候，禁止别的线程操作，即使a阻塞了，也得等着</li>
+</ul>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
@@ -347,7 +352,7 @@
 
 
 
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第10天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P366开头，刷题如下：</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第10天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P432开头，刷题如下：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle/">141. 环形链表</a></li>
 <li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/linked-list-cycle-ii/">142. 环形链表 II</a></li>
@@ -404,6 +409,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/07/17/2022-07-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC12%E5%A4%A9/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">【归】复习准备秋招第12天</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

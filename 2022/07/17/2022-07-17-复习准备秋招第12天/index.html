@@ -1,0 +1,722 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="心太软的人快乐是不容易的，别人伤害她或者她伤害别人都让她在心里病一场">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【归】复习准备秋招第12天">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/07/17/2022-07-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC12%E5%A4%A9/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="心太软的人快乐是不容易的，别人伤害她或者她伤害别人都让她在心里病一场">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC12%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103128.jpg">
+<meta property="article:published_time" content="2022-07-17T12:40:40.000Z">
+<meta property="article:modified_time" content="2022-07-17T15:30:26.134Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Leetcode">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC12%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103128.jpg">
+  
+  
+  <title>【归】复习准备秋招第12天 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-07-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC12%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103128.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【归】复习准备秋招第12天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-17 20:40" pubdate>
+        2022年7月17日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      10k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      85 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【归】复习准备秋招第12天</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第10天，给爷学</p>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Java研发"><a href="#Java研发" class="headerlink" title="Java研发"></a>Java研发</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a></p>
+</blockquote>
+<h4 id="P433"><a href="#P433" class="headerlink" title="P433"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=433">P433</a></h4><p>解决同步线程安全问题：</p>
+<ul>
+<li>同步代码块：<ul>
+<li>指的是操作共享数据的代码块</li>
+<li>同步监视器，又称为锁，任何一个对象都可以充当锁，多个线程共用一把锁（最方便的对象是this 和 类.class）</li>
+</ul>
+</li>
+<li>同步方法：<ul>
+<li>如果方法都是操作共享数据，直接在方法前面加上synchronized</li>
+<li>仍涉及同步监视器，只是未显式声明<ul>
+<li>非静态方法的同步监视器：this</li>
+<li>静态方法的同步监视器：当前类本身</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意：类.class也是个对象，例如：Class clazz = Dog.class;</strong></p>
+<h4 id="P437"><a href="#P437" class="headerlink" title="P437"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=437">P437</a></h4><p>快捷键：ctrl + alt + t，讲一段代码用xxx结构包裹</p>
+<p>懒汉式单例模式的线程安全问题解决：</p>
+<ul>
+<li><p>方法一：方法加synchronized（本身就是static，所以锁唯一），或者整个内部代码加synchronized，效率较差</p>
+</li>
+<li><p>方法二：双重校验锁，效率稍微高点</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Bank <span class="hljs-title">getInstance</span><span class="hljs-params">()</span></span>&#123;<br>  <span class="hljs-keyword">if</span>(bank==<span class="hljs-keyword">null</span>)&#123;<br>    <span class="hljs-keyword">synchronized</span>(Bank.class)&#123;<br>      <span class="hljs-keyword">if</span>(bank==<span class="hljs-keyword">null</span>)&#123;<br>        bank = <span class="hljs-keyword">new</span> Bank();<br>      &#125;<br>    &#125;<br>  &#125;<br>  <span class="hljs-keyword">return</span> bank;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="P438"><a href="#P438" class="headerlink" title="P438"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=438">P438</a></h4><p>避免死锁的方法：</p>
+<ul>
+<li>专门的算法，原则</li>
+<li>尽量减少同步资源的定义</li>
+<li>尽量避免嵌套同步</li>
+</ul>
+<h4 id="P439"><a href="#P439" class="headerlink" title="P439"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=439">P439</a></h4><p>快捷键：ctrl+p，显式该方法有几种重载的参数列表</p>
+<p>ReentranLock 的参数fair，如果为true，代表先进先出，绝对公平，默认为false</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Window</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span></span>&#123;<br>    ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> tickets = <span class="hljs-number">100</span>;<br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">try</span> &#123;<br>            lock.lock();<br>            <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;<br>                <span class="hljs-keyword">if</span>(tickets&gt;<span class="hljs-number">0</span>)&#123;<br>                    System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;卖了第 &quot;</span> + tickets + <span class="hljs-string">&quot; 张票&quot;</span>);<br>                    tickets--;<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>        &#125;<span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>Synchronized 和 lock 的异同：</p>
+<ul>
+<li>相同：<ul>
+<li>都可以解决线程安全问题</li>
+</ul>
+</li>
+<li>不同：<ul>
+<li>synchronized执行完同步代码块后，自动释放同步监视器</li>
+<li>lock 手动启动同步（lock.lock()），手动结束同步（lock.unlock()）</li>
+</ul>
+</li>
+</ul>
+<h4 id="P441"><a href="#P441" class="headerlink" title="P441"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=441">P441</a></h4><p>线程通信的方法：</p>
+<ul>
+<li>wait()</li>
+<li>notify()</li>
+<li>notifyAll()</li>
+</ul>
+<p>wait() 和 sleep() 的区别：虽然都是进入阻塞状态，但是：</p>
+<ul>
+<li>wait() 会释放锁的所有权，并进入阻塞</li>
+<li>Sleep() 不会释放锁，只能睡醒之后，依然有锁，执行完同步代码块，才释放</li>
+</ul>
+<p><strong>注意</strong></p>
+<ul>
+<li>notify()唤醒优先级最高的线程</li>
+<li>wait()，notify()，notifyAll() 必须在synchronized内，lock另算</li>
+<li>wait()，notify()，notifyAll() 的调用者，必须是synchronized的同步监视器/锁，不然会报错 IllegalMonitorStateException异常</li>
+</ul>
+<h4 id="P442"><a href="#P442" class="headerlink" title="P442"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=442">P442</a></h4><p>sleep() 和 wait() 的异同：</p>
+<ul>
+<li>相同点：都可以使当前线程进入阻塞状态</li>
+<li>不同点：<ul>
+<li>声明的位置不同，sleep() 在 Thread 类中， wait() 在 Object 类中</li>
+<li>调用的要求不同， sleep() 没啥限制， wait() 要在synchronized中（同步代码块和同步方法）</li>
+<li>是否释放同步监视器不同， sleep() 不释放，wait() 会释放锁</li>
+</ul>
+</li>
+</ul>
+<h4 id="P443"><a href="#P443" class="headerlink" title="P443"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=443">P443</a></h4><p>生产者消费者问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.shasha.s20220717;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 生产者 - 消费者问题</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ShaLuwei</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@create</span> 2022-07-17 12:29</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test_producer_customer</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Clerk c  = <span class="hljs-keyword">new</span> Clerk();<br>        Producer p1 = <span class="hljs-keyword">new</span> Producer(c);<br>        Customer c1 = <span class="hljs-keyword">new</span> Customer(c);<br><br>        Thread pp1 = <span class="hljs-keyword">new</span> Thread(p1);<br>        Thread cc1 = <span class="hljs-keyword">new</span> Thread(c1);<br><br>        pp1.start();<br>        cc1.start();<br><br>    &#125;<br><br>&#125;<br><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Clerk</span></span>&#123;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">produce</span><span class="hljs-params">()</span></span>&#123;<br><br>        <span class="hljs-keyword">if</span>(count&lt;<span class="hljs-number">20</span>)&#123;<br>            count++;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;正在生产第 &quot;</span> + count + <span class="hljs-string">&quot;个产品&quot;</span>);<br>            notify();<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                wait();<br>            &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br>        &#125;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">consume</span><span class="hljs-params">()</span></span>&#123;<br><br>        <span class="hljs-keyword">if</span>(count&gt;<span class="hljs-number">0</span>)&#123;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;正在消费第 &quot;</span> + count + <span class="hljs-string">&quot;个产品&quot;</span>);<br>            count--;<br>            notify();<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                wait();<br>            &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br>        &#125;<br><br>    &#125;<br><br>&#125;<br><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Producer</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span></span>&#123;<br><br>    Clerk c;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Producer</span><span class="hljs-params">(Clerk c)</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.c = c;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br><br>        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)&#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                Thread.sleep(<span class="hljs-number">10</span>);<br>            &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br><br>            c.produce();<br>        &#125;<br><br>    &#125;<br>&#125;<br><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span></span>&#123;<br><br>    Clerk c;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Customer</span><span class="hljs-params">(Clerk c)</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.c = c;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                Thread.sleep(<span class="hljs-number">10</span>);<br>            &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>                e.printStackTrace();<br>            &#125;<br>            c.consume();<br>        &#125;<br>    &#125;<br>&#125;<br><br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P444"><a href="#P444" class="headerlink" title="P444"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=444">P444</a></h4><p>（不在这一集，反正是今天的某集，突然想到了）</p>
+<p>如果是匿名类的子类重写，格式如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> Thread()&#123;<br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">super</span>.run();<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>如果是里面的参数要接口实现，格式如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() &#123;<br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br><br>  &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 不大一样，记得区分</p>
+</blockquote>
+<p>Callable方法比Runnable方法更强大：</p>
+<ul>
+<li>有返回值</li>
+<li>可以抛出异常，被外面捕获，得到异常信息</li>
+<li>支持泛型</li>
+</ul>
+<p>Callable用法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.shasha.s20220717;<br><br><span class="hljs-keyword">import</span> java.util.concurrent.Callable;<br><span class="hljs-keyword">import</span> java.util.concurrent.ExecutionException;<br><span class="hljs-keyword">import</span> java.util.concurrent.FutureTask;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * callable 方法调用线程</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ShaLuwei</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@create</span> 2022-07-17 13:57</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test_callable_thread</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>        MyCallable m = <span class="hljs-keyword">new</span> MyCallable();<br><br>        FutureTask f = <span class="hljs-keyword">new</span> FutureTask(m);<br><br>        Thread t = <span class="hljs-keyword">new</span> Thread(f);<br><br>        t.start();<br><br>        <span class="hljs-keyword">try</span> &#123;<br>            Object o = f.get();<br>            System.out.println(o);<br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>            e.printStackTrace();<br>        &#125; <span class="hljs-keyword">catch</span> (ExecutionException e) &#123;<br>            e.printStackTrace();<br>        &#125;<br><br>    &#125;<br><br>&#125;<br><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyCallable</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Callable</span> </span>&#123;<br><br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">call</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;<br><br>        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br>            sum += i;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> sum;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<p>关于Future接口</p>
+<p><img src="/Future%E6%8E%A5%E5%8F%A3.png" srcset="/img/loading.gif" lazyload alt="Future接口"></p>
+<h4 id="P445"><a href="#P445" class="headerlink" title="P445"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=445">P445</a></h4><p>线程池的好处：</p>
+<ul>
+<li>减小响应时间</li>
+<li>减小资源消耗</li>
+<li>便于线程管理</li>
+</ul>
+<h4 id="P446"><a href="#P446" class="headerlink" title="P446"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=446">P446</a></h4><p>线程池的创建方式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.shasha.s20220717;<br><br><span class="hljs-keyword">import</span> java.util.concurrent.ExecutorService;<br><span class="hljs-keyword">import</span> java.util.concurrent.Executors;<br><span class="hljs-keyword">import</span> java.util.concurrent.ThreadPoolExecutor;<br><span class="hljs-keyword">import</span> java.util.concurrent.TimeUnit;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 线程池创建多线程的例子</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> ShaLuwei</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@create</span> 2022-07-17 14:19</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test_executors_thread</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br><br>        ExecutorService service = Executors.newFixedThreadPool(<span class="hljs-number">10</span>);<br>        System.out.println(service.getClass());<br><br>        <span class="hljs-comment">// 接口本身没有各种属性，是接口实现的类的对象才有，所以要强转一下</span><br>        ThreadPoolExecutor t = (ThreadPoolExecutor) service;<br>        t.setCorePoolSize(<span class="hljs-number">4</span>);<br>        t.setKeepAliveTime(<span class="hljs-number">123</span>, TimeUnit.DAYS);<br><br>        <span class="hljs-comment">// Runnable 的调用方法</span><br>        service.execute(<span class="hljs-keyword">new</span> Runnable() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;<br>                    System.out.println(i);<br>                &#125;<br>            &#125;<br>        &#125;);<br><br>        <span class="hljs-comment">// Callable 的调用方法</span><br><span class="hljs-comment">//        service.submit(new Callable() &#123;</span><br><span class="hljs-comment">//            @Override</span><br><span class="hljs-comment">//            public Object call() throws Exception &#123;</span><br><span class="hljs-comment">//                for (int i = 0; i &lt; 100; i++) &#123;</span><br><span class="hljs-comment">//                    System.out.println(i);</span><br><span class="hljs-comment">//                &#125;</span><br><span class="hljs-comment">//                return null;</span><br><span class="hljs-comment">//            &#125;</span><br><span class="hljs-comment">//        &#125;);</span><br><br>        service.shutdown();<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>（不是这一集的）</p>
+<p>快捷键：Ctrl + alt + l ：格式化</p>
+<p>快捷键：ctrl + alt + 左/右 : 前往上一次或者下一次查看的文件指针位置</p>
+<p>快捷键：ctrl + alt + v：补完返回值类型</p>
+<h4 id="P452"><a href="#P452" class="headerlink" title="P452"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=452">P452</a></h4><p>String 不管是：</p>
+<ul>
+<li>重新赋值</li>
+<li>连接新字符串</li>
+<li>replace换字母</li>
+</ul>
+<p>都会变成常量池中心的字符串，即地址改变了，反映了<strong>String内部存储的char[] 是final类型，即地址不可变</strong></p>
+<h4 id="P453"><a href="#P453" class="headerlink" title="P453"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=453">P453</a></h4><p>String a = new String(“abc”); 创建了两个对象，一个在堆中，一个在方法区常量池</p>
+<h4 id="P454"><a href="#P454" class="headerlink" title="P454"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=454">P454</a></h4><p>String常量（<strong>字面量 + final修饰的变量</strong>）与常量的拼接，结果依然在常量池中（常量池中相同值的String只有一份）</p>
+<p>只要有变量参与，就等于是在堆中new了一个新的变量</p>
+<p>如果拼接的结果用intern() 返回，那么返回的是常量池中的结果</p>
+<h4 id="P455"><a href="#P455" class="headerlink" title="P455"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=455">P455</a></h4><p>一个易错题：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span></span>&#123;<br>  <br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;<br>  	String a = <span class="hljs-keyword">new</span> String(<span class="hljs-string">&quot;abc&quot;</span>);<br>    method(a);<br>  	System.out.println(a); <span class="hljs-comment">// 结果是”abc“,因为a一直指向内存中的一块区域，b一开始初始为指向同一个地方，但method()仅让b指向另一个地方，其他没变</span><br>	&#125;<br>  <br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method</span><span class="hljs-params">(String b)</span></span>&#123;<br>    b = <span class="hljs-string">&quot;123&quot;</span>;<br>  &#125;<br>  <br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P456"><a href="#P456" class="headerlink" title="P456"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=456">P456</a></h4><p>字符串常量池的版本更迭：</p>
+<ul>
+<li>1.6及之前：字符串常量池在方法区（永久代）</li>
+<li>1.7：在堆中</li>
+<li>1.8：在方法区（元空间）</li>
+</ul>
+<h4 id="P457"><a href="#P457" class="headerlink" title="P457"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=457">P457</a></h4><p>因为String的不可变性，所有String的方法，原字符串都没有变化，而是返回新的字符串</p>
+<p>String常用方法：</p>
+<ul>
+<li>String toLowerCase()：</li>
+<li>String toUpperCase()：</li>
+<li>String trim()：</li>
+<li>String equalsIgnoreCase(String s)：</li>
+<li>int compareTo(String s)：</li>
+</ul>
+<h4 id="P458"><a href="#P458" class="headerlink" title="P458"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=458">P458</a></h4><p>String的常用方法：</p>
+<ul>
+<li>boolean endsWith(String suffix)：以xxx为后缀</li>
+<li>boolean startsWith(String preffix)：以xxx为前缀</li>
+<li>boolean startsWith(String preffix, int toffset)：从第xx个位置开始，以xxx为前缀</li>
+<li>boolean contains(CharSequence s)：是否包含xxx，这里可以用String（因为是CharSequence接口的实现类）</li>
+<li>int indexOf(String str)：str 第一次出现的下标位置</li>
+<li>int indexOf(String str, int fromIndex)：str 从fromIndex开始，第一次出现的下标位置</li>
+<li>int lastIndexOf(String str)：str 第一次出现的下标位置</li>
+<li>int lastindexOf(String str, int fromIndex)：str 从fromIndex开始 <strong>往左找</strong> ，第一次出现的下标位置</li>
+</ul>
+<h4 id="P459"><a href="#P459" class="headerlink" title="P459"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=459">P459</a></h4><p>String的常用方法：</p>
+<ul>
+<li>String replace(char old, char new)：所有的old字符换成new字符</li>
+<li>String replace(CharSequence old, CharSequence new)：所有的old字符串换成new字符串</li>
+<li>String replaceAll(String regex, String replacement)：所有满足正则表达式的都换成xxxx</li>
+<li>String replaceFirst(String regex, String replacement)：第一个满足正则表达式的换成xxxx</li>
+<li>boolean matches(String regex)：字符串是否满足正则表达式</li>
+<li>String[] split(String regex, int limit)：最多不超过limit个，把最后剩下的都并到最后一个里</li>
+</ul>
+<h4 id="P461"><a href="#P461" class="headerlink" title="P461"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=461">P461</a></h4><p>String 和 char[] 相互转换</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">String s1 = <span class="hljs-string">&quot;abc&quot;</span>;<br><span class="hljs-keyword">char</span>[] c1 = s1.toCharArray();<br>String s2 = <span class="hljs-keyword">new</span> String(c1);<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P462"><a href="#P462" class="headerlink" title="P462"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=462">P462</a></h4><p>String 和 byte[] 相互转换（编解码）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">String s = <span class="hljs-string">&quot;abc&quot;</span>;<br><span class="hljs-keyword">byte</span>[] b1 = s.getBytes(); <span class="hljs-comment">// 默认的字符集，看编译器</span><br><span class="hljs-keyword">byte</span>[] b2 = s.getBytes(”gbk“); <span class="hljs-comment">// gbk，一个汉字2bytes</span><br>String s1 = <span class="hljs-keyword">new</span> String(b1);<br>String s2 = <span class="hljs-keyword">new</span> String(b1, <span class="hljs-string">&quot;gbk&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P465"><a href="#P465" class="headerlink" title="P465"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=465">P465</a></h4><p>String，StringBuffer，StringBuilder的异同：</p>
+<p>相同：底层都是char[] 数组</p>
+<p>不同：</p>
+<ul>
+<li>可变/不可变<ul>
+<li>String 不可变</li>
+<li>StringBuffer，StringBuilder 可变</li>
+</ul>
+</li>
+<li>线程安全<ul>
+<li>StringBuffer 线程安全</li>
+<li>StringBuilder 线程不安全</li>
+</ul>
+</li>
+</ul>
+<h4 id="P466"><a href="#P466" class="headerlink" title="P466"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=466">P466</a></h4><p>StringBuffer的一些底层源码细节：</p>
+<ul>
+<li>扩容：一般变为原来的 2*n + 2，除非有其他例外（扩容后还不够就直接赋值你要求的值，或者扩容后超界变为负数）<ul>
+<li>建议构造StringBuffer的时候，直接指定长度，因为扩容很耗时</li>
+</ul>
+</li>
+</ul>
+<h4 id="P467"><a href="#P467" class="headerlink" title="P467"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=467">P467</a></h4><p>StringBuffer的常用函数：</p>
+<p><img src="/StringBuffer%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.png" srcset="/img/loading.gif" lazyload alt="StringBuffer常用函数"></p>
+<p><strong>注意，只有substring是有返回值的，更准确地说是返回不可变对象，其他都是返回自身，因此自身地址一样不如不返回</strong></p>
+<h4 id="P470"><a href="#P470" class="headerlink" title="P470"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=470">P470</a></h4><p>几个时间类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">long</span> l = System.currentTimeMillis();<br>System.out.println(l);<br><br>Date d1 = <span class="hljs-keyword">new</span> Date();<br>System.out.println(d1.toString());<br>System.out.println(d1.getTime());<br><br>Date d2 = <span class="hljs-keyword">new</span> Date(<span class="hljs-number">132213131L</span>);<br>System.out.println(d1.toString());<br><br>java.sql.Date d3 = <span class="hljs-keyword">new</span> java.sql.Date(d1.getTime());<br>System.out.println(d3.toString());<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h4 id="P478"><a href="#P478" class="headerlink" title="P478"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=478">P478</a></h4><p>两个字符串判断最大相同子串：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">maxSameSubstring</span><span class="hljs-params">(String a, String b)</span></span>&#123;<br>  String max = (a.length()&gt;b.length())?a:b;<br>  String min = (a.length()&lt;b.length())?a:b;<br><br>  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;min.length(); i++)&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> x=<span class="hljs-number">0</span>, y=min.length()-i; y&lt;=min.length(); x++, y++)&#123;<br>      <span class="hljs-keyword">if</span>(max.contains(min.substring(x, y)))&#123;<br>        <span class="hljs-keyword">return</span> min.substring(x, y);<br>      &#125;<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
+</blockquote>
+<h4 id="5-Longest-Palindromic-Substring"><a href="#5-Longest-Palindromic-Substring" class="headerlink" title="5. Longest Palindromic Substring"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-palindromic-substring/">5. Longest Palindromic Substring</a></h4><p>版本一：全程String，速度较慢</p>
+<ul>
+<li>maxPalin函数最后，并非返回”“，而是同样返回s.substring(i+1, j)，这个会自动帮你处理</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">longestPalindrome</span><span class="hljs-params">(String s)</span> </span>&#123;<br>        String res = <span class="hljs-string">&quot;&quot;</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;s.length(); i++)&#123;<br>            String res1 = maxPalin(s, i, i);<br>            String res2 = maxPalin(s, i, i+<span class="hljs-number">1</span>);<br>            <span class="hljs-keyword">if</span>(res1.length()&gt;res.length())&#123;<br>                res = res1;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(res2.length()&gt;res.length())&#123;<br>                res = res2;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">maxPalin</span><span class="hljs-params">(String s, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span></span>&#123;<br>        <span class="hljs-keyword">int</span> i = x;<br>        <span class="hljs-keyword">int</span> j = y;<br>        <span class="hljs-keyword">while</span>(i&gt;=<span class="hljs-number">0</span> &amp;&amp; j&lt;s.length())&#123;<br>            <span class="hljs-keyword">if</span>(s.charAt(i)!=s.charAt(j))&#123;<br>                <span class="hljs-keyword">return</span> s.substring(i+<span class="hljs-number">1</span>, j);<br>            &#125;<br>            i--;<br>            j++;<br>        &#125;<br>        <span class="hljs-keyword">return</span> s.substring(i+<span class="hljs-number">1</span>, j);<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>版本二：char[] + int[]返回值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">longestPalindrome</span><span class="hljs-params">(String s)</span> </span>&#123;<br>        <span class="hljs-keyword">char</span>[] ss = s.toCharArray();<br>        <span class="hljs-keyword">int</span> max_l = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> max_r = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> max = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;ss.length; i++)&#123;<br>            <span class="hljs-keyword">int</span>[] res1 = maxPalin(ss, i, i);<br>            <span class="hljs-keyword">int</span>[] res2 = maxPalin(ss, i, i+<span class="hljs-number">1</span>);<br>            <span class="hljs-keyword">if</span>(res1[<span class="hljs-number">2</span>]&gt;max)&#123;<br>                max = res1[<span class="hljs-number">2</span>];<br>                max_l = res1[<span class="hljs-number">0</span>];<br>                max_r = res1[<span class="hljs-number">1</span>];<br>            &#125;<br>            <span class="hljs-keyword">if</span>(res2[<span class="hljs-number">2</span>]&gt;max)&#123;<br>                max = res2[<span class="hljs-number">2</span>];<br>                max_l = res2[<span class="hljs-number">0</span>];<br>                max_r = res2[<span class="hljs-number">1</span>];<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> s.substring(max_l, max_r);<br>    &#125;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] maxPalin(<span class="hljs-keyword">char</span>[] ss, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)&#123;<br>        <span class="hljs-keyword">int</span> i = x;<br>        <span class="hljs-keyword">int</span> j = y;<br>        <span class="hljs-keyword">while</span>(i&gt;=<span class="hljs-number">0</span> &amp;&amp; j&lt;ss.length)&#123;<br>            <span class="hljs-keyword">if</span>(ss[i]!=ss[j])&#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]&#123;i+<span class="hljs-number">1</span>, j, j-i-<span class="hljs-number">1</span>&#125;;<br>            &#125;<br>            i--;<br>            j++;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]&#123;i+<span class="hljs-number">1</span>, j, j-i-<span class="hljs-number">1</span>&#125;;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第10天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P478开头，刷题如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/">167. 两数之和 II - 输入有序数组</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-element/">27. 移除元素</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/">283. 移动零</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-string/">344. 反转字符串</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-palindromic-substring/">5. 最长回文子串</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list/">83. 删除排序链表中的重复元素</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/he-wei-sde-liang-ge-shu-zi-lcof/">剑指 Offer 57. 和为s的两个数字</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/kLl5u1/">剑指 Offer II 006. 排序数组中两个数字之和</a></li>
+</ul>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>《陆犯焉识》</p>
+<p>她表面的嘻嘻哈哈，大大咧咧恰是因为自己的心太软，心太软的人快乐是不容易的，别人伤害她或者她伤害别人都让她在心里病一场</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%BD%E6%A0%91/">程序缘的技能栽树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/16/2022-07-16-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC11%E5%A4%A9/">
+                        <span class="hidden-mobile">【归】复习准备秋招第11天</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
