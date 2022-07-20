@@ -1,0 +1,695 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="要了解一个城市，比较方便的途径不外乎打听：那里的人们怎么干活，怎么相爱，怎么死去">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【归】复习准备秋招第15天">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/07/20/2022-07-20-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC15%E5%A4%A9/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="要了解一个城市，比较方便的途径不外乎打听：那里的人们怎么干活，怎么相爱，怎么死去">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-20-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC15%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103230.jpg">
+<meta property="article:published_time" content="2022-07-20T15:40:40.000Z">
+<meta property="article:modified_time" content="2022-07-20T15:52:26.221Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Leetcode">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-20-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC15%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103230.jpg">
+  
+  
+  <title>【归】复习准备秋招第15天 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-07-20-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC15%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103230.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【归】复习准备秋招第15天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-20 23:40" pubdate>
+        2022年7月20日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      12k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      101 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【归】复习准备秋招第15天</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第15天，给爷学</p>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Java研发"><a href="#Java研发" class="headerlink" title="Java研发"></a>Java研发</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a></p>
+</blockquote>
+<h4 id="P570"><a href="#P570" class="headerlink" title="P570"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=570">P570</a></h4><p>泛型方法可以声明为静态的，泛型参数是调用方法时确定的，并非在实例化时确定的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 泛型方法可以是静态的</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;E&gt; <span class="hljs-function">E <span class="hljs-title">show</span><span class="hljs-params">(E e)</span></span>&#123;<br>  <span class="hljs-keyword">return</span> e;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P571"><a href="#P571" class="headerlink" title="P571"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=571">P571</a></h4><p>泛型类 和 泛型方法 的 操作数据库 举例，可以再回顾体悟</p>
+<h4 id="P572"><a href="#P572" class="headerlink" title="P572"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=572">P572</a></h4><p><code>List&lt;Object&gt;</code> 和 <code>List&lt;String&gt; b</code> 不具备子父类关系，不然下面例子的最后，a = b，那么a.add(123) 也不会报错，就引入了不匹配的数据类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java">Object a = <span class="hljs-keyword">null</span>;<br>String b = <span class="hljs-keyword">null</span>;<br>a = b;<br><br>Object[] a = <span class="hljs-keyword">null</span>;<br>String[] b = <span class="hljs-keyword">null</span>;<br>a = b;<br><br>List&lt;Object&gt; a = <span class="hljs-keyword">null</span>;<br>List&lt;String&gt; b = <span class="hljs-keyword">null</span>;<br>a = b; <span class="hljs-comment">// 会报错，只有这一种不具备子父类关系</span><br><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P573"><a href="#P573" class="headerlink" title="P573"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=573">P573</a></h4><p>解决上一p的尖括号内的子父类继承问题，就是引入通配符？，即<code>List&lt;?&gt;</code>  是  <code>List&lt;Object&gt;</code> 和 <code>List&lt;String&gt; b</code>  的公共父类，因此可以不用写一堆重载方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>  List&lt;Object&gt; o = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>  List&lt;String&gt; s = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>  print(o);<br>  print(s);<br><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(List&lt;?&gt; cur)</span></span>&#123;<br>  Iterator&lt;?&gt; iterator = cur.iterator();<br>  <span class="hljs-keyword">while</span> (iterator.hasNext())&#123;<br>    Object o = iterator.next();<br>    System.out.println(o);<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P574"><a href="#P574" class="headerlink" title="P574"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=574">P574</a></h4><p>通配符？不能写入任何元素（null除外，毕竟任何类型都可以赋值null），但是可以读取，赋值给Object类型</p>
+<h4 id="P575"><a href="#P575" class="headerlink" title="P575"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=575">P575</a></h4><p>有限制条件的通配符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java">				List&lt;? extends Person&gt; l1 = <span class="hljs-keyword">null</span>;<br>        List&lt;? <span class="hljs-keyword">super</span> Person&gt; l2 = <span class="hljs-keyword">null</span>;<br><br>        List&lt;Object&gt; l3 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        List&lt;Person&gt; l4 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        List&lt;Student&gt; l5 = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br><br><br><span class="hljs-comment">//        l1 = l3; // 报错</span><br>        l1 = l4;<br>        l1 = l5;<br><br>        l2 = l3;<br>        l2 = l4;<br><span class="hljs-comment">//        l2 = l5; // 报错</span><br>        <br><span class="hljs-comment">//        l1.add(new Student()); // 报错，还是只能传null</span><br><span class="hljs-comment">//        l1.add(new Person()); // 报错，还是只能传null</span><br>        l2.add(<span class="hljs-keyword">new</span> Person());<br>        l2.add(<span class="hljs-keyword">new</span> Student());<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P578"><a href="#P578" class="headerlink" title="P578"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=578">P578</a></h4><p>File的相关函数方法1</p>
+<p><img src="/File%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%951.png" srcset="/img/loading.gif" lazyload alt="File的相关函数方法1"></p>
+<h4 id="P579"><a href="#P579" class="headerlink" title="P579"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=579">P579</a></h4><p>File的相关函数方法2</p>
+<p><img src="/File%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%952.png" srcset="/img/loading.gif" lazyload alt="File的相关函数方法2"></p>
+<p>File的相关函数方法3</p>
+<p><img src="/File%E7%9A%84%E7%9B%B8%E5%85%B3%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%953.png" srcset="/img/loading.gif" lazyload alt="File的相关函数方法3"></p>
+<p><strong>注意：File的各种方法，都不涉及内容，内容的修改要用到IO流</strong></p>
+<h4 id="P584"><a href="#P584" class="headerlink" title="P584"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=584">P584</a></h4><p>对于idea，如果是main方法，相对路径是整个工程，如果是单元测试，相对路径是在module下</p>
+<h4 id="P585"><a href="#P585" class="headerlink" title="P585"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=585">P585</a></h4><p>不同分类：</p>
+<ul>
+<li>数据单位<ul>
+<li>字节流： 8bit</li>
+<li>字符流：16bit</li>
+</ul>
+</li>
+<li>流的角色<ul>
+<li>节点流：</li>
+<li>处理流：节点流上外包的流</li>
+</ul>
+</li>
+</ul>
+<h4 id="P586"><a href="#P586" class="headerlink" title="P586"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=586">P586</a></h4><p>IO流的分类</p>
+<p><img src="/IO%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB.png" srcset="/img/loading.gif" lazyload alt="IO流的分类"></p>
+<p>第一行：抽象基类</p>
+<p>第二行：节点流</p>
+<p>第三行及以后：处理流</p>
+<h4 id="P587"><a href="#P587" class="headerlink" title="P587"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=587">P587</a></h4><p>尽量用try-catch-finally，而不是throws，因为可能跳过了IO流的关闭，gc是关不掉流的</p>
+<h4 id="P588"><a href="#P588" class="headerlink" title="P588"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=588">P588</a></h4><p>读入的基本用法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">char</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">5</span>];<br><span class="hljs-keyword">int</span> len;<br><span class="hljs-keyword">while</span>((len = fr.read(<span class="hljs-keyword">char</span>)!=-<span class="hljs-number">1</span>))&#123;<br>  String s = <span class="hljs-keyword">new</span> String(buffer, <span class="hljs-number">0</span>, len);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P589"><a href="#P589" class="headerlink" title="P589"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=589">P589</a></h4><p>写入的操作，默认是覆盖，如果要追加，fw定义的时候，第二个参数变成true</p>
+<h4 id="P592"><a href="#P592" class="headerlink" title="P592"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=592">P592</a></h4><p>用字节流来读文本，英文没啥问题（单位能用char处理），中文因为有3个字节，所以会乱码（除非中文占的3个字节，在一次性读的buffer[]内没有被截断）</p>
+<p><strong>注意，读有问题是因为每次读buffer，如果全部操作完，整体再读（类似于复制），就没有任何问题</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java">				FileInputStream fi = <span class="hljs-keyword">null</span>;<br>        <span class="hljs-keyword">try</span> &#123;<br>            File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;hello.txt&quot;</span>);<br>            fi = <span class="hljs-keyword">new</span> FileInputStream(f);<br><br>            <span class="hljs-comment">// 读取方法1，中文一定会乱码</span><br>            <span class="hljs-keyword">int</span> res;<br>            <span class="hljs-keyword">while</span>((res = fi.read())!=-<span class="hljs-number">1</span>)&#123;<br>                System.out.print((<span class="hljs-keyword">char</span>)res);<br>            &#125;<br><br>            <span class="hljs-comment">// 读取方法2，中文会乱码(没有被截断)</span><br><span class="hljs-comment">//            byte[] buffer = new byte[5];</span><br><span class="hljs-comment">//            int len;</span><br><span class="hljs-comment">//            while((len=fi.read(buffer))!=-1)&#123;</span><br><span class="hljs-comment">//                System.out.print(new String(buffer, 0, len));</span><br><span class="hljs-comment">//            &#125;</span><br>        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>            e.printStackTrace();<br>        &#125; <span class="hljs-keyword">finally</span>&#123;<br>          	<span class="hljs-keyword">if</span> (fi!=<span class="hljs-keyword">null</span>) &#123;<br>                <span class="hljs-keyword">try</span> &#123;<br>                    fi.close();<br>                &#125; <span class="hljs-keyword">catch</span> (IOException ioException) &#123;<br>                    ioException.printStackTrace();<br>                &#125;<br>            &#125;<br>        &#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：doc文件因为会自动换行，插入图片，也不算文本文件</strong></p>
+<h4 id="P596"><a href="#P596" class="headerlink" title="P596"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=596">P596</a></h4><p>Flush()：当前缓冲区内容输出，并清空缓冲区内容</p>
+<h4 id="P597"><a href="#P597" class="headerlink" title="P597"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=597">P597</a></h4><p>读写操作的两种方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java">		<span class="hljs-meta">@Test</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>&#123;<br>        BufferedReader bf = <span class="hljs-keyword">null</span>;<br>        BufferedWriter bw = <span class="hljs-keyword">null</span>;<br>        <span class="hljs-keyword">try</span> &#123;<br>            File f = <span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;hello.txt&quot;</span>);<br>            File f2 = <span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;hello2.txt&quot;</span>);<br>            FileReader fr = <span class="hljs-keyword">new</span> FileReader(f);<br>            FileWriter fw = <span class="hljs-keyword">new</span> FileWriter(f2);<br>            bf = <span class="hljs-keyword">new</span> BufferedReader(fr);<br>            bw = <span class="hljs-keyword">new</span> BufferedWriter(fw);<br><br>            <span class="hljs-comment">// 读写方法1</span><br>            String res;<br>            <span class="hljs-keyword">while</span> ((res = bf.readLine())!=<span class="hljs-keyword">null</span>) &#123;<br>                bw.write(res);<br>            &#125;<br>            <span class="hljs-comment">// 读写方法2</span><br><span class="hljs-comment">//            int len = 0;</span><br><span class="hljs-comment">//            char[] buffer = new char[1024];</span><br><span class="hljs-comment">//            while((len = bf.read(buffer))!=-1)&#123;</span><br><span class="hljs-comment">//                bw.write(buffer, 0, len);</span><br><span class="hljs-comment">//            &#125;</span><br>        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>            e.printStackTrace();<br>        &#125; <span class="hljs-keyword">finally</span>&#123;<br>          	<span class="hljs-keyword">if</span> (bf!=<span class="hljs-keyword">null</span>) &#123;<br>                <span class="hljs-keyword">try</span> &#123;<br>                    bf.close();<br>                &#125; <span class="hljs-keyword">catch</span> (IOException ioException) &#123;<br>                    ioException.printStackTrace();<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="P598"><a href="#P598" class="headerlink" title="P598"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=598">P598</a></h4><p>读取图片，并加密（对像素进行位运算）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">int</span> len = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">char</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">1024</span>];<br><span class="hljs-keyword">while</span>((len = bf.read(buffer))!=-<span class="hljs-number">1</span>)&#123;<br>  	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;len; i++)&#123;<br>      buffer[i] = buffer[i]^<span class="hljs-number">5</span><br>    &#125;<br>    bw.write(buffer, <span class="hljs-number">0</span>, len);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P600"><a href="#P600" class="headerlink" title="P600"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=600">P600</a></h4><p>转换流：InputStreamReader 和 OutputStreamWriter</p>
+<ul>
+<li>InputStreamReader：字节 变 字符</li>
+<li>OutputStreamWriter：字符 变 字节</li>
+</ul>
+<h4 id="P602"><a href="#P602" class="headerlink" title="P602"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=602">P602</a></h4><p>不同字符集</p>
+<p><img src="/%E4%B8%8D%E5%90%8C%E5%AD%97%E7%AC%A6%E9%9B%86.png" srcset="/img/loading.gif" lazyload alt="不同字符集"></p>
+<p>GB2312  和 GBK 的原理</p>
+<p>首位表示是一个字节还是两个字节：</p>
+<ul>
+<li>为0，表示1个字节</li>
+<li>为1，表示2个字节</li>
+</ul>
+<p>UTF-8原理</p>
+<p><img src="/UTF-8%E5%8E%9F%E7%90%86.png" srcset="/img/loading.gif" lazyload alt="UTF-8原理"></p>
+<p>不同字符集的关系</p>
+<p><img src="/%E4%B8%8D%E5%90%8C%E5%AD%97%E7%AC%A6%E9%9B%86%E7%9A%84%E5%85%B3%E7%B3%BB.png" srcset="/img/loading.gif" lazyload alt="不同字符集的关系"></p>
+<h4 id="P603"><a href="#P603" class="headerlink" title="P603"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=603">P603</a></h4><p>标准输入输出流的用法（System.in 得到的是InputStream，要用转换流转成 InputStreamReader，再用别的类似 BufferedReader 去操作）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java">BufferedReader br = <span class="hljs-keyword">null</span>;<br><span class="hljs-keyword">try</span> &#123;<br>  InputStreamReader isr = <span class="hljs-keyword">new</span> InputStreamReader(System.in);<br>  br = <span class="hljs-keyword">new</span> BufferedReader(isr);<br><br>  String res = <span class="hljs-keyword">null</span>;<br>  <span class="hljs-keyword">while</span>((res = br.readLine())!=<span class="hljs-keyword">null</span>)&#123;<br>    <span class="hljs-keyword">if</span>(<span class="hljs-string">&quot;e&quot;</span>.equalsIgnoreCase(res))&#123;<br>      <span class="hljs-keyword">break</span>;<br>    &#125;<br>    String uppercase = res.toUpperCase();<br>    System.out.println(uppercase);<br>  &#125;<br>&#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>  e.printStackTrace();<br>&#125; <span class="hljs-keyword">finally</span> &#123;<br>  <span class="hljs-keyword">if</span>(br!=<span class="hljs-keyword">null</span>)&#123;<br>    <span class="hljs-keyword">try</span> &#123;<br>      br.close();<br>    &#125; <span class="hljs-keyword">catch</span> (IOException ioException) &#123;<br>      ioException.printStackTrace();<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h4 id="P605"><a href="#P605" class="headerlink" title="P605"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=605">P605</a></h4><p>数据流的读写</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;<br><br>  DataOutputStream dos = <span class="hljs-keyword">new</span> DataOutputStream(<span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">&quot;hello.txt&quot;</span>));<br><br>  dos.writeUTF(<span class="hljs-string">&quot;123&quot;</span>);<br>  dos.flush();<br>  dos.writeInt(<span class="hljs-number">123</span>);<br>  dos.flush();<br>  dos.writeDouble(<span class="hljs-number">12.34</span>);<br><br>  dos.close();<br><br><br>  DataInputStream dis = <span class="hljs-keyword">new</span> DataInputStream(<span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;hello.txt&quot;</span>));<br><br>  String s = dis.readUTF();<br>  System.out.println(s);<br>  <span class="hljs-keyword">int</span> i = dis.readInt();<br>  System.out.println(i);<br>  <span class="hljs-keyword">double</span> v = dis.readDouble();<br>  System.out.println(v);<br><br><br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P610"><a href="#P610" class="headerlink" title="P610"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=610">P610</a></h4><p>System.in 返回的是抽象基类 InputStream</p>
+<p>system.out 返回的是打印流 PrintStream</p>
+<h4 id="P611"><a href="#P611" class="headerlink" title="P611"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=611">P611</a></h4><p>关于序列化</p>
+<p><img src="/%E5%85%B3%E4%BA%8E%E5%BA%8F%E5%88%97%E5%8C%96.png" srcset="/img/loading.gif" lazyload alt="关于序列化"></p>
+<h4 id="P613"><a href="#P613" class="headerlink" title="P613"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=613">P613</a></h4><p>对象流的要求：</p>
+<ul>
+<li>实现Serializable接口</li>
+<li>有个 <code>static final long serialVersionUID</code> 的属性</li>
+<li>所有成员变量/属性，都是可序列化的（基本数据类型默认是可以的）</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test_Object_Input_Output</span> </span>&#123;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException, ClassNotFoundException </span>&#123;<br><br>        ObjectOutputStream oos = <span class="hljs-keyword">new</span> ObjectOutputStream(<span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">&quot;hello.txt&quot;</span>));<br><br>        oos.writeObject(<span class="hljs-keyword">new</span> Sha(<span class="hljs-string">&quot;沙1&quot;</span>));<br>        oos.flush();<br>        oos.writeObject(<span class="hljs-keyword">new</span> Sha(<span class="hljs-string">&quot;沙2&quot;</span>));<br>        oos.flush();<br>        oos.writeObject(<span class="hljs-keyword">new</span> Sha(<span class="hljs-string">&quot;沙3&quot;</span>));<br>        oos.flush();<br><br>        ObjectInputStream ois = <span class="hljs-keyword">new</span> ObjectInputStream(<span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;hello.txt&quot;</span>));<br><br>        Object o1 = ois.readObject();<br>        System.out.println(o1);<br>        Object o2 = ois.readObject();<br>        System.out.println(o2);<br>        Object o3 = ois.readObject();<br>        System.out.println(o3);<br><br><br>    &#125;<br><br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Sha</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Serializable</span> </span>&#123;<br>  <br>  	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> serialVersionUID = <span class="hljs-number">4212412412414131L</span>;<br><br>    String name;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Sha</span><span class="hljs-params">(String name)</span> </span>&#123;<br>        <span class="hljs-keyword">this</span>.name = name;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Sha&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;name=&#x27;&quot;</span> + name + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P614"><a href="#P614" class="headerlink" title="P614"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=614">P614</a></h4><p>序列化UID的作用</p>
+<p><img src="/%E5%BA%8F%E5%88%97%E5%8C%96UID%E7%9A%84%E4%BD%9C%E7%94%A8.png" srcset="/img/loading.gif" lazyload alt="序列化UID的作用"></p>
+<p><strong>注意：即使序列化后，又改了类的一些内容，只要你的UID不变，即使本地存的类信息是被修改后的，依然能反序列化还原出修改前的类的对象信息</strong></p>
+<h4 id="P615"><a href="#P615" class="headerlink" title="P615"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=615">P615</a></h4><p>static，transient修饰的属性，不能序列化（反序列化的结果是默认值）</p>
+<h4 id="P616"><a href="#P616" class="headerlink" title="P616"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=616">P616</a></h4><p>RandomAccessFile</p>
+<ul>
+<li>直接继承Object，而不是4个抽象基类</li>
+<li>实现了 DataInput 和 DataOutput 两个接口（既可以做输入流，又可以做输出流）</li>
+</ul>
+<p>RandomAccessFile类的信息</p>
+<p><img src="/RandomAccessFile%E7%B1%BB%E7%9A%84%E4%BF%A1%E6%81%AF.png" srcset="/img/loading.gif" lazyload alt="RandomAccessFile类的信息"></p>
+<h4 id="P617"><a href="#P617" class="headerlink" title="P617"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=617">P617</a></h4><p>RandomAccessFile 的使用</p>
+<ul>
+<li>seek() 的使用</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;<br><br>  RandomAccessFile raf = <span class="hljs-keyword">new</span> RandomAccessFile(<span class="hljs-string">&quot;hello.txt&quot;</span>, <span class="hljs-string">&quot;rw&quot;</span>);<br>  RandomAccessFile raf2 = <span class="hljs-keyword">new</span> RandomAccessFile(<span class="hljs-string">&quot;hello.txt&quot;</span>, <span class="hljs-string">&quot;r&quot;</span>);<br><br><br>  <span class="hljs-comment">// 第一次写</span><br>  raf.write(<span class="hljs-string">&quot;abcdefghijklmn&quot;</span>.getBytes());<br><br>  <span class="hljs-comment">// 第一次读</span><br>  <span class="hljs-keyword">int</span> len = <span class="hljs-number">0</span>;<br>  <span class="hljs-keyword">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">10</span>];<br>  <span class="hljs-keyword">while</span>((len = raf2.read(buffer))!=-<span class="hljs-number">1</span>)&#123;<br>    System.out.print(<span class="hljs-keyword">new</span> String(buffer,<span class="hljs-number">0</span>,len));<br>  &#125;<br><br>  <span class="hljs-comment">// 第二次写</span><br>  raf.seek(<span class="hljs-number">3</span>);<br>  raf.write(<span class="hljs-string">&quot;xyz&quot;</span>.getBytes());<br><br>  <span class="hljs-comment">// 第二次读</span><br>  System.out.println();<br>  raf2.seek(<span class="hljs-number">0</span>);<br>  <span class="hljs-keyword">while</span>((len = raf2.read(buffer))!=-<span class="hljs-number">1</span>)&#123;<br>    System.out.print(<span class="hljs-keyword">new</span> String(buffer,<span class="hljs-number">0</span>,len));<br>  &#125;<br><br>  raf.close();<br>  raf2.close();<br><br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意，RandomAccessFile的应用，例如下载的断点续传</strong></p>
+<p><img src="/RandomAccessFile%E7%9A%84%E5%BA%94%E7%94%A8_%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0.png" srcset="/img/loading.gif" lazyload alt="RandomAccessFile的应用_断点续传"></p>
+<h4 id="P618"><a href="#P618" class="headerlink" title="P618"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=618">P618</a></h4><p>NIO是基于缓冲区的，普通IO是基于流的</p>
+<p><img src="/%E5%85%B3%E4%BA%8ENIO.png" srcset="/img/loading.gif" lazyload alt="关于NIO"></p>
+<p>关于Path，Paths，Files</p>
+<p><img src="/%E5%85%B3%E4%BA%8EPath_Paths_Files.png" srcset="/img/loading.gif" lazyload alt="关于Path_Paths_Files1"></p>
+<p><img src="/%E5%85%B3%E4%BA%8EPath_Paths_Files2.png" srcset="/img/loading.gif" lazyload alt="关于Path_Paths_Files2"></p>
+<p><img src="/%E5%85%B3%E4%BA%8EPath_Paths_Files3.png" srcset="/img/loading.gif" lazyload alt="关于Path_Paths_Files3"></p>
+<h4 id="P619"><a href="#P619" class="headerlink" title="P619"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=619">P619</a></h4><p>如何导第三方jar包</p>
+<ul>
+<li>建一个package，命名为“libs”，粘贴到该目录下</li>
+<li>右键jar包，“add as Library…”，之后就能引用了</li>
+</ul>
+<h4 id="P623"><a href="#P623" class="headerlink" title="P623"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=623">P623</a></h4><p>UDP的数据包，最大不超过64K</p>
+<h4 id="P624"><a href="#P624" class="headerlink" title="P624"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=624">P624</a></h4><p>socket通信的基本原理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">client</span><span class="hljs-params">()</span> </span>&#123;<br><br>      OutputStream outputStream = <span class="hljs-keyword">null</span>;<br>      <span class="hljs-keyword">try</span> &#123;<br>          InetAddress inet = InetAddress.getLocalHost();<br>          Socket s = <span class="hljs-keyword">new</span> Socket(inet, <span class="hljs-number">8889</span>);<br><br>          outputStream = s.getOutputStream();<br><br>          outputStream.write(<span class="hljs-string">&quot;沙哥牛逼~~123&quot;</span>.getBytes());<br>      &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>          e.printStackTrace();<br>      &#125; <span class="hljs-keyword">finally</span> &#123;<br>          <span class="hljs-keyword">if</span>(outputStream!=<span class="hljs-keyword">null</span>)&#123;<br>              <span class="hljs-keyword">try</span> &#123;<br>                  outputStream.close();<br>              &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>                  e.printStackTrace();<br>              &#125;<br>          &#125;<br><br>      &#125;<br><br>  &#125;<br><br>  <span class="hljs-meta">@Test</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">server</span><span class="hljs-params">()</span></span>&#123;<br><br>      InputStreamReader isr = <span class="hljs-keyword">null</span>;<br>      <span class="hljs-keyword">try</span> &#123;<br>          ServerSocket ss = <span class="hljs-keyword">new</span> ServerSocket(<span class="hljs-number">8889</span>);<br>          Socket accept = ss.accept();<br><br>          InputStream inputStream = accept.getInputStream();<br><br>          isr = <span class="hljs-keyword">new</span> InputStreamReader(inputStream);<br><br>          <span class="hljs-keyword">char</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">5</span>];<br>          <span class="hljs-keyword">int</span> len = <span class="hljs-number">0</span>;<br>          <span class="hljs-keyword">while</span>((len = isr.read(buffer))!=-<span class="hljs-number">1</span>)&#123;<br>              System.out.print(<span class="hljs-keyword">new</span> String(buffer,<span class="hljs-number">0</span>,len));<br>          &#125;<br>      &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>          e.printStackTrace();<br>      &#125; <span class="hljs-keyword">finally</span> &#123;<br>          <span class="hljs-keyword">if</span>(isr!=<span class="hljs-keyword">null</span>) &#123;<br>              <span class="hljs-keyword">try</span> &#123;<br>                  isr.close();<br>              &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>                  e.printStackTrace();<br>              &#125;<br>          &#125;<br>      &#125;<br><br><br><br>  &#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P626"><a href="#P626" class="headerlink" title="P626"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=626">P626</a></h4><p>客户端传文件，服务端收到后，返回“收到”：</p>
+<ul>
+<li>如果客户端传完文件，没有明确告知传完，服务端会一直等待，及不会退出接收程序的循环<ul>
+<li>需要额外客户端的socket，调用shutdownOutput() 一下</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">client</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;<br><br>      <span class="hljs-comment">// 文件 输入流的定义</span><br>      FileInputStream fis = <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">&quot;art_pig.jpg&quot;</span>);<br><br>      <span class="hljs-comment">// socket 输出流的定义</span><br>      InetAddress inet = InetAddress.getByName(<span class="hljs-string">&quot;127.0.0.1&quot;</span>);<br>      Socket s = <span class="hljs-keyword">new</span> Socket(inet, <span class="hljs-number">8889</span>);<br>      OutputStream os = s.getOutputStream();<br><br>      <span class="hljs-keyword">int</span> len = <span class="hljs-number">0</span>;<br>      <span class="hljs-keyword">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">5</span>];<br><br>      <span class="hljs-keyword">while</span>((len = fis.read(buffer))!=-<span class="hljs-number">1</span>)&#123;<br>          os.write(buffer, <span class="hljs-number">0</span>, len);<br>      &#125;<br><br>      s.shutdownOutput();<br><br>      InputStream is = s.getInputStream();<br>      InputStreamReader isr = <span class="hljs-keyword">new</span> InputStreamReader(is);<br>      <span class="hljs-keyword">char</span>[] buf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">5</span>];<br>      <span class="hljs-keyword">while</span>((len = isr.read(buf))!=-<span class="hljs-number">1</span>)&#123;<br>          System.out.print(<span class="hljs-keyword">new</span> String(buf, <span class="hljs-number">0</span>, len));<br>      &#125;<br><br>      isr.close();<br>      os.close();<br>      s.close();<br>      fis.close();<br><br>  &#125;<br><br>  <span class="hljs-meta">@Test</span><br>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">server</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;<br>      <span class="hljs-comment">// 文件 输出流</span><br>      FileOutputStream fos = <span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">&quot;art_pig2.jpg&quot;</span>);<br><br>      <span class="hljs-comment">// socket 输入流</span><br>      ServerSocket ss = <span class="hljs-keyword">new</span> ServerSocket(<span class="hljs-number">8889</span>);<br>      Socket s = ss.accept();<br>      InputStream is = s.getInputStream();<br><br>      <span class="hljs-keyword">int</span> len = <span class="hljs-number">0</span>;<br>      <span class="hljs-keyword">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">5</span>];<br>      <span class="hljs-keyword">while</span>((len=is.read(buffer))!=-<span class="hljs-number">1</span>)&#123;<br>          fos.write(buffer, <span class="hljs-number">0</span>, len);<br>      &#125;<br><br>      OutputStream os = s.getOutputStream();<br><br>      os.write(<span class="hljs-string">&quot;发送完成word沙&quot;</span>.getBytes());<br><br><br>      os.close();<br>      is.close();<br>      s.close();<br>      ss.close();<br>      fos.close();<br><br>  &#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P627"><a href="#P627" class="headerlink" title="P627"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=627">P627</a></h4><p>Tomcat服务器有空自己搭一下</p>
+<h4 id="P628"><a href="#P628" class="headerlink" title="P628"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=628">P628</a></h4><p>UDP 的 代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Test</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">client</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;<br><br>        DatagramSocket ds = <span class="hljs-keyword">new</span> DatagramSocket();<br>        <span class="hljs-keyword">byte</span>[] bytes = <span class="hljs-string">&quot;UDP就是我~~&quot;</span>.getBytes();<br>        DatagramPacket dp = <span class="hljs-keyword">new</span> DatagramPacket(bytes,<span class="hljs-number">0</span>,bytes.length, InetAddress.getLocalHost(),<span class="hljs-number">8889</span>);<br><br>        ds.send(dp);<br><br><br><br>    &#125;<br><br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">server</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException</span>&#123;<br>        DatagramSocket ds = <span class="hljs-keyword">new</span> DatagramSocket(<span class="hljs-number">8889</span>);<br>        <span class="hljs-keyword">byte</span>[] buf = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">100</span>];<br>        DatagramPacket dp = <span class="hljs-keyword">new</span> DatagramPacket(buf,<span class="hljs-number">0</span>,buf.length);<br><br>        ds.receive(dp);<br><br>        System.out.println(<span class="hljs-keyword">new</span> String(dp.getData(),<span class="hljs-number">0</span>,dp.getLength()));<br><br>    &#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h4 id="P630"><a href="#P630" class="headerlink" title="P630"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=630">P630</a></h4><p>URL 下载图片</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test_URL_download</span> </span>&#123;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">download</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;<br>        <br><span class="hljs-comment">//        https://c-ssl.duitang.com/uploads/item/201710/21/20171021211119_x2wWB.jpeg</span><br><br>        URL url = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">&quot;https://c-ssl.duitang.com/uploads/item/201710/21/20171021211119_x2wWB.jpeg&quot;</span>);<br><br>        HttpURLConnection uc = (HttpURLConnection) url.openConnection();<br><br>        uc.connect();<br><br>        InputStream is = uc.getInputStream();<br><br>        FileOutputStream fos = <span class="hljs-keyword">new</span> FileOutputStream(<span class="hljs-string">&quot;ppig.jpeg&quot;</span>);<br><br>        <span class="hljs-keyword">int</span> len = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">5</span>];<br>        <span class="hljs-keyword">while</span>((len=is.read(buffer))!=-<span class="hljs-number">1</span>)&#123;<br>            fos.write(buffer,<span class="hljs-number">0</span>,len);<br>        &#125;<br><br>        fos.close();<br>        is.close();<br>        uc.disconnect();<br><br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h4 id="P640"><a href="#P640" class="headerlink" title="P640"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=640">P640</a></h4><p>关于反射的应用讲得很好</p>
+<ul>
+<li>一个服务器正在运行，发来一个login 的URL，服务器代码不可能预测来的是什么，要调用哪个类，因此只能用反射的方式，通过url了解到想调login的类，因此用反射去造一个login类</li>
+</ul>
+<p>两个问题的解答：</p>
+<ul>
+<li>开发中应该用普通的直接new方法，还是反射方法<ul>
+<li>大部分时候直接new，再需要动态确定的时候，采用反射的方法</li>
+</ul>
+</li>
+<li>反射机制和面向对象的封装性是不是矛盾，如何看待<ul>
+<li>不矛盾，一个是建议你用public的方法，这些public的方法被设计得更好（例如单例模式，你可以另外造对象，但是你操作了一堆最后实现的也无外乎我给你造的对象能实现的功能，因此我是强烈建议）；另一个是在证明能不能的问题（反射能达到任何你需要的操作目的）</li>
+</ul>
+</li>
+</ul>
+<h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
+</blockquote>
+<h4 id="76-Minimum-Window-Substring"><a href="#76-Minimum-Window-Substring" class="headerlink" title="76. Minimum Window Substring"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/minimum-window-substring/">76. Minimum Window Substring</a></h4><ul>
+<li>一开始初始化为不可能达到的，最后返回前要判断下</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">minWindow</span><span class="hljs-params">(String s, String t)</span> </span>&#123;<br>        <span class="hljs-keyword">char</span>[] ss = s.toCharArray();<br>        <span class="hljs-keyword">char</span>[] pp = t.toCharArray();<br>        <span class="hljs-keyword">int</span> n = ss.length;<br>        <br>        <span class="hljs-keyword">int</span>[] need = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">256</span>];<br>        <span class="hljs-keyword">int</span>[] window = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">256</span>];<br>        <br>        <span class="hljs-keyword">int</span> target = <span class="hljs-number">0</span>;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">char</span> c : pp)&#123;<br>            <span class="hljs-keyword">if</span>(need[c]==<span class="hljs-number">0</span>)&#123;<br>                target++;<br>            &#125;<br>            need[c]++;<br>        &#125;<br>        <br>        <span class="hljs-keyword">int</span> l = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> r = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> valid = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> res_len = n+<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">int</span> res_l = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> res_r = n;<br>        <br>        List&lt;Integer&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        <br>        <span class="hljs-keyword">while</span>(r&lt;n)&#123;<br>            <span class="hljs-keyword">char</span> cur = ss[r];<br>            <span class="hljs-keyword">if</span>(need[cur]&gt;<span class="hljs-number">0</span>)&#123;<br>                window[cur]++;<br>                <span class="hljs-keyword">if</span>(window[cur]==need[cur])&#123;<br>                    valid++;<br>                &#125;<br>            &#125;<br>            r++;<br>            <br>            <br>            <span class="hljs-keyword">while</span>(valid&gt;=target)&#123;<br>                <span class="hljs-keyword">if</span>(r-l&lt;res_len)&#123;<br>                    res_len = r - l;<br>                    res_l = l;<br>                    res_r = r;<br>                &#125;<br>                cur = ss[l];<br>                <span class="hljs-keyword">if</span>(need[cur]&gt;<span class="hljs-number">0</span>)&#123;<br>                    <span class="hljs-keyword">if</span>(window[cur]==need[cur])&#123;<br>                        valid--;<br>                    &#125;<br>                    window[cur]--;<br>                &#125;<br>                l++;<br>            &#125;<br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> (res_len==n+<span class="hljs-number">1</span>)?<span class="hljs-string">&quot;&quot;</span>:s.substring(res_l, res_r);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第15天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P640开头，刷题如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122. 买卖股票的最佳时机 II</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123. 买卖股票的最佳时机 III</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188. 买卖股票的最佳时机 IV</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. 最佳买卖股票时机含冷冻期</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. 买卖股票的最佳时机含手续费</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof/">剑指 Offer 63. 股票的最大利润</a></li>
+</ul>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>阿尔贝·加缪《鼠疫》</p>
+<p>要了解一个城市，比较方便的途径不外乎打听：那里的人们怎么干活，怎么相爱，怎么死去</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%BD%E6%A0%91/">程序缘的技能栽树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/19/2022-07-19-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC14%E5%A4%A9/">
+                        <span class="hidden-mobile">【归】复习准备秋招第14天</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
