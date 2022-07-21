@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="要了解一个城市，比较方便的途径不外乎打听：那里的人们怎么干活，怎么相爱，怎么死去">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【归】复习准备秋招第16天">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/07/21/2022-07-21-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC16%E5%A4%A9/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="要了解一个城市，比较方便的途径不外乎打听：那里的人们怎么干活，怎么相爱，怎么死去">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-21-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC16%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103246.jpg">
+<meta property="article:published_time" content="2022-07-21T15:40:40.000Z">
+<meta property="article:modified_time" content="2022-07-21T01:56:33.228Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Leetcode">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-21-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC16%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103246.jpg">
+  
+  
+  <title>【归】复习准备秋招第16天 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-07-21-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC16%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103246.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【归】复习准备秋招第16天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-21 23:40" pubdate>
+        2022年7月21日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【归】复习准备秋招第16天</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第15天，给爷学</p>
+<p><img src="/2022/07/21/2022-07-21-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC16%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103246.jpg" srcset="/img/loading.gif" lazyload alt="123"></p>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Java研发"><a href="#Java研发" class="headerlink" title="Java研发"></a>Java研发</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a></p>
+</blockquote>
+<h4 id="P570"><a href="#P570" class="headerlink" title="P570"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=570">P570</a></h4><p>泛型方法可以声明为静态的，泛型参数是调用方法时确定的，并非在实例化时确定的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 泛型方法可以是静态的</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> &lt;E&gt; <span class="hljs-function">E <span class="hljs-title">show</span><span class="hljs-params">(E e)</span></span>&#123;<br>  <span class="hljs-keyword">return</span> e;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
+</blockquote>
+<h4 id="309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown"><a href="#309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown" class="headerlink" title="309. Best Time to Buy and Sell Stock with Cooldown"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. Best Time to Buy and Sell Stock with Cooldown</a></h4><ul>
+<li>如何保存pre变量，要自己推演一下</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br><span class="hljs-comment">//     public int maxProfit(int[] prices) &#123;</span><br><span class="hljs-comment">//         int n = prices.length;</span><br><span class="hljs-comment">//         //dp[i][j]:第i天，是否持有股票（j=1代表持有）</span><br><span class="hljs-comment">//         int[][] dp = new int[n+1][2];</span><br>        <br><span class="hljs-comment">//         dp[0][0] = 0;</span><br><span class="hljs-comment">//         dp[0][1] = -2500001;</span><br><span class="hljs-comment">//         dp[1][0] = 0;</span><br><span class="hljs-comment">//         dp[1][1] = -prices[0];</span><br>        <br><span class="hljs-comment">//         for(int i=2; i&lt;=n; i++)&#123;</span><br><span class="hljs-comment">//             dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1]+prices[i-1]);</span><br><span class="hljs-comment">//             dp[i][1] = Math.max(dp[i-1][1], dp[i-2][0]-prices[i-1]);</span><br><span class="hljs-comment">//         &#125;</span><br>        <br><span class="hljs-comment">//         System.out.println(Arrays.deepToString(dp));</span><br>        <br><span class="hljs-comment">//         return Math.max(dp[n][0], 0);</span><br>        <br><span class="hljs-comment">//     &#125;</span><br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxProfit</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] prices)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = prices.length;<br>        <span class="hljs-comment">//dp[i][j]:第i天，是否持有股票（j=1代表持有）</span><br>        <span class="hljs-comment">// int[][] dp = new int[n+1][2];</span><br>        <br>        <span class="hljs-keyword">int</span> dp0_pre = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> dp0_cur = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> dp1 = -prices[<span class="hljs-number">0</span>];<br>        <span class="hljs-comment">// dp[0][0] = 0;</span><br>        <span class="hljs-comment">// dp[0][1] = -2500001;</span><br>        <span class="hljs-comment">// dp[1][0] = 0;</span><br>        <span class="hljs-comment">// dp[1][1] = -prices[0];</span><br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>; i&lt;=n; i++)&#123;<br>            <span class="hljs-keyword">int</span> tmp = dp0_cur;<br>            dp0_cur = Math.max(dp0_cur, dp1+prices[i-<span class="hljs-number">1</span>]);<br>            dp1 = Math.max(dp1, dp0_pre-prices[i-<span class="hljs-number">1</span>]);<br>            dp0_pre = tmp;<br>            <br>            <span class="hljs-comment">// System.out.println(dp0_cur + &quot;, &quot; + dp1);</span><br>            <br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> Math.max(dp0_cur, <span class="hljs-number">0</span>);<br>        <br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第15天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P640开头，刷题如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122. 买卖股票的最佳时机 II</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123. 买卖股票的最佳时机 III</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188. 买卖股票的最佳时机 IV</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. 最佳买卖股票时机含冷冻期</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. 买卖股票的最佳时机含手续费</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof/">剑指 Offer 63. 股票的最大利润</a></li>
+</ul>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>阿尔贝·加缪《鼠疫》</p>
+<p>要了解一个城市，比较方便的途径不外乎打听：那里的人们怎么干活，怎么相爱，怎么死去</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%BD%E6%A0%91/">程序缘的技能栽树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/20/2022-07-20-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC15%E5%A4%A9/">
+                        <span class="hidden-mobile">【归】复习准备秋招第15天</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

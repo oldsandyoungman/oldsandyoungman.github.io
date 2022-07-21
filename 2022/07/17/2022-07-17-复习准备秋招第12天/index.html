@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC12%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103128.jpg">
 <meta property="article:published_time" content="2022-07-17T12:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-18T15:45:51.164Z">
+<meta property="article:modified_time" content="2022-07-21T02:29:43.078Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Leetcode">
@@ -353,7 +353,7 @@
 
 
 <p>关于Future接口</p>
-<p><img src="/Future%E6%8E%A5%E5%8F%A3.png" srcset="/img/loading.gif" lazyload alt="Future接口"></p>
+<p><img src="/2022/07/17/2022-07-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC12%E5%A4%A9/Future%E6%8E%A5%E5%8F%A3.png" srcset="/img/loading.gif" lazyload alt="Future接口"></p>
 <h4 id="P445"><a href="#P445" class="headerlink" title="P445"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=445">P445</a></h4><p>线程池的好处：</p>
 <ul>
 <li>减小响应时间</li>
@@ -457,7 +457,7 @@
 </li>
 </ul>
 <h4 id="P467"><a href="#P467" class="headerlink" title="P467"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=467">P467</a></h4><p>StringBuffer的常用函数：</p>
-<p><img src="/StringBuffer%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.png" srcset="/img/loading.gif" lazyload alt="StringBuffer常用函数"></p>
+<p><img src="/2022/07/17/2022-07-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC12%E5%A4%A9/StringBuffer%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0.png" srcset="/img/loading.gif" lazyload alt="StringBuffer常用函数"></p>
 <p><strong>注意，只有substring是有返回值的，更准确地说是返回不可变对象，其他都是返回自身，因此自身地址一样不如不返回</strong></p>
 <h4 id="P470"><a href="#P470" class="headerlink" title="P470"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=470">P470</a></h4><p>几个时间类</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">long</span> l = System.currentTimeMillis();<br>System.out.println(l);<br><br>Date d1 = <span class="hljs-keyword">new</span> Date();<br>System.out.println(d1.toString());<br>System.out.println(d1.getTime());<br><br>Date d2 = <span class="hljs-keyword">new</span> Date(<span class="hljs-number">132213131L</span>);<br>System.out.println(d1.toString());<br><br>java.sql.Date d3 = <span class="hljs-keyword">new</span> java.sql.Date(d1.getTime());<br>System.out.println(d3.toString());<br></code></pre></td></tr></table></figure>
