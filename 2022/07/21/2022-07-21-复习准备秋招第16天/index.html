@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-21-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC16%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103246.jpg">
 <meta property="article:published_time" content="2022-07-21T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-21T12:06:11.834Z">
+<meta property="article:modified_time" content="2022-07-21T16:02:21.302Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Leetcode">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7k 字
+      6.7k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      59 分钟
+      56 分钟
     </span>
   
 
@@ -243,7 +243,7 @@
             <h1 style="display: none">【归】复习准备秋招第16天</h1>
             
             <div class="markdown-body">
-              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第15天，给爷学</p>
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第16天，给爷学</p>
 <h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="Java研发"><a href="#Java研发" class="headerlink" title="Java研发"></a>Java研发</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a></p>
 </blockquote>
@@ -385,26 +385,29 @@
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
-<h4 id="309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown"><a href="#309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown" class="headerlink" title="309. Best Time to Buy and Sell Stock with Cooldown"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. Best Time to Buy and Sell Stock with Cooldown</a></h4><ul>
-<li>如何保存pre变量，要自己推演一下</li>
+<h4 id="198-House-Robber"><a href="#198-House-Robber" class="headerlink" title="198. House Robber"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/house-robber/">198. House Robber</a></h4><ul>
+<li>dp[0] 已经是dp[1] 和另外一个中的最大值，所以不需要再返回Math.max(dp[0], dp[1]) 了</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br><span class="hljs-comment">//     public int maxProfit(int[] prices) &#123;</span><br><span class="hljs-comment">//         int n = prices.length;</span><br><span class="hljs-comment">//         //dp[i][j]:第i天，是否持有股票（j=1代表持有）</span><br><span class="hljs-comment">//         int[][] dp = new int[n+1][2];</span><br>        <br><span class="hljs-comment">//         dp[0][0] = 0;</span><br><span class="hljs-comment">//         dp[0][1] = -2500001;</span><br><span class="hljs-comment">//         dp[1][0] = 0;</span><br><span class="hljs-comment">//         dp[1][1] = -prices[0];</span><br>        <br><span class="hljs-comment">//         for(int i=2; i&lt;=n; i++)&#123;</span><br><span class="hljs-comment">//             dp[i][0] = Math.max(dp[i-1][0], dp[i-1][1]+prices[i-1]);</span><br><span class="hljs-comment">//             dp[i][1] = Math.max(dp[i-1][1], dp[i-2][0]-prices[i-1]);</span><br><span class="hljs-comment">//         &#125;</span><br>        <br><span class="hljs-comment">//         System.out.println(Arrays.deepToString(dp));</span><br>        <br><span class="hljs-comment">//         return Math.max(dp[n][0], 0);</span><br>        <br><span class="hljs-comment">//     &#125;</span><br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxProfit</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] prices)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = prices.length;<br>        <span class="hljs-comment">//dp[i][j]:第i天，是否持有股票（j=1代表持有）</span><br>        <span class="hljs-comment">// int[][] dp = new int[n+1][2];</span><br>        <br>        <span class="hljs-keyword">int</span> dp0_pre = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> dp0_cur = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> dp1 = -prices[<span class="hljs-number">0</span>];<br>        <span class="hljs-comment">// dp[0][0] = 0;</span><br>        <span class="hljs-comment">// dp[0][1] = -2500001;</span><br>        <span class="hljs-comment">// dp[1][0] = 0;</span><br>        <span class="hljs-comment">// dp[1][1] = -prices[0];</span><br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">2</span>; i&lt;=n; i++)&#123;<br>            <span class="hljs-keyword">int</span> tmp = dp0_cur;<br>            dp0_cur = Math.max(dp0_cur, dp1+prices[i-<span class="hljs-number">1</span>]);<br>            dp1 = Math.max(dp1, dp0_pre-prices[i-<span class="hljs-number">1</span>]);<br>            dp0_pre = tmp;<br>            <br>            <span class="hljs-comment">// System.out.println(dp0_cur + &quot;, &quot; + dp1);</span><br>            <br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> Math.max(dp0_cur, <span class="hljs-number">0</span>);<br>        <br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">rob</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = nums.length;<br>        <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span>)&#123;<br>            <span class="hljs-keyword">return</span> nums[<span class="hljs-number">0</span>];<br>        &#125;<br>        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n+<span class="hljs-number">2</span>];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = n-<span class="hljs-number">1</span>; i&gt;=<span class="hljs-number">0</span>; i--)&#123;<br>            dp[i] = Math.max(dp[i+<span class="hljs-number">1</span>], dp[i+<span class="hljs-number">2</span>]+nums[i]);<br>        &#125;<br>        <span class="hljs-keyword">return</span> dp[<span class="hljs-number">0</span>];<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="213-House-Robber-II"><a href="#213-House-Robber-II" class="headerlink" title="213. House Robber II"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/house-robber-ii/">213. House Robber II</a></h4><ul>
+<li>不包括最后一个的情况，可以重复利用上次的数组，只是dp[n-1]位置置为0即可</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">rob</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;<br>        <br>        <span class="hljs-keyword">int</span> n = nums.length;<br>        <br>        <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span>)&#123;<br>            <span class="hljs-keyword">return</span> nums[<span class="hljs-number">0</span>];<br>        &#125;<br>        <br>        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n+<span class="hljs-number">2</span>];<br>        <br>        <span class="hljs-comment">// 不包括第一个</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=n-<span class="hljs-number">1</span>; i&gt;<span class="hljs-number">0</span>; i--)&#123;<br>            dp[i] = Math.max(dp[i+<span class="hljs-number">1</span>], dp[i+<span class="hljs-number">2</span>]+nums[i]);<br>        &#125;<br>        <br>        <span class="hljs-keyword">int</span> max1 = dp[<span class="hljs-number">1</span>];<br>        <br>        <span class="hljs-comment">// 不包括最后一个</span><br>        dp[n-<span class="hljs-number">1</span>] = <span class="hljs-number">0</span>;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=n-<span class="hljs-number">2</span>; i&gt;=<span class="hljs-number">0</span>; i--)&#123;<br>            dp[i] = Math.max(dp[i+<span class="hljs-number">1</span>], dp[i+<span class="hljs-number">2</span>]+nums[i]);<br>        &#125;<br>        <br>        <span class="hljs-keyword">int</span> max2 = dp[<span class="hljs-number">0</span>];<br>        <br>        <span class="hljs-keyword">return</span> Math.max(max1, max2);<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
 
 
-
-
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第16天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P640开头，刷题如下：</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第16天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N">尚硅谷Java入门视频教程(在线答疑+Java面试真题)</a> 的 P693开头，刷题如下：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/">122. 买卖股票的最佳时机 II</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/">123. 买卖股票的最佳时机 III</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv/">188. 买卖股票的最佳时机 IV</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/">309. 最佳买卖股票时机含冷冻期</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">714. 买卖股票的最佳时机含手续费</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof/">剑指 Offer 63. 股票的最大利润</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/house-robber/">198. 打家劫舍</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/house-robber-ii/">213. 打家劫舍 II</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/house-robber-iii/">337. 打家劫舍 III</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/Gu0c2T/">剑指 Offer II 089. 房屋偷盗</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/PzWKhm/">剑指 Offer II 090. 环形房屋偷盗</a></li>
 </ul>
 <h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
 <p>阿尔贝·加缪《鼠疫》</p>
