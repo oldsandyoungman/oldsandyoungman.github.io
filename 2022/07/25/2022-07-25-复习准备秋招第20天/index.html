@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-25-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC20%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103311.jpg">
 <meta property="article:published_time" content="2022-07-25T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-25T01:17:07.603Z">
+<meta property="article:modified_time" content="2022-07-25T13:07:23.589Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.4k 字
+      2.5k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      12 分钟
+      22 分钟
     </span>
   
 
@@ -247,22 +247,33 @@
 <h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a></p>
 </blockquote>
-<h4 id="P15"><a href="#P15" class="headerlink" title="P15"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=15">P15</a></h4><p>字符串用单引号，别名用双引号</p>
+<h4 id="P23"><a href="#P23" class="headerlink" title="P23"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=23">P23</a></h4><p>分页： <code>LIMIT a, b</code>，从第a条数据开始输出，输出b条数据</p>
 <ul>
-<li>如果乱用，mysql虽然不会报错（语法检查不严谨），但是oracle会报错</li>
+<li>8.0新特性，等效的写法：<code>LIMIT b OFFSET a</code>位置要变一下</li>
 </ul>
-<p>distinct 只能放在所有字段最前面，加多个变量（其实没啥意义）</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">DISTINCT</span> department_id, salary <span class="hljs-keyword">FROM</span> employees;<br></code></pre></td></tr></table></figure>
-
-<p>着重号``:</p>
+<h4 id="P25"><a href="#P25" class="headerlink" title="P25"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=25">P25</a></h4><p>单表拆成多表的意义：</p>
 <ul>
-<li>用于处理和关键字相同的表名</li>
+<li>减少冗余数据（有些行的字段为空）</li>
+<li>增大数据IO（多表联查比单表查，因为上面的减少冗余，能查更多操作）</li>
+<li>并行查询效率更高（单表查的并行效率肯定低）</li>
 </ul>
-<p>查询常数：</p>
+<h4 id="P26"><a href="#P26" class="headerlink" title="P26"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=26">P26</a></h4><p>笛卡尔积的错误</p>
 <ul>
-<li>用于增加常亮字段</li>
+<li>A表的每一行，都跟B表每一行乘了一次显示</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-string">&#x27;abc&#x27;</span>, <span class="hljs-number">123</span>, department_id, salary <span class="hljs-keyword">FROM</span> employees;<br></code></pre></td></tr></table></figure>
+<p>多表查询时，建议每个字段都加上表名（即使没有歧义）</p>
+<ul>
+<li>便于SQL优化</li>
+</ul>
+<p>多表查询时，FROM里可以给表名加别名，给SELECT，WHERE里用</p>
+<ul>
+<li>一旦起了别名，就不能用原名了</li>
+</ul>
+<h4 id="P27"><a href="#P27" class="headerlink" title="P27"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=27">P27</a></h4><p>非等值连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> e.last_name, e.salary, j.grade_level<br><span class="hljs-keyword">FROM</span> employees e, job_grades j<br><span class="hljs-keyword">WHERE</span> e.salary <span class="hljs-keyword">BETWEEN</span> j.lowest_sal <span class="hljs-keyword">AND</span> j.highest_sal;<br></code></pre></td></tr></table></figure>
+
+<p>自连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name employee_name, e.manager_id, m.last_name manager_name<br><span class="hljs-keyword">from</span> employees e, employees m<br><span class="hljs-keyword">WHERE</span> e.manager_id <span class="hljs-operator">=</span> m.employee_id<br></code></pre></td></tr></table></figure>
 
 
 
@@ -270,20 +281,41 @@
 
 
 
+<h4 id="P28"><a href="#P28" class="headerlink" title="P28"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=28">P28</a></h4><p>内连接：多表查询如果不满足条件，就不列出来</p>
+<p>外连接：多表查询如果不满足条件，也要列出来</p>
+<ul>
+<li>左外连接：不满足的左表都列出来</li>
+<li>右外连接：不满足的右表都列出来</li>
+<li>满外连接：左右表不满足的都列出来</li>
+</ul>
+<h5 id="SQL92-使用-创建连接"><a href="#SQL92-使用-创建连接" class="headerlink" title="SQL92**:使用**(+)创建连接"></a>SQL92**:使用**(+)<strong>创建连接</strong></h5><p>在 SQL92 中采用(+)代表从表所在的位置。即左或右外连接中，(+) 表示哪个是从表。</p>
+<p>Oracle 对 SQL92 支持较好，而 MySQL 则不支持 SQL92 的外连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs sql">#左外连接<br><span class="hljs-keyword">SELECT</span> last_name,department_name<br><span class="hljs-keyword">FROM</span> employees ,departments<br><span class="hljs-keyword">WHERE</span> employees.department_id <span class="hljs-operator">=</span> departments.department_id(<span class="hljs-operator">+</span>);<br><br>#右外连接<br><span class="hljs-keyword">SELECT</span> last_name,department_name<br><span class="hljs-keyword">FROM</span> employees ,departments<br><span class="hljs-keyword">WHERE</span> employees.department_id(<span class="hljs-operator">+</span>) <span class="hljs-operator">=</span> departments.department_id;<br></code></pre></td></tr></table></figure>
+
+<p>而且在 SQL92 中，只有左外连接和右外连接，没有满(或全)外连接。</p>
+<h5 id="SQL99-使用JOIN-ON创建连接"><a href="#SQL99-使用JOIN-ON创建连接" class="headerlink" title="SQL99**:使用JOIN ON创建连接**"></a>SQL99**:使用<strong>JOIN ON</strong>创建连接**</h5><p><strong>内连接</strong>(INNER JOIN)<strong>的实现</strong></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> employee_id, city, department_name<br><span class="hljs-keyword">FROM</span>   employees e<br><span class="hljs-keyword">JOIN</span>   departments d<br><span class="hljs-keyword">ON</span>     d.department_id <span class="hljs-operator">=</span> e.department_id<br><span class="hljs-keyword">JOIN</span>   locations l<br><span class="hljs-keyword">ON</span>     d.location_id <span class="hljs-operator">=</span> l.location_id;<br></code></pre></td></tr></table></figure>
+
+<p><strong>左外连接</strong>(LEFT OUTER JOIN)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span>   employees e<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span>   (e.department_id <span class="hljs-operator">=</span> d.department_id) ;<br></code></pre></td></tr></table></figure>
+
+<p><strong>右外连接</strong>(RIGHT OUTER JOIN)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span>   employees e<br><span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">OUTER</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span>    (e.department_id <span class="hljs-operator">=</span> d.department_id);<br></code></pre></td></tr></table></figure>
 
 
+
+
+
+<h4 id="P29"><a href="#P29" class="headerlink" title="P29"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=29">P29</a></h4><blockquote>
+<p>注意：执行UNION ALL语句时所需要的资源比UNION语句少。如果明确知道合并数据后的结果数据不存在重复数据，或者不需要去除重复的数据，则尽量使用UNION ALL语句，以提高数据查询的效率。</p>
+</blockquote>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
-<h4 id="25-Reverse-Nodes-in-k-Group"><a href="#25-Reverse-Nodes-in-k-Group" class="headerlink" title="25. Reverse Nodes in k-Group"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/reverse-nodes-in-k-group/">25. Reverse Nodes in k-Group</a></h4><ul>
-<li>遍历K个节点的过程里，如果为null，就直接返回head，别忘了</li>
-<li>这里面也是两步走<ul>
-<li>递归调用子函数，表示前k个节点ok了</li>
-<li>head的next指针，指向下一部分（<strong>注意下一部分要调用本函数</strong>）</li>
+<h4 id="304-Range-Sum-Query-2D-Immutable"><a href="#304-Range-Sum-Query-2D-Immutable" class="headerlink" title="304. Range Sum Query 2D - Immutable"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/range-sum-query-2d-immutable/">304. Range Sum Query 2D - Immutable</a></h4><ul>
+<li>这类前缀和，都是默认输入的小标是取到的，所以preSum[j+1]-preSum[i]，后面那个不需要额外加一</li>
 </ul>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * public class ListNode &#123;</span><br><span class="hljs-comment"> *     int val;</span><br><span class="hljs-comment"> *     ListNode next;</span><br><span class="hljs-comment"> *     ListNode() &#123;&#125;</span><br><span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span><br><span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">reverseKGroup</span><span class="hljs-params">(ListNode head, <span class="hljs-keyword">int</span> k)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(head==<span class="hljs-keyword">null</span> || head.next==<span class="hljs-keyword">null</span>)&#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        ListNode nextStart = head;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;k; i++)&#123;<br>            <span class="hljs-keyword">if</span>(nextStart==<span class="hljs-keyword">null</span>)&#123;<br>                <span class="hljs-keyword">return</span> head;<br>            &#125;<br>            nextStart = nextStart.next;<br>        &#125;<br>        ListNode last = reverseA2B(head, nextStart);<br>        head.next = reverseKGroup(nextStart, k);<br>        <span class="hljs-keyword">return</span> last;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">reverseA2B</span><span class="hljs-params">(ListNode head, ListNode nextStart)</span></span>&#123;<br>        <span class="hljs-keyword">if</span>(head.next==nextStart)&#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        ListNode last = reverseA2B(head.next, nextStart);<br>        head.next.next = head;<br>        head.next = nextStart;<br>        <span class="hljs-keyword">return</span> last;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NumMatrix</span> </span>&#123;<br>    <br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] preSum;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">NumMatrix</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix)</span> </span>&#123;<br>        preSum = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[matrix.length+<span class="hljs-number">1</span>][matrix[<span class="hljs-number">0</span>].length+<span class="hljs-number">1</span>];<br>        <span class="hljs-comment">// 第一行第一列默认为0</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;preSum.length; i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>; j&lt;preSum[<span class="hljs-number">0</span>].length; j++)&#123;<br>                preSum[i][j] = preSum[i-<span class="hljs-number">1</span>][j] + preSum[i][j-<span class="hljs-number">1</span>] + matrix[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>] - preSum[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>];<br>            &#125;<br>        &#125;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumRegion</span><span class="hljs-params">(<span class="hljs-keyword">int</span> row1, <span class="hljs-keyword">int</span> col1, <span class="hljs-keyword">int</span> row2, <span class="hljs-keyword">int</span> col2)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> preSum[row2+<span class="hljs-number">1</span>][col2+<span class="hljs-number">1</span>] - preSum[row2+<span class="hljs-number">1</span>][col1] - preSum[row1][col2+<span class="hljs-number">1</span>] + preSum[row1][col1];<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Your NumMatrix object will be instantiated and called as such:</span><br><span class="hljs-comment"> * NumMatrix obj = new NumMatrix(matrix);</span><br><span class="hljs-comment"> * int param_1 = obj.sumRegion(row1,col1,row2,col2);</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
 
 
 
@@ -291,9 +323,9 @@
 
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第19天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a>的 P22 开头，刷题如下：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-nodes-in-k-group/">25. K 个一组翻转链表</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/palindrome-linked-list/">234. 回文链表</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/aMhZSa/">剑指 Offer II 027. 回文链表</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/range-sum-query-immutable/">303. 区域和检索 - 数组不可变</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/range-sum-query-2d-immutable/">304. 二维区域和检索 - 矩阵不可变</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/O4NDxx/">剑指 Offer II 013. 二维子矩阵的和</a></li>
 </ul>
 <h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
 <p>阿尔贝·加缪</p>
