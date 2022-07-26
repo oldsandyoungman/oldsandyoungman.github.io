@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-25-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC20%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103311.jpg">
 <meta property="article:published_time" content="2022-07-25T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-25T15:52:37.090Z">
+<meta property="article:modified_time" content="2022-07-26T01:02:24.870Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.5k 字
+      4.7k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      22 分钟
+      39 分钟
     </span>
   
 
@@ -243,7 +243,7 @@
             <h1 style="display: none">【归】复习准备秋招第20天</h1>
             
             <div class="markdown-body">
-              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第天，给爷学</p>
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第20天，给爷学</p>
 <h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a></p>
 </blockquote>
@@ -309,6 +309,39 @@
 <h4 id="P29"><a href="#P29" class="headerlink" title="P29"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=29">P29</a></h4><blockquote>
 <p>注意：执行UNION ALL语句时所需要的资源比UNION语句少。如果明确知道合并数据后的结果数据不存在重复数据，或者不需要去除重复的数据，则尽量使用UNION ALL语句，以提高数据查询的效率。</p>
 </blockquote>
+<p>小总结一下：</p>
+<p>SQL92规范（<code>+</code>来做外连接）：</p>
+<ul>
+<li><p>内连接：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name employee_name, e.manager_id, m.last_name manager_name<br><span class="hljs-keyword">from</span> employees e, employees m<br><span class="hljs-keyword">WHERE</span> e.manager_id <span class="hljs-operator">=</span> m.employee_id<br></code></pre></td></tr></table></figure></li>
+<li><p>外连接：</p>
+<ul>
+<li><p>左外连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> last_name,department_name<br><span class="hljs-keyword">FROM</span> employees ,departments<br><span class="hljs-keyword">WHERE</span> employees.department_id <span class="hljs-operator">=</span> departments.department_id(<span class="hljs-operator">+</span>);<br></code></pre></td></tr></table></figure></li>
+<li><p>右外连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> last_name,department_name<br><span class="hljs-keyword">FROM</span> employees ,departments<br><span class="hljs-keyword">WHERE</span> employees.department_id(<span class="hljs-operator">+</span>) <span class="hljs-operator">=</span> departments.department_id;<br></code></pre></td></tr></table></figure></li>
+<li><p>满连接：<code>无</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>SQL99规范（<code>JOIN ON</code>来做左右连接）</p>
+<ul>
+<li><p>内连接：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"># 内连接： A∩B<br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">INNER</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id;<br></code></pre></td></tr></table></figure></li>
+<li><p>外连接：</p>
+<ul>
+<li><p>左外连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"># 左外连接：A<br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id;<br></code></pre></td></tr></table></figure></li>
+<li><p>右外连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"># 右外连接：B<br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id;<br></code></pre></td></tr></table></figure></li>
+<li><p>满连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs sql"># 第一种写法 (MySQL不可以，Oracle可以)<br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">FULL</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id;<br><br># 第二种写法（MySQL可以）：满连接：A∪B（左外加右外部分）<br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id<br><span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span><br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id<br><span class="hljs-keyword">WHERE</span> e.department_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;<br></code></pre></td></tr></table></figure></li>
+<li><p>其它3种连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs sql"># 左外连接的部分：A\B<br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id<br><span class="hljs-keyword">WHERE</span> d.department_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;<br><br># 右外连接的部分：B\A<br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id<br><span class="hljs-keyword">WHERE</span> e.department_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;<br><br># 没有公共部分<br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id<br><span class="hljs-keyword">WHERE</span> d.department_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">UNION</span> <span class="hljs-keyword">ALL</span><br><span class="hljs-keyword">SELECT</span> e.employee_id, e.last_name, e.department_id, d.department_name<br><span class="hljs-keyword">FROM</span> employees e<br><span class="hljs-keyword">RIGHT</span> <span class="hljs-keyword">JOIN</span> departments d<br><span class="hljs-keyword">ON</span> e.department_id <span class="hljs-operator">=</span> d.department_id<br><span class="hljs-keyword">WHERE</span> e.department_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NULL</span>;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
@@ -366,6 +399,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/07/26/2022-07-26-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC21%E5%A4%A9/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">【归】复习准备秋招第21天</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
