@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-27-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC22%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103314.jpg">
 <meta property="article:published_time" content="2022-07-27T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-07-27T15:45:50.847Z">
+<meta property="article:modified_time" content="2022-07-28T01:38:00.546Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.6k 字
+      3.3k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      14 分钟
+      28 分钟
     </span>
   
 
@@ -257,7 +257,7 @@
 </ul>
 <p>多个列进行分组，调换顺序，显示的结果其实一样（顺序不一样）</p>
 <ul>
-<li><code>GROUP BY</code> 中的字段一定要大于等于 <code>SELECT</code> 中的字段</li>
+<li><strong><code>GROUP BY</code> 中的字段一定要大于等于 <code>SELECT</code> 中的非聚合函数的字段</strong></li>
 </ul>
 <p><code>GROUP BY</code> 后面跟 <code>ROLL UP</code>，会额外加一个平均数，因此不能在后面再加 <code>ORDER BY</code></p>
 <h4 id="P41"><a href="#P41" class="headerlink" title="P41"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=41">P41</a></h4><p>如果过滤条件里有聚合函数，<code>WHERE</code>换成<code>HAVING</code>，并且后置到<code>GROUP BY</code>后面</p>
@@ -283,6 +283,42 @@
 <li>ORDER BY（排序）</li>
 <li>LIMIT（分页）</li>
 </ul>
+<h4 id="P42"><a href="#P42" class="headerlink" title="P42"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=42">P42</a></h4><p>错了的练习题</p>
+<ul>
+<li><strong><code>GROUP BY</code> 中的字段一定要大于等于 <code>SELECT</code> 中的非聚合函数的字段</strong></li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs sql"># <span class="hljs-number">1.</span><span class="hljs-keyword">where</span>子句可否使用组函数进行过滤? <span class="hljs-keyword">No</span><br><br><br><br># <span class="hljs-number">2.</span>查询公司员工工资的最大值，最小值，平均值，总和 <br><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MAX</span>(salary), <span class="hljs-built_in">MIN</span>(salary), <span class="hljs-built_in">AVG</span>(salary), <span class="hljs-built_in">SUM</span>(salary)<br><span class="hljs-keyword">FROM</span> employees;<br><br># <span class="hljs-number">3.</span>查询各job_id的员工工资的最大值，最小值，平均值，总和 <br><span class="hljs-keyword">SELECT</span> job_id, <span class="hljs-built_in">MAX</span>(salary), <span class="hljs-built_in">MIN</span>(salary), <span class="hljs-built_in">AVG</span>(salary), <span class="hljs-built_in">SUM</span>(salary)<br><span class="hljs-keyword">FROM</span> employees<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> job_id;<br><br><br># <span class="hljs-number">4.</span>选择具有各个job_id的员工人数<br># <span class="hljs-comment">----------------------- 需要再复习 ---------------------------</span><br><span class="hljs-keyword">SELECT</span> job_id, <span class="hljs-built_in">COUNT</span>(<span class="hljs-number">1</span>)<br><span class="hljs-keyword">FROM</span> employees<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> job_id;<br><br><br># <span class="hljs-number">5.</span>查询员工最高工资和最低工资的差距(DIFFERENCE)<br><span class="hljs-keyword">SELECT</span> <span class="hljs-built_in">MAX</span>(salary)<span class="hljs-operator">-</span><span class="hljs-built_in">MIN</span>(salary) &quot;DIFFERENCE&quot;<br><span class="hljs-keyword">FROM</span> employees;<br><br># <span class="hljs-number">6.</span>查询各个管理者手下员工的最低工资，其中最低工资不能低于<span class="hljs-number">6000</span>，没有管理者的员工不计算在内 <br># <span class="hljs-comment">----------------------- 题目意思理解错了，是先列出所有部分的最低工资，然后去掉低于6000的，先选再过滤，只能加在HAVING里了 -------------</span><br><span class="hljs-comment">-- SELECT manager_id, MIN(salary)</span><br><span class="hljs-comment">-- FROM employees</span><br><span class="hljs-comment">-- WHERE salary&gt;=6000 AND manager_id IS NOT NULL</span><br><span class="hljs-comment">-- GROUP BY manager_id;</span><br><span class="hljs-keyword">SELECT</span> manager_id, <span class="hljs-built_in">MIN</span>(salary)<br><span class="hljs-keyword">FROM</span> employees<br><span class="hljs-keyword">WHERE</span> manager_id <span class="hljs-keyword">IS</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span><br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> manager_id<br><span class="hljs-keyword">HAVING</span> <span class="hljs-built_in">MIN</span>(salary)<span class="hljs-operator">&gt;=</span><span class="hljs-number">6000</span>;<br><br><br># <span class="hljs-number">7.</span>查询所有部门的名字，location_id，员工数量和平均工资，并按平均工资降序<br># <span class="hljs-comment">----------------------- 这个题两个点，一个是count那块不能写1，这样会使null也算一条记录，另一个就是下面这个写法是对的，如果group by 改成 department_那么就会报错</span><br><span class="hljs-comment">-- SELECT d.department_id, d.location_id, COUNT(e.employee_id), AVG(e.salary) </span><br><span class="hljs-comment">-- FROM departments d</span><br><span class="hljs-comment">-- LEFT JOIN employees e ON d.department_id=e.department_id</span><br><span class="hljs-comment">-- GROUP BY d.department_id</span><br><span class="hljs-comment">-- ORDER BY AVG(e.salary) DESC;</span><br><span class="hljs-keyword">SELECT</span> d.department_name, d.location_id, <span class="hljs-built_in">COUNT</span>(e.employee_id), <span class="hljs-built_in">AVG</span>(e.salary) <br><span class="hljs-keyword">FROM</span> departments d<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> employees e <span class="hljs-keyword">ON</span> d.department_id<span class="hljs-operator">=</span>e.department_id<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> d.department_name, d.location_id<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> <span class="hljs-built_in">AVG</span>(e.salary) <span class="hljs-keyword">DESC</span>;<br><br><br># <span class="hljs-number">8.</span>查询每个工种、每个部门的部门名、工种名和最低工资<br><span class="hljs-keyword">SELECT</span> d.department_name, e.job_id, <span class="hljs-built_in">MIN</span>(salary)<br><span class="hljs-keyword">FROM</span> departments d<br><span class="hljs-keyword">LEFT</span> <span class="hljs-keyword">JOIN</span> employees e <span class="hljs-keyword">ON</span> d.department_id<span class="hljs-operator">=</span>e.department_id<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> d.department_name, e.job_id;<br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
@@ -297,7 +333,7 @@
 
 
 
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第22天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a>的 P29 开头，刷题如下：</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第22天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a>的 P43 开头，刷题如下：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-words-in-a-string/">151. 翻转字符串里的单词</a></li>
 <li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/rotate-image/">48. 旋转图像</a></li>
@@ -343,6 +379,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/07/28/2022-07-28-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC23%E5%A4%A9/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">【归】复习准备秋招第23天</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
