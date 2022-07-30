@@ -1,0 +1,637 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="且相爱，趁你我，尚在人世">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【归】复习准备秋招第25天">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/07/30/2022-07-30-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC25%E5%A4%A9/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="且相爱，趁你我，尚在人世">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-30-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC25%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103331.jpg">
+<meta property="article:published_time" content="2022-07-30T15:40:40.000Z">
+<meta property="article:modified_time" content="2022-07-30T15:11:07.296Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="MySQL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-07-30-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC25%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103331.jpg">
+  
+  
+  <title>【归】复习准备秋招第25天 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-07-30-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC25%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103331.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【归】复习准备秋招第25天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-07-30 23:40" pubdate>
+        2022年7月30日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.6k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      39 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【归】复习准备秋招第25天</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第25天，给爷学</p>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a></p>
+</blockquote>
+<h4 id="P49"><a href="#P49" class="headerlink" title="P49"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=49">P49</a></h4><p>创建数据库，最好指定字符集，因为MySQL 5.7版本默认字符集是Latin</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> DATABASE IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> xxxx <span class="hljs-type">CHARACTER</span> <span class="hljs-keyword">SET</span> <span class="hljs-string">&#x27;utf8&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<p>修改数据库字符集</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> DATABASE xxxx <span class="hljs-type">CHARACTER</span> <span class="hljs-keyword">SET</span> <span class="hljs-string">&#x27;utf8&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：不能修改数据库，名字，如果IDE有相关功能，也只是复制了一份重命名再删原来的库</strong></p>
+<p>删库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> DATABASE IF <span class="hljs-keyword">EXISTS</span> xxx;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P50"><a href="#P50" class="headerlink" title="P50"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=50">P50</a></h4><p>创建表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> xxx(<br>  id <span class="hljs-type">INT</span>,<br>  name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">15</span>),<br>  <span class="hljs-type">date</span> <span class="hljs-type">DATE</span><br>);<br></code></pre></td></tr></table></figure>
+
+<p>基于已有表的部分数据的创建表（包括复制数据）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> IF <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> xxx<br><span class="hljs-keyword">AS</span><br><span class="hljs-keyword">SELECT</span> a <span class="hljs-string">&#x27;aa&#x27;</span>,b,c,d<br><span class="hljs-keyword">FROM</span> yyy<br><span class="hljs-keyword">WHERE</span> ....<br></code></pre></td></tr></table></figure>
+
+<p>基于已有表的创建表（不包括复制数据）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> IF <span class="hljs-keyword">NOT</span> EXIST xxx<br><span class="hljs-keyword">AS</span><br><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span><br><span class="hljs-keyword">FROM</span> yyy<br><span class="hljs-keyword">WHERE</span> <span class="hljs-number">1</span><span class="hljs-operator">=</span><span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P51"><a href="#P51" class="headerlink" title="P51"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=51">P51</a></h4><p>添加字段</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> X<br><span class="hljs-keyword">ADD</span> name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">45</span>) AFTER id<br></code></pre></td></tr></table></figure>
+
+<p>修改字段的属性，默认值</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> X<br>MODIFY name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">50</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-string">&#x27;AA&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>修改字段名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> X<br>CHANGE name new_name <span class="hljs-type">VARCHAR</span>(<span class="hljs-number">50</span>)<br></code></pre></td></tr></table></figure>
+
+<p>删除字段</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> X<br><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">COLUMN</span> name<br></code></pre></td></tr></table></figure>
+
+<p>重命名表名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">RENAME <span class="hljs-keyword">TABLE</span> X<br><span class="hljs-keyword">TO</span> XX<br></code></pre></td></tr></table></figure>
+
+<p>删表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> IF <span class="hljs-keyword">EXISTS</span> X<br></code></pre></td></tr></table></figure>
+
+<p>清空表中数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">TRUNCATE</span> <span class="hljs-keyword">TABLE</span> X<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="P52"><a href="#P52" class="headerlink" title="P52"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=52">P52</a></h4><p>ROLLBACK 只能针对未COMMIT的数据</p>
+<p><strong>常考题：TRUNCATE TABLE xxx 和 DELETE FROM xxx 有啥区别</strong></p>
+<ul>
+<li>相同点：<ul>
+<li>都可以清除表数据，保留表结构</li>
+</ul>
+</li>
+<li>不同点<ul>
+<li>是否可以回滚<ul>
+<li>TRUNCATE TABLE 不可以</li>
+<li>DELETE TABLE 看加不加参数</li>
+</ul>
+</li>
+<li>是否可以不全清除<ul>
+<li>TRUNCATE TABLE 只能全部清除</li>
+<li>DELETE TABLE 可以用 WHERE 条件选择性清除</li>
+</ul>
+</li>
+<li>速度比较<ul>
+<li>TRUNCATE TABLE 更快，因为占用系统和事务日志的资源少</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>常考题：DDL（Data Definition Language） 和 DML（Data Manipulation Language） 有啥区别</strong></p>
+<ul>
+<li>是否可以回滚<ul>
+<li>DDL：一定不能回滚，每次执行完自动COMMIT，不受 <code>SET autocommit = FALSE</code>影响</li>
+<li>DML：默认不可回滚，但可以加 <code>SET autocommit = FALSE</code>来允许回滚</li>
+</ul>
+</li>
+</ul>
+<h4 id="P53"><a href="#P53" class="headerlink" title="P53"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=53">P53</a></h4><p>MySQL8.0能保证事务的完整性：要么成功要么回滚</p>
+<h4 id="P55"><a href="#P55" class="headerlink" title="P55"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=55">P55</a></h4><p>插入操作</p>
+<ul>
+<li><p>手写数据的插入</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> xxx(id, `name`, age)<br><span class="hljs-keyword">VALUES</span>(a,b,c), (d,e,f);<br></code></pre></td></tr></table></figure></li>
+<li><p>查的结果插入</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> xxx(id, `name`, age)<br><span class="hljs-keyword">SELECT</span> id2, `name2`, age2<br><span class="hljs-keyword">FROM</span> ....<br><span class="hljs-keyword">WHERE</span> ....<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意，如果id2里有一条数据比id范围大，就会报错</strong></p>
+</li>
+</ul>
+<p>更新数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sql">UPDATE xxx<br><span class="hljs-keyword">SET</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;123&#x27;</span>, age <span class="hljs-operator">=</span> <span class="hljs-number">2</span><br><span class="hljs-keyword">WHERE</span> id <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br></code></pre></td></tr></table></figure>
+
+<p>删除数据</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> xxx<br><span class="hljs-keyword">WHERE</span> id <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P56"><a href="#P56" class="headerlink" title="P56"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=56">P56</a></h4><p>MySQL8 新特性：计算列</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> xxx(<br>  a <span class="hljs-type">INT</span>,<br>  b <span class="hljs-type">INT</span>, <br>  C <span class="hljs-type">INT</span> GENERATED ALWAYS <span class="hljs-keyword">AS</span> (a<span class="hljs-operator">+</span>b) VIRTUAL<br>);<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P57"><a href="#P57" class="headerlink" title="P57"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=57">P57</a></h4><p>综合练习</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs sql"># <span class="hljs-number">15</span>、查询书名达到<span class="hljs-number">10</span>个字符的书，不包括里面的空格<br><span class="hljs-keyword">SELECT</span> `NAME`<br><span class="hljs-keyword">FROM</span> books<br><span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">CHAR_LENGTH</span>(REPLACE(`NAME`,<span class="hljs-string">&#x27; &#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>)) <span class="hljs-operator">&gt;=</span><span class="hljs-number">10</span><br><br># <span class="hljs-number">16</span>、查询书名和类型，其中note值为novel显示小说，law显示法律，medicine显示医药，cartoon显示卡通， joke显示笑话<br><span class="hljs-keyword">SELECT</span> `NAME` &quot;书名&quot;, note, <span class="hljs-keyword">CASE</span> note <span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;law&#x27;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&#x27;法律&#x27;</span><br>																<span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;medicine&#x27;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&#x27;医药&#x27;</span><br>																<span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;cartoon&#x27;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&#x27;卡通&#x27;</span><br>																<span class="hljs-keyword">WHEN</span> <span class="hljs-string">&#x27;joke&#x27;</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&#x27;笑话&#x27;</span><br>																<span class="hljs-keyword">ELSE</span> <span class="hljs-string">&#x27;其他&#x27;</span><br>																<span class="hljs-keyword">END</span> &quot;类型&quot;<br><span class="hljs-keyword">FROM</span> books;<br># 这样显示的结果有三列<br><br># <span class="hljs-number">17</span>、查询书名、库存，其中num值超过<span class="hljs-number">30</span>本的，显示滞销，大于<span class="hljs-number">0</span>并低于<span class="hljs-number">10</span>的，显示畅销，为<span class="hljs-number">0</span>的显示需要无货 <br><span class="hljs-keyword">SELECT</span> name,num,<span class="hljs-keyword">CASE</span> <span class="hljs-keyword">WHEN</span> num<span class="hljs-operator">&gt;</span><span class="hljs-number">30</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&#x27;滞销&#x27;</span><br>                      <span class="hljs-keyword">WHEN</span> num<span class="hljs-operator">&gt;</span><span class="hljs-number">0</span> <span class="hljs-keyword">AND</span> num<span class="hljs-operator">&lt;</span><span class="hljs-number">10</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&#x27;畅销&#x27;</span> <br>                      <span class="hljs-keyword">WHEN</span> num<span class="hljs-operator">=</span><span class="hljs-number">0</span> <span class="hljs-keyword">THEN</span> <span class="hljs-string">&#x27;无货&#x27;</span><br>                      <span class="hljs-keyword">ELSE</span> <span class="hljs-string">&#x27;正常&#x27;</span><br>                      <span class="hljs-keyword">END</span> <span class="hljs-keyword">AS</span> &quot;库存状态&quot;<br><span class="hljs-keyword">FROM</span> books;<br><br># <span class="hljs-number">18</span>、统计每一种note的库存量，并合计总量<br><span class="hljs-keyword">SELECT</span> IFNULL(note,<span class="hljs-string">&#x27;合计总库存量&#x27;</span>) <span class="hljs-keyword">AS</span> note, <span class="hljs-built_in">SUM</span>(num)<br><span class="hljs-keyword">FROM</span> books<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> note <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">ROLLUP</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="P59"><a href="#P59" class="headerlink" title="P59"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=59">P59</a></h4><p><code>CHARACTER SET &#39;utf8&#39;</code> 在创建数据库，表，字段时都可以加</p>
+<h4 id="P60"><a href="#P60" class="headerlink" title="P60"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=60">P60</a></h4><p>MySQL5.7中，类型后面括号有个数字，代表<code>显示宽度</code>，例如</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> xxx(<br>  a <span class="hljs-type">INT</span>(<span class="hljs-number">5</span>)<br>);<br><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> xxx(A)<br><span class="hljs-keyword">VALUES</span>(<span class="hljs-number">123</span>),(<span class="hljs-number">123456</span>);<br><br># 显示的结果是 <span class="hljs-number">00123</span>,<span class="hljs-number">123456</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>注意，显示宽度和实际类型存储宽度无关，即使显示小了，也不会截断数据</strong></p>
+<h4 id="P61"><a href="#P61" class="headerlink" title="P61"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=61">P61</a></h4><p>浮点数类型，即使声明成无符号，范围也没有扩大</p>
+<p>MySQL支持<code>非标准语法</code>：FLOAT(a,b)，代表一共a位，其中小数部分b位</p>
+<ul>
+<li>例如设置FLOAT(5,2)<ul>
+<li>添加<code>123.45</code>，没啥问题</li>
+<li>添加<code>123.456</code>，自动四舍五入成 <code>123.46</code></li>
+<li>添加<code>999.995</code>，报错</li>
+<li>添加<code>1999.99</code>，报错</li>
+</ul>
+</li>
+</ul>
+<p><strong>注意，跟其他类型的语言一样，浮点类型判断相等不用 <code>=</code></strong></p>
+<p>DECIMAL：同样有精度<code>M</code>和标度<code>D</code>的概念，占用<code>M+2</code>个字节，如果不指定，默认是 DECIMAL(10, 0)</p>
+<ul>
+<li>DECIMAL精度之所以高，是因为底层是字符串存储的</li>
+</ul>
+<p>浮点数和定点数的比较</p>
+<ul>
+<li>表示范围：相同空间，浮点数能表示更大范围的数</li>
+<li>精度：定点数精度更高（任何涉及到金钱的项目）</li>
+</ul>
+<p><strong>DATETIME 和 TIMESTAMP 的区别</strong></p>
+<ul>
+<li>存储大小：8字节，4字节</li>
+<li>底层存储：前者就是存的时间，后者底层存的是毫秒数</li>
+<li>关于时区：因为底层存储不同，后者在真正显示的时候，会减去当前时区再显示，所以数据库中的时间，如果切换时间，前者显示不变，后者会变</li>
+<li>检索比较速度：后者存的是毫秒数，所以运算会更快</li>
+</ul>
+<h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
+</blockquote>
+<h4 id="1011-Capacity-To-Ship-Packages-Within-D-Days"><a href="#1011-Capacity-To-Ship-Packages-Within-D-Days" class="headerlink" title="1011. Capacity To Ship Packages Within D Days"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/">1011. Capacity To Ship Packages Within D Days</a></h4><h4 id="410-Split-Array-Largest-Sum"><a href="#410-Split-Array-Largest-Sum" class="headerlink" title="410. Split Array Largest Sum"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/split-array-largest-sum/">410. Split Array Largest Sum</a></h4><ul>
+<li>这两题，都是一种类型，并且都在二分法思路上写错了，实在想得晕，画个图也能解决<ul>
+<li>这是个递减函数，当y值比预计的小，要x变量左移；相等的时候，题目也是让尽可能小，x也是左移</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">shipWithinDays</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] weights, <span class="hljs-keyword">int</span> days)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = weights.length;<br>        <span class="hljs-keyword">int</span> max = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)&#123;<br>            max = Math.max(max, weights[i]);<br>            sum += weights[i];<br>        &#125;<br>        <br>        <span class="hljs-keyword">int</span> l = max;<br>        <span class="hljs-keyword">int</span> r = sum;<br>        <br>        <span class="hljs-keyword">while</span>(l&lt;=r)&#123;<br>            <span class="hljs-keyword">int</span> mid = l + (r-l)/<span class="hljs-number">2</span>;<br>            <span class="hljs-keyword">if</span>(getDays(weights, mid)&gt;days)&#123;<br>                l = mid + <span class="hljs-number">1</span>;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                r = mid - <span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> l;<br>        <br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getDays</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] weights, <span class="hljs-keyword">int</span> cap)</span></span>&#123;<br>        <span class="hljs-keyword">int</span> days = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">int</span> cur = <span class="hljs-number">0</span>;<br>        <br>        <span class="hljs-keyword">int</span> n = weights.length;<br>        <br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)&#123;<br>            <br>            <span class="hljs-keyword">if</span>(cur + weights[i] &lt;= cap)&#123;<br>                cur += weights[i];<br>            &#125;<span class="hljs-keyword">else</span> &#123;<br>                cur = weights[i];<br>                days++;<br>            &#125;<br>            <br>        &#125;<br>        <br>        <span class="hljs-keyword">if</span>(cur&gt;<span class="hljs-number">0</span>)&#123;<br>            days++;<br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> days;<br>        <br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="875-Koko-Eating-Bananas"><a href="#875-Koko-Eating-Bananas" class="headerlink" title="875. Koko Eating Bananas"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/koko-eating-bananas/">875. Koko Eating Bananas</a></h4><ul>
+<li>跟上面那道的初始化不同，正向运算函数也不同，自己小心</li>
+<li>案例多了个溢出的坑，记得用long类型</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minEatingSpeed</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] piles, <span class="hljs-keyword">int</span> h)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> n = piles.length;<br>        <span class="hljs-keyword">int</span> max = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)&#123;<br>            max = Math.max(max, piles[i]);<br>        &#125;<br><br>        <span class="hljs-keyword">int</span> l = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">int</span> r = max;<br><br>        <span class="hljs-keyword">while</span>(l&lt;=r)&#123;<br>            <span class="hljs-keyword">int</span> mid = l + (r-l)/<span class="hljs-number">2</span>;<br>            <span class="hljs-keyword">if</span>(getH(piles, mid)&gt;h)&#123;<br>                l = mid + <span class="hljs-number">1</span>;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                r = mid - <span class="hljs-number">1</span>;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> l;<br><br>    &#125;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">long</span> <span class="hljs-title">getH</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] piles, <span class="hljs-keyword">int</span> k)</span></span>&#123;<br>        <span class="hljs-keyword">long</span> res = <span class="hljs-number">0</span>;<br><br>        <span class="hljs-keyword">int</span> n = piles.length;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)&#123;<br>            <span class="hljs-keyword">long</span> h = piles[i]/k;<br>            res += h;<br>            <span class="hljs-keyword">if</span>(piles[i] &gt; k*h)&#123;<br>                res++;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> res;<br><br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第25天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a>的 P43 开头，刷题如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/">1011. 在 D 天内送达包裹的能力</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/split-array-largest-sum/">410. 分割数组的最大值</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/koko-eating-bananas/">875. 爱吃香蕉的珂珂</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/nZZqjQ/">剑指 Offer II 073. 狒狒吃香蕉</a></li>
+</ul>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>鲁米</p>
+<p>且相爱，趁你我，尚在人世</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%BD%E6%A0%91/">程序缘的技能栽树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MySQL/">MySQL</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/29/2022-07-29-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC24%E5%A4%A9/">
+                        <span class="hidden-mobile">【归】复习准备秋招第24天</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
