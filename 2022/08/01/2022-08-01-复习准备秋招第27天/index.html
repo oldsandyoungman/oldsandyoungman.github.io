@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="在这什么都善变的人世里，我想和你，看一下永恒。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【归】复习准备秋招第27天">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/08/01/2022-08-01-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC27%E5%A4%A9/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="在这什么都善变的人世里，我想和你，看一下永恒。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-01-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC26%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103204.jpg">
+<meta property="article:published_time" content="2022-08-01T15:40:40.000Z">
+<meta property="article:modified_time" content="2022-08-01T11:07:11.643Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="MySQL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-01-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC26%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103204.jpg">
+  
+  
+  <title>【归】复习准备秋招第27天 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-08-01-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC26%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103204.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【归】复习准备秋招第27天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-08-01 23:40" pubdate>
+        2022年8月1日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      5.3k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      45 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【归】复习准备秋招第27天</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第27天，给爷学</p>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a></p>
+</blockquote>
+<h4 id="P90"><a href="#P90" class="headerlink" title="P90"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=90">P90</a></h4><p>游标会给数据进行加锁，不适合并发业务</p>
+<p>游标在内存中进行，占用系统资源，用完记得关闭</p>
+<h4 id="P93"><a href="#P93" class="headerlink" title="P93"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=93">P93</a></h4><p>只有直接对子表员工表(t_employee)执行DELETE语句时才会激活触发器 t1。</p>
+<h4 id="P102"><a href="#P102" class="headerlink" title="P102"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=102">P102</a></h4><p>character_set_client<br>character_set_connection<br>character_set_results</p>
+<p>其中，character_set_client 和 character_set_results 一定要一样</p>
+<h4 id="P103"><a href="#P103" class="headerlink" title="P103"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=103">P103</a></h4><p>linux下，数据库名、表名、表的别名、变量名是<strong>严格</strong>区分大小写的</p>
+<h4 id="P104"><a href="#P104" class="headerlink" title="P104"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=104">P104</a></h4><p>举例: 数据库a ， 表b 。</p>
+<p>如果表b采用 InnoDB ，data\a中会产生1个或者2个文件:</p>
+<ul>
+<li>b.frm :描述表结构文件，字段长度等</li>
+<li>如果采用 系统表空间 模式的，数据信息和索引信息都存储在 ibdata1 中</li>
+<li>如果采用 独立表空间 存储模式，data\a中还会产生 b.ibd 文件(存储数据信息和索引信息) </li>
+</ul>
+<p>此外：</p>
+<ul>
+<li>MySQL5.7 中会在data/a的目录下生成 db.opt 文件用于保存数据库的相关配置。比如:字符集、比较 规则。而MySQL8.0不再提供db.opt文件。</li>
+<li>MySQL8.0中不再单独提供b.frm，而是合并在b.ibd文件中。</li>
+</ul>
+<p>如果表b采用 MyISAM ，data\a中会产生3个文件:</p>
+<ul>
+<li><p>MySQL5.7 中: b.frm :描述表结构文件，字段长度等。 </p>
+<p>MySQL8.0 中 b.xxx.sdi :描述表结构文件，字段长度等</p>
+</li>
+<li><p>b.MYD (MYData):数据信息文件，存储数据信息(如果采用独立表存储模式) </p>
+</li>
+<li><p>b.MYI (MYIndex):存放索引信息文件</p>
+</li>
+</ul>
+<h4 id="P105"><a href="#P105" class="headerlink" title="P105"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=105">P105</a></h4><p>user表的主键，是 host，user 联合主键</p>
+<h4 id="P106"><a href="#P106" class="headerlink" title="P106"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=106">P106</a></h4><p>密码如果过期，能登录，但是查表会报错</p>
+<h4 id="P107"><a href="#P107" class="headerlink" title="P107"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=107">P107</a></h4><p><code>ALL PRIVILEGES</code> 是不包含 <code>GRANT</code> 这个赋予别人权限的能力</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> PRIVILEGES <span class="hljs-keyword">ON</span> <span class="hljs-operator">*</span>.<span class="hljs-operator">*</span> <span class="hljs-keyword">TO</span> joe@<span class="hljs-string">&#x27;%&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;123&#x27;</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>请求核实阶段</strong></p>
+<p>一旦建立了连接，服务器就进入了访问控制的阶段2，也就是请求核实阶段。对此连接上进来的每个请 求，服务器检查该请求要执行什么操作、是否有足够的权限来执行它，这正是需要授权表中的权限列发 挥作用的地方。这些权限可以来自user、db、table_priv和column_priv表。</p>
+<p>确认权限时，MySQL首先 检查user表 ，如果指定的权限没有在user表中被授予，那么MySQL就会继续 检 查db表 ，db表是下一安全层级，其中的权限限定于数据库层级，在该层级的SELECT权限允许用户查看指 定数据库的所有表中的数据;如果在该层级没有找到限定的权限，则MySQL继续 以 及 ，如果所有权限表都检查完毕，但还是没有找到允许的权限操作，MySQL将返回错误信息，用户请求的操作不能执行，操作失败。</p>
+<blockquote>
+<p>提示: MySQL通过向下层级的顺序(从user表到columns_priv表)检查权限表，但并不是所有的权 限都要执行该过程。例如，一个用户登录到MySQL服务器之后只执行对MySQL的管理操作，此时只 涉及管理权限，因此MySQL只检查user表。另外，如果请求的权限操作不被允许，MySQL也不会继 续检查下一层级的表</p>
+</blockquote>
+<h4 id="P109"><a href="#P109" class="headerlink" title="P109"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=109">P109</a></h4><p>逻辑架构</p>
+<ul>
+<li><p>连接层</p>
+<ul>
+<li>TCP连接池+线程池<ul>
+<li>连接池的重要功能：限制连接数量 + 长连接模式复用TCP</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>服务层</p>
+<ul>
+<li>查询缓存：（8.0被移除）</li>
+<li>SQL接口：接收命令，返回结果</li>
+<li>解析器：检查语法是否报错，语法解析，生成解析树<ul>
+<li>词法分析：哪些是关键字</li>
+<li>语法分析：整体语法有没有问题，没有的话生成解析树</li>
+</ul>
+</li>
+<li>优化器：确定执行计划<ul>
+<li>选取（哪几行）- 投影（哪几列）- 连接（成结果）</li>
+</ul>
+</li>
+<li>执行器：判断是否有权限（之前只是获得权限），再执行执行计划</li>
+</ul>
+</li>
+<li><p>引擎层</p>
+<ul>
+<li><p>作用：负责数据的存储和提取，对物理服务器级别维护的底层数据执行操作</p>
+<ul>
+<li><p>InnoDB</p>
+</li>
+<li><p>MyISAM</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>存储层</p>
+</li>
+</ul>
+<h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
+</blockquote>
+<h4 id="380-Insert-Delete-GetRandom-O-1"><a href="#380-Insert-Delete-GetRandom-O-1" class="headerlink" title="380. Insert Delete GetRandom O(1)"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/insert-delete-getrandom-o1/">380. Insert Delete GetRandom O(1)</a></h4><ul>
+<li><p>思路没啥问题：</p>
+<ul>
+<li>插入O(1)：普通数组插到最后</li>
+<li>删除O(1)：删数组的最后才能不会整体移动，因此需要把中间的目标值换到最后。但这又要求怎么通过值找到下标，因此再来个HashMap来记录值和坐标的对应关系</li>
+<li>随机数O(1)：保证数组不空心的情况下，就能O(1)</li>
+</ul>
+</li>
+<li><p>删除的时候，同时操作 ArrayList 和 HashMap</p>
+</li>
+<li><p>删除的时候，虽然由COUNT控制用不着清空末位，但是添加的时候会有问题，所以还是要对ArrayList进行remove（如果用数组而非ArrayList，则可以避免这个问题）</p>
+</li>
+<li><p>删除的时候，如果只剩一个元素删除，HashMap的更新要在remove之前，不然会报错</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RandomizedSet</span> </span>&#123;<br><br>    ArrayList&lt;Integer&gt; l;<br>    <span class="hljs-keyword">int</span> count;<br>    HashMap&lt;Integer, Integer&gt; memo;<br>    Random r;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">RandomizedSet</span><span class="hljs-params">()</span> </span>&#123;<br>        l = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>        count = <span class="hljs-number">0</span>;<br>        memo = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();<br>        r = <span class="hljs-keyword">new</span> Random();<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">insert</span><span class="hljs-params">(<span class="hljs-keyword">int</span> val)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(memo.containsKey(val))&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>        &#125;<br>        l.add(val);<br>        memo.put(val, count);<br>        count++;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">remove</span><span class="hljs-params">(<span class="hljs-keyword">int</span> val)</span> </span>&#123;<br>        <span class="hljs-keyword">if</span>(!memo.containsKey(val))&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;<br>        &#125;<br>        <span class="hljs-keyword">int</span> i = memo.get(val);<br>        <span class="hljs-keyword">int</span> v = l.get(count-<span class="hljs-number">1</span>);<br>        l.set(i, v);<br>        l.remove(count-<span class="hljs-number">1</span>);<br>        memo.put(v, i);<br>        memo.remove(val);<br>        count--;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;<br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getRandom</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> num = r.nextInt(count);<br>        <span class="hljs-keyword">return</span> l.get(num);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Your RandomizedSet object will be instantiated and called as such:</span><br><span class="hljs-comment"> * RandomizedSet obj = new RandomizedSet();</span><br><span class="hljs-comment"> * boolean param_1 = obj.insert(val);</span><br><span class="hljs-comment"> * boolean param_2 = obj.remove(val);</span><br><span class="hljs-comment"> * int param_3 = obj.getRandom();</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="710-Random-Pick-with-Blacklist"><a href="#710-Random-Pick-with-Blacklist" class="headerlink" title="710. Random Pick with Blacklist"></a><a target="_blank" rel="noopener" href="https://leetcode.com/problems/random-pick-with-blacklist/">710. Random Pick with Blacklist</a></h4><ul>
+<li>普通的数直接输出，不需要存数组，因此最终的载体不是一个很长的数组，而是一个异常数的HashMap</li>
+<li>设count是分界线，count以内的black数，要换到后面非black位置数，count以外的则不需要任何操作</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br><br>    <span class="hljs-keyword">int</span> count;<br>    HashMap&lt;Integer, Integer&gt; memo;<br>    Random r;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Solution</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span>[] blacklist)</span> </span>&#123;<br>        <span class="hljs-keyword">int</span> bn = blacklist.length;<br>        count = n - bn;<br>        memo = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();<br>        r = <span class="hljs-keyword">new</span> Random();<br><br>        HashSet&lt;Integer&gt; s = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : blacklist) &#123;<br>            s.add(i);<br>        &#125;<br><br>        <span class="hljs-keyword">int</span> tail = n - <span class="hljs-number">1</span>;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> b : blacklist)&#123;<br>            <span class="hljs-keyword">if</span>(b &lt; count)&#123;<br>                <span class="hljs-keyword">while</span>(s.contains(tail))&#123;<br>                    tail--;<br>                &#125;<br>                memo.put(b, tail);<br>                tail--;<br>            &#125;<br>        &#125;<br><br>    &#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">pick</span><span class="hljs-params">()</span> </span>&#123;<br>        <br>        <span class="hljs-keyword">int</span> i = r.nextInt(count);<br>        <span class="hljs-keyword">if</span>(memo.containsKey(i))&#123;<br>            <span class="hljs-keyword">return</span> memo.get(i);<br>        &#125;<br>        <span class="hljs-keyword">return</span> i;<br><br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Your Solution object will be instantiated and called as such:</span><br><span class="hljs-comment"> * Solution obj = new Solution(n, blacklist);</span><br><span class="hljs-comment"> * int param_1 = obj.pick();</span><br><span class="hljs-comment"> */</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="967-连续差相同的数字"><a href="#967-连续差相同的数字" class="headerlink" title="967. 连续差相同的数字"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/numbers-with-same-consecutive-differences/">967. 连续差相同的数字</a></h4><ul>
+<li>标准的回溯法</li>
+<li>记得k==0的时候，要单独考虑一下</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] numsSameConsecDiff(<span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> k) &#123;<br>        res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;<span class="hljs-number">10</span>; i++)&#123;<br>            backtrack(i, i, n-<span class="hljs-number">1</span>, k);<br>        &#125;<br><br>        <span class="hljs-keyword">int</span> nn = res.size();<br>        <span class="hljs-keyword">int</span>[] result = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[nn];<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;nn; i++)&#123;<br>            result[i] = res.get(i);<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> result;<br><br>    &#125;<br>    ArrayList&lt;Integer&gt; res;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">backtrack</span><span class="hljs-params">(<span class="hljs-keyword">int</span> sum, <span class="hljs-keyword">int</span> cur_num, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> k)</span></span>&#123;<br>        <span class="hljs-keyword">if</span>(n==<span class="hljs-number">0</span>)&#123;<br>            res.add(sum);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">if</span>(k==<span class="hljs-number">0</span>)&#123;<br>            backtrack(<span class="hljs-number">10</span>*sum+cur_num, cur_num, n-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">if</span>(cur_num+k&lt;<span class="hljs-number">10</span>)&#123;<br>            backtrack(<span class="hljs-number">10</span>*sum+cur_num+k, cur_num+k, n-<span class="hljs-number">1</span>, k);<br>        &#125;<br>        <span class="hljs-keyword">if</span>(cur_num-k&gt;=<span class="hljs-number">0</span>)&#123;<br>            backtrack(<span class="hljs-number">10</span>*sum+cur_num-k, cur_num-k, n-<span class="hljs-number">1</span>, k);<br>        &#125;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="120-三角形最小路径和"><a href="#120-三角形最小路径和" class="headerlink" title="120. 三角形最小路径和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/triangle/">120. 三角形最小路径和</a></h4><ul>
+<li>思路不复杂，动态规划</li>
+<li>看似不规则的图形，依然能用dp二维数组，别被迷惑了</li>
+<li>为了加快速度，可以把内层的ArrayList取出来，再去操作</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minimumTotal</span><span class="hljs-params">(List&lt;List&lt;Integer&gt;&gt; triangle)</span> </span>&#123;<br><br>        <span class="hljs-keyword">int</span> n = triangle.size();<br><br>        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];<br>        <br>        dp[<span class="hljs-number">0</span>] = triangle.get(<span class="hljs-number">0</span>).get(<span class="hljs-number">0</span>);<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;n; i++)&#123;<br><br>            List&lt;Integer&gt; cur = triangle.get(i);<br><br>            <span class="hljs-keyword">int</span> pre = dp[<span class="hljs-number">0</span>];<br><br>            dp[<span class="hljs-number">0</span>] = dp[<span class="hljs-number">0</span>] + cur.get(<span class="hljs-number">0</span>);<br><br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>; j&lt;i; j++)&#123;<br>                <span class="hljs-keyword">int</span> option1 = pre + cur.get(j);<br>                <span class="hljs-keyword">int</span> option2 = dp[j] + cur.get(j);<br>                <span class="hljs-keyword">int</span> val = Math.min(option1, option2);<br><br>                pre = dp[j];<br>                dp[j] = val;<br>            &#125;<br><br>            dp[i] = pre + cur.get(i);<br>            <br>        &#125;<br><br>        <span class="hljs-keyword">int</span> min = <span class="hljs-number">2000001</span>;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> num : dp)&#123;<br>            min = Math.min(min, num);<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> min;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第26天，看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a>的 P89 开头，刷题如下：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/insert-delete-getrandom-o1/">380. O(1) 时间插入、删除和获取随机元素</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/random-pick-with-blacklist/">710. 黑名单中的随机数</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/FortPu/">剑指 Offer II 030. 插入、删除和随机访问都是 O(1) 的容器</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/numbers-with-same-consecutive-differences/">967. 连续差相同的数字</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/triangle/">120. 三角形最小路径和</a></p>
+</li>
+</ul>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>在这什么都善变的人世里，我想和你，看一下永恒。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%BD%E6%A0%91/">程序缘的技能栽树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MySQL/">MySQL</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/31/2022-07-31-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC26%E5%A4%A9/">
+                        <span class="hidden-mobile">【归】复习准备秋招第26天</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
