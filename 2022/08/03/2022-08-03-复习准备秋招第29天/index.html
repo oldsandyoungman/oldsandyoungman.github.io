@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-03-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC29%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103252.jpg">
 <meta property="article:published_time" content="2022-08-03T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-08-03T03:17:37.361Z">
+<meta property="article:modified_time" content="2022-08-03T15:46:15.830Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k 字
+      3.5k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11 分钟
+      30 分钟
     </span>
   
 
@@ -247,17 +247,221 @@
 <h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a></p>
 </blockquote>
-<h4 id="P112"><a href="#P112" class="headerlink" title="P112"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=112">P112</a></h4><p>把磁盘的页数据，缓存到内存中的<code>Buffer Pool(数据库缓冲池)</code>，来减少磁盘IO</p>
+<h4 id="P124"><a href="#P124" class="headerlink" title="P124"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=124">P124</a></h4><p>很细致，可以反复观看</p>
+<h4 id="P125"><a href="#P125" class="headerlink" title="P125"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=125">P125</a></h4><p>MyISAM 是可以没有主键的</p>
+<p>InnoDB 一定有主键</p>
 <ul>
-<li>缓冲池和查询缓存不一样：一个是原始数据，一个是查询结果</li>
+<li>自己定义了主键，那就是主键了</li>
+<li>没有定义的话，如果有 UNIQUE 字段，那就拿来当主键</li>
+<li>如果连 UNIQUE 字段也没有，那么自动生成一个 ROW_ID 隐藏列，作为主键</li>
 </ul>
-<p>多线程下，buffer pool 是要加锁的，在 buffer pool 很大，且并发多线程的时候，可以拆分 buffer pool</p>
+<blockquote>
+<p>COMPACT 行格式描述</p>
+</blockquote>
 <ul>
-<li>innodb_buffer_pool_size：总大小</li>
-<li>innodb_buffer_pool_instances：分成多少份</li>
+<li>变长字段的长度列表</li>
+<li>NULL值列表</li>
+<li>记录头信息（5字节）<ul>
+<li>delete_mask</li>
+<li>min_rec_mask</li>
+<li>record_type</li>
+<li>heap_no</li>
+<li>n_owned</li>
+<li>next_record</li>
 </ul>
-<p><strong>注意：超过1G，InnoDB才会分，毕竟管理也有开销</strong></p>
-<p>脏页的处理，如果中途宕机，需要日志来回滚</p>
+</li>
+<li>真实数据<ul>
+<li>隐藏列<ul>
+<li>RowID（非必要，没有主键才会自动生成）</li>
+<li>TransactionID</li>
+<li>Roll Pointer</li>
+</ul>
+</li>
+<li>显式数据</li>
+</ul>
+</li>
+</ul>
+<h4 id="P126"><a href="#P126" class="headerlink" title="P126"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=126">P126</a></h4><blockquote>
+<p>Dynamic 和 COMPACT 格式的区别</p>
+</blockquote>
+<ul>
+<li><p>行溢出的处理方式</p>
+<p>（行溢出：如果某个字段直接大于表容量，eg. VARCHAR 65533 = 65533B &gt; 16KB = 16384 B）</p>
+<ul>
+<li>COMPACT：把多出来的数据，放到另一个地址，本部分留20个字节来记录地址</li>
+<li>Dynamic：完全行溢出的处理策略，本地不存放数据，只留20个字节来记录地址，存到另一个BLOB位置上</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Compressed 相较于Dynamic 格式的区别</p>
+</blockquote>
+<ul>
+<li>额外用 zlib 进行了数据压缩</li>
+</ul>
+<blockquote>
+<p>Redundant 和 COMPACT 格式的区别</p>
+</blockquote>
+<ul>
+<li>字段长度偏移列表  替换了  变长字段的长度列表<ul>
+<li>没有“变长”：即记录了所有字段的长度，有冗余</li>
+<li>多了“偏移”：记录的不是长度，而是相对于首地址的偏移量，相邻地址相减才是长度</li>
+</ul>
+</li>
+<li>没有了 NULL 值列表</li>
+<li>记录头信息变化<ul>
+<li>多了两个字段：n_field和1byte_offs_flag</li>
+<li>少了一个字段：没record_type</li>
+</ul>
+</li>
+</ul>
+<h4 id="P127"><a href="#P127" class="headerlink" title="P127"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=127">P127</a></h4><blockquote>
+<p>为什么要有区</p>
+</blockquote>
+<ul>
+<li>如果页在物理上不连续，那么光是磁盘寻道的时间就会远大于读取时间，那么从磁盘读数据到内存效率就会很低</li>
+<li>引入区以后，保证一个区里面64个区的存储是连续的，这样就能大大提高从磁盘读取数据的效率</li>
+</ul>
+<blockquote>
+<p>为什么要有段</p>
+</blockquote>
+<ul>
+<li>一个区如果混杂叶子结点和非叶子结点，那么范围查询的时候效率就会极低，所以要给区分类，分出来的结果集合就叫段，即数据段（叶子结点段，即里面都是叶子结点区）、索引段（非叶子结点段，即里面都是非叶子结点区）</li>
+<li>段是逻辑的概念，例如叶子结点区的结合，里面有很多个区，但是物理上不一定连续（段除了完整的区，可能还带有零散的页）</li>
+</ul>
+<blockquote>
+<p>为什么要有碎片区</p>
+</blockquote>
+<ul>
+<li>一个段默认是1M，如果一开始数据比较少，正常分配就是索引段占1M，数据段1M，很浪费空间</li>
+<li>设定碎片区，即里面的页不属于任何一个段（直属于表空间），而是所有段都可以共用，当某个段的页面超过32个页，之后就会申请完整的区来存储数据</li>
+</ul>
+<blockquote>
+<p>区的分类</p>
+</blockquote>
+<p>根据区的归属，状态，分为2种4类</p>
+<ul>
+<li><p>独立属于表空间的</p>
+<ul>
+<li><p>空闲的区</p>
+</li>
+<li><p>有剩余空间的碎片区</p>
+</li>
+<li><p>没有剩余空间的碎片区</p>
+</li>
+</ul>
+</li>
+<li><p>附属于某个段的区</p>
+<ul>
+<li>附属于某个段的区</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>独立表空间默认创建</p>
+</blockquote>
+<ul>
+<li>96K = 6* 16KB，即6个页的数据</li>
+</ul>
+<blockquote>
+<p>数据字典</p>
+</blockquote>
+<ul>
+<li><p>除了用户自定义的数据，为了记录其他的各种信息，例如</p>
+<ul>
+<li>这个表在哪个表空间，表有多少列</li>
+<li>表的每个字段啥类型</li>
+</ul>
+<p>这些非用户数据的额外数据，也被称为<code>元数据</code>，InnoDB 用一些列的<code>内部系统表</code>来存储，被称为<code>数据词典</code></p>
+</li>
+<li><p>它们都是以 B+ 树的形式保存在系统表空间的某个页面中。其中 <code>SYS_TABLES、SYS_COLUMNS、SYS_INDEXES、SYS_FIELDS</code> 这四个表尤其重要，称之为基本系统表 (basic system tables)</p>
+</li>
+<li><p>用户不能直接访问 InnoDB 的这些内部系统表，除非你直接去解析系统表空间对应文件系统上的文件。不过考虑到查看这些表的内容可能有助于大家分析问题，所以在系统数据库 <code>information_schema</code> 中提供了一些以 <code>innodb_sys</code> 开头的表（相当于SYS_表的副本，内容也不完全一样）</p>
+</li>
+</ul>
+<h4 id="P128"><a href="#P128" class="headerlink" title="P128"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=128">P128</a></h4><blockquote>
+<p>为什么要有主键索引</p>
+</blockquote>
+<ul>
+<li>因为数据一般只存一份（索引可以存多分），聚簇索引最后的叶子结点是要存数据的，所以两个主键索引就浪费了一倍的空间</li>
+</ul>
+<h4 id="P129"><a href="#P129" class="headerlink" title="P129"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=129">P129</a></h4><blockquote>
+<p>联合索引的使用方法</p>
+</blockquote>
+<ul>
+<li>最左前缀原则</li>
+</ul>
+<blockquote>
+<p>全文索引的注意事项</p>
+</blockquote>
+<ol>
+<li>使用全文索引前，搞清楚版本支持情况； </li>
+<li>全文索引比 like + % 快 N 倍，但是可能存在精度问题；</li>
+<li>如果需要全文索引的是大量数据，建议先添加数据，再创建索引</li>
+</ol>
+<h4 id="P130"><a href="#P130" class="headerlink" title="P130"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=130">P130</a></h4><blockquote>
+<p>AUTO_INCREMENT 字段为什么不能删唯一索引</p>
+</blockquote>
+<p>因为 AUTO_INCREMENT 能添加的前提只有两种可能</p>
+<ul>
+<li>主键索引</li>
+<li>唯一索引</li>
+</ul>
+<p>在两者都不满足的情况下，就会报错</p>
+<blockquote>
+<p>联合索引删除其中一个字段会怎样</p>
+</blockquote>
+<ul>
+<li>联合索引会重置成少一个字段的，但不会消失</li>
+</ul>
+<blockquote>
+<p>8.0新特性降序索引怎么理解</p>
+</blockquote>
+<ul>
+<li><p>8.0之前虽然能显示指定降序，但是底层依然是升序索引，使用的时候反向扫描，效率很差</p>
+</li>
+<li><p>8.0才是真觉得降序索引</p>
+</li>
+<li><p>即使是8.0，也要搜索的顺序和建表指定的顺序一致，才真正用到了索引</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> ts1(a <span class="hljs-type">int</span>,b <span class="hljs-type">int</span>,index idx_a_b(a,b <span class="hljs-keyword">desc</span>));<br>EXPLAIN <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> ts1 <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> a, b <span class="hljs-keyword">DESC</span> LIMIT <span class="hljs-number">5</span>; # 有效<br><br><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> ts1(a <span class="hljs-type">int</span>,b <span class="hljs-type">int</span>,index idx_a_b(a,b <span class="hljs-keyword">desc</span>));<br>EXPLAIN <span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> ts1 <span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> a <span class="hljs-keyword">DESC</span>, b <span class="hljs-keyword">DESC</span> LIMIT <span class="hljs-number">5</span>; # 无效<br></code></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>8.0新特性隐藏索引的用途</p>
+</blockquote>
+<ul>
+<li>试探能不能删索引<ul>
+<li>直接删可能会报错中，之后加回去会浪费大量时间</li>
+<li>先设成隐藏再删除，更保险</li>
+</ul>
+</li>
+<li>试探索引有没有用<ul>
+<li>有些索引设了但是并没有加快效率，不如删了</li>
+<li>先设成隐藏，测试效率如果没有降低，可以删除这个索引</li>
+</ul>
+</li>
+<li>（注意，主键不能设成隐藏索引）</li>
+<li>索引隐藏，内容依然和正常索引一样实时更新，所以长期隐藏的建议删除</li>
+</ul>
+<h4 id="P131"><a href="#P131" class="headerlink" title="P131"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj?p=131">P131</a></h4><blockquote>
+<p>索引的创建原则</p>
+</blockquote>
+<ul>
+<li>唯一字段，建议加索引（Alibaba手册写的是一定）<ul>
+<li>查到就会立即停止，而不会继续找左右边界</li>
+<li>虽然加了索引后，插入数据会每次多插内容多消耗时间，但查询带来的提升远大于这个，前者可忽略</li>
+</ul>
+</li>
+<li>经常 WHERE 查询的字段<ul>
+<li>索引会排序嘛，二分查找肯定能提升效率</li>
+<li>即使只是普通索引，也能大大提升效率</li>
+</ul>
+</li>
+<li>经常被 GROUP BY / ORDER BY 的字段<ul>
+<li>索引已经帮排好序了，不用你再排序了，ORDER BY 的语句肯定能提升性能</li>
+<li>同样索引已经帮排好序了，相同的值放在一起，因此再GROUP BY 的时候，不用左找一个，右找一个合并，效率肯定提升</li>
+</ul>
+</li>
+</ul>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
