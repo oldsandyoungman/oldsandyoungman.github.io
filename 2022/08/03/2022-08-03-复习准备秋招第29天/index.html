@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-03-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC29%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103252.jpg">
 <meta property="article:published_time" content="2022-08-03T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-08-03T16:48:22.900Z">
+<meta property="article:modified_time" content="2022-08-04T04:26:55.790Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -202,7 +202,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.5k 字
+      4.4k 字
     </span>
   
 
@@ -211,7 +211,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      30 分钟
+      37 分钟
     </span>
   
 
@@ -446,20 +446,91 @@
 <p>索引的创建原则</p>
 </blockquote>
 <ul>
-<li>唯一字段，建议加索引（Alibaba手册写的是一定）<ul>
+<li><p>唯一字段，建议加索引（Alibaba手册写的是一定）</p>
+<ul>
 <li>查到就会立即停止，而不会继续找左右边界</li>
 <li>虽然加了索引后，插入数据会每次多插内容多消耗时间，但查询带来的提升远大于这个，前者可忽略</li>
 </ul>
 </li>
-<li>经常 WHERE 查询的字段<ul>
+<li><p>经常 WHERE 查询的字段</p>
+<ul>
 <li>索引会排序嘛，二分查找肯定能提升效率</li>
 <li>即使只是普通索引，也能大大提升效率</li>
 </ul>
 </li>
-<li>经常被 GROUP BY / ORDER BY 的字段<ul>
+<li><p>经常被 GROUP BY / ORDER BY 的字段</p>
+<ul>
 <li>索引已经帮排好序了，不用你再排序了，ORDER BY 的语句肯定能提升性能</li>
 <li>同样索引已经帮排好序了，相同的值放在一起，因此再GROUP BY 的时候，不用左找一个，右找一个合并，效率肯定提升</li>
 </ul>
+</li>
+<li><p>UPDATE / DELETE 的 WHERE 条件列 </p>
+<ul>
+<li>先查再更新，查的时候就用到索引，效率肯定高，同第二点</li>
+<li>如果更新删除的字段不是索引，那么速度会更快，因为不用额外花时间对索引进行维护</li>
+</ul>
+</li>
+<li><p>DISTINCT 字段，建议加索引</p>
+<ul>
+<li>用了索引，排序好以后相同值的在一起，自然去重效率高</li>
+</ul>
+</li>
+<li><p>多表连接时，WHERE的查询字段，JOIN ON的连接字段</p>
+<ul>
+<li>多表连接不要超过3张，毕竟复杂度是次方增长 O(n) -&gt; O(n^3)</li>
+<li>因为WHERE先执行先过滤一大批数据，因此创建索引很有必要</li>
+<li>JOIN ON的连接字段创建索引，效率也自然高<ul>
+<li>连接字段两边类型一定要一致，不然即使能查，也是用了隐式转换，也就是用到了函数，用到了函数，索引自然就失效了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>尽可能让索引的类型小，例如 优先顺序 ： TINYINT &gt; MEDIUMINT &gt; INT &gt; BIGINT</p>
+<ul>
+<li>索引的空间越小，查的效率自然会快（查下一条的时间自然少了）</li>
+<li>对于普通索引，类型更小，当前的二级索引的每一条数据就会更小，因此每一页会存储更多的记录，B-TREE 会更扁平，IO次数也会变少</li>
+<li>如果还是主键索引，那么不仅自身的B-TREE会小，所有非聚簇索引的B-TREE也会变小</li>
+</ul>
+</li>
+<li><p>字符串创建索引前缀</p>
+<ul>
+<li>用完整字符作为索引，浪费空间 + 比较时间高</li>
+<li>索引前缀无法对前缀相同，后面不同的排序，因此 <code>无法支持使用索引排序</code> ，只能使用文件排序</li>
+<li>索引的长度和区分度是矛盾体，一般设定前缀长度20，区分度会高达 90% 以上 <ul>
+<li>可以使用 count(distinct left(列名, 索引长度))/count(*)的区分度来确定。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>区分度高/散列性高 的列做索引</p>
+<ul>
+<li>例如gender，做索引效果就不大，没啥意义</li>
+</ul>
+</li>
+<li><p>使用频繁的列，放到联合索引的左侧</p>
+<ul>
+<li>确实</li>
+</ul>
+</li>
+<li><p>多个字段都要索引的情况下，联合索引效率远大于单列索引</p>
+<ul>
+<li>即使 WHERE 只有一个字段，也能用得上联合索引</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>同时出现 GROUP BY + ORDER BY 时选择的索引顺序 </p>
+</blockquote>
+<p>假设查询语句是</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> xxx<br><span class="hljs-keyword">FROM</span> xxx<br><span class="hljs-keyword">GROUP</span> <span class="hljs-keyword">BY</span> a<br><span class="hljs-keyword">ORDER</span> <span class="hljs-keyword">BY</span> b <span class="hljs-keyword">DESC</span>;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>如果有跟查询语句一致的联合索引</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> xxx<br><span class="hljs-keyword">ADD</span> INDEX idx_name(a, b <span class="hljs-keyword">DESC</span>);<br></code></pre></td></tr></table></figure>
+
+<p>那么优先选这个联合索引</p>
+</li>
+<li><p>如果联合索引不一致，也是用的最左匹配，即GROUP BY 对应的索引，而不会用到不一致的联合索引</p>
 </li>
 </ul>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
