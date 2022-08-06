@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-06-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC32%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103249.jpg">
 <meta property="article:published_time" content="2022-08-06T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-08-05T15:55:17.417Z">
+<meta property="article:modified_time" content="2022-08-06T14:25:21.981Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.8k 字
+      3.4k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      24 分钟
+      29 分钟
     </span>
   
 
@@ -251,9 +251,105 @@
 <h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a></p>
 </blockquote>
-<h4 id="P2"><a href="#P2" class="headerlink" title="P2"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH?p=2">P2</a></h4><blockquote>
-<p>服务的分类</p>
+<h4 id="P7"><a href="#P7" class="headerlink" title="P7"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH?p=7">P7</a></h4><blockquote>
+<p>系统调用的概念</p>
 </blockquote>
+<ul>
+<li>为统一管理，防止混乱，系统的所有共享资源都操作系统统一管理，所有资源相关操作，</li>
+</ul>
+<blockquote>
+<p>系统调用的背后过程</p>
+</blockquote>
+<ul>
+<li>传参，将参数放到一些通用寄存器里：<code>用户态</code></li>
+<li>执行陷入指令（trap指令，访管指令），发出一个内中断，使CPU进入核心态：<code>用户态</code></li>
+<li>执行内核程序处理系统调用：<code>内核态</code></li>
+<li>返回</li>
+</ul>
+<h4 id="P8"><a href="#P8" class="headerlink" title="P8"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH?p=8">P8</a></h4><blockquote>
+<p>进程，进程实体的概念</p>
+</blockquote>
+<ul>
+<li>PCB<ul>
+<li>进程存在的唯一标志（存放类似进程的必要信息）</li>
+</ul>
+</li>
+<li>进程实体（<code>静态</code>）<ul>
+<li>PCB + 程序段 + 数据段</li>
+</ul>
+</li>
+<li>进程（<code>动态</code>）<ul>
+<li>进程是进程实体的运行过程</li>
+<li>进程是系统进行资源分配和调度的一个独立单位</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>进程的组织方式</p>
+</blockquote>
+<p>按照进程状态（运行，就绪，阻塞）</p>
+<ul>
+<li>链接方式<ul>
+<li>分为多个队列，操作系统由各个队列的头指针</li>
+</ul>
+</li>
+<li>索引方式<ul>
+<li>分为多个索引表，操作系统由各个索引表的地址</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>进程的5大特征</p>
+</blockquote>
+<ul>
+<li>动态性（<code>最基本特征</code>）<ul>
+<li>程序的一次执行过程</li>
+</ul>
+</li>
+<li>并发性<ul>
+<li>多个进程可以并发执行</li>
+</ul>
+</li>
+<li>独立性<ul>
+<li>资源、调度的基本单位</li>
+</ul>
+</li>
+<li>异步性<ul>
+<li>各个进程独立进行，速度不一地前进，结果可能不确定</li>
+<li>靠同步机制来解决异步问题</li>
+</ul>
+</li>
+<li>结构性<ul>
+<li>每个进程都有一个PCB</li>
+<li>进程/进程实体：PCB + 程序段 + 数据段</li>
+</ul>
+</li>
+</ul>
+<h4 id="P9"><a href="#P9" class="headerlink" title="P9"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH?p=9">P9</a></h4><blockquote>
+<p>进程的不同状态</p>
+</blockquote>
+<ul>
+<li>运行态：有CPU的资源</li>
+<li>就绪态：有除CPU的其他所有资源</li>
+<li>阻塞态：除CPU资源外，还缺别的资源</li>
+<li>创建态：操作系统给进程分配资源，初始化PCB</li>
+<li>终止态：操作系统撤销进程，从中回收资源，撤销PCB</li>
+</ul>
+<blockquote>
+<p>进程之间的转换，关于主动 OR 被动</p>
+</blockquote>
+<ul>
+<li><p>运行态 -&gt; 阻塞态：<code>主动</code></p>
+<ul>
+<li>进程 <code>主动</code> 申请某种系统资源（系统调用）/请求等待某个事件发生</li>
+</ul>
+</li>
+<li><p>阻塞态 -&gt; 就绪态：<code>被动</code></p>
+<ul>
+<li>之前申请的资源<code>被</code>分配，等待的事件<code>被</code>发生</li>
+</ul>
+</li>
+</ul>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
