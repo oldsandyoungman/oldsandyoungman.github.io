@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-08-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC34%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103258.jpg">
 <meta property="article:published_time" content="2022-08-08T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-08-08T15:39:28.261Z">
+<meta property="article:modified_time" content="2022-08-09T04:09:14.194Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      7.8k 字
+      7.9k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      65 分钟
+      66 分钟
     </span>
   
 
@@ -566,7 +566,7 @@
 <p>页表项的计算</p>
 <p><img src="/2022/08/08/2022-08-08-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC34%E5%A4%A9/%E9%A1%B5%E8%A1%A8%E9%A1%B9%E7%9A%84%E8%AE%A1%E7%AE%97.png" srcset="/img/loading.gif" lazyload alt="页表项的计算"></p>
 <h4 id="P39"><a href="#P39" class="headerlink" title="P39"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH?p=39">P39</a></h4><blockquote>
-<p>页表项长度，页表长度，页面大小</p>
+<p>页表项长度，页表长度，页面大小，页内偏移量</p>
 </blockquote>
 <p>页表 -&gt; 页表项 <code>==</code> 进程 -&gt; 页面</p>
 <p>4GB/2^32B内存，页面大小4KB/2^12B</p>
@@ -579,8 +579,13 @@
 <li>页表长度M：指的是PCB中，或者运行时PCB恢复到页表寄存器中的第二个变量M（页表在内存中的起始地址F + 页表长度M），即该进程一共有几个页（例如进程占用16KB，一个页是1KB，那么页表长度M就是16，即一共有16个页 ），或者说进程所代表的页表，拥有的页表项数量（假设一个页表项是3B，页表48B，那么页表长度M就是16，即页表项有16个）</li>
 <li>页表项长度：即每个页表项占用了多少空间，在上面的例子里，就是3B</li>
 <li>页面大小：即一个页占用的空间，这个是由系统确定的，比如上面的例子就是1KB</li>
-<li></li>
+<li>页内偏移量：即一个页里面某个位置距离页的起始位置的相对地址偏移，最大偏移量等于页面大小减一，上面那个例子就是1023</li>
 </ul>
+<blockquote>
+<p>基本地址变换结构</p>
+</blockquote>
+<p>基本地址变换结构</p>
+<p><img src="/2022/08/08/2022-08-08-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC34%E5%A4%A9/%E5%9F%BA%E6%9C%AC%E5%9C%B0%E5%9D%80%E5%8F%98%E6%8D%A2%E7%BB%93%E6%9E%84.png" srcset="/img/loading.gif" lazyload alt="基本地址变换结构"></p>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
@@ -624,7 +629,7 @@
 
 
 
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第34天，看到 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a> 的 P20 开头，刷题如下：</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第34天，看到 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a> 的 P39 开头，刷题如下：</p>
 <ul>
 <li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-ii/">1644. 二叉树的最近公共祖先 II</a></p>
 </li>
