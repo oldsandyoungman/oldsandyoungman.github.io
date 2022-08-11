@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>【归】复习准备秋招第37天</title>
+    <link href="/2022/08/11/2022-08-11-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC37%E5%A4%A9/"/>
+    <url>/2022/08/11/2022-08-11-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC37%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第37天，给爷学</p><h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><blockquote><p>来源：<a href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a></p></blockquote><h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><blockquote><p>来源：<a href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a></p></blockquote><h4 id="P61"><a href="#P61" class="headerlink" title="P61"></a><a href="https://www.bilibili.com/video/BV1YE411D7nH?p=61">P61</a></h4><blockquote><p>磁盘的管理</p></blockquote><h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote><p>来源：<a href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p></blockquote><h4 id="1584-Min-Cost-to-Connect-All-Points"><a href="#1584-Min-Cost-to-Connect-All-Points" class="headerlink" title="1584. Min Cost to Connect All Points"></a><a href="https://leetcode.com/problems/min-cost-to-connect-all-points/">1584. Min Cost to Connect All Points</a></h4><ul><li>Kruskal 思路<ul><li>优先级队列，元素是<code>int[3]</code>，左端点+右端点+线段长度</li></ul></li></ul><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第37天，看到 <a href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a> 的 P20 开头，刷题如下：</p><ul><li></li></ul><h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote><p>你要提醒自己，这世上风物辽阔，日月有期，不止一恨一爱，还有四海与四季。至于冗杂的感情，往后只奉行那句：</p><p>“我用真心待你，但不能执着于你。活在缘分中，而非关系里”</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>程序缘的技能栽树</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Leetcode</tag>
+      
+      <tag>MySQL</tag>
+      
+      <tag>操作系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【归】复习准备秋招第36天</title>
     <link href="/2022/08/10/2022-08-10-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC36%E5%A4%A9/"/>
     <url>/2022/08/10/2022-08-10-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC36%E5%A4%A9/</url>
@@ -1690,9 +1719,9 @@
     
     <tags>
       
-      <tag>GitHub / Gitee</tag>
-      
       <tag>Blog</tag>
+      
+      <tag>GitHub / Gitee</tag>
       
       <tag>Fluid主题</tag>
       
@@ -1773,13 +1802,13 @@
     
     <tags>
       
-      <tag>GitHub / Gitee</tag>
-      
       <tag>Blog</tag>
       
-      <tag>Next主题</tag>
-      
       <tag>Jekyll</tag>
+      
+      <tag>GitHub / Gitee</tag>
+      
+      <tag>Next主题</tag>
       
     </tags>
     
@@ -1837,9 +1866,9 @@
       
       <tag>Blog</tag>
       
-      <tag>Jekyll</tag>
-      
       <tag>markdown</tag>
+      
+      <tag>Jekyll</tag>
       
     </tags>
     
@@ -1889,13 +1918,13 @@
     
     <tags>
       
-      <tag>GitHub / Gitee</tag>
-      
       <tag>Blog</tag>
       
-      <tag>Next主题</tag>
-      
       <tag>Jekyll</tag>
+      
+      <tag>GitHub / Gitee</tag>
+      
+      <tag>Next主题</tag>
       
     </tags>
     
