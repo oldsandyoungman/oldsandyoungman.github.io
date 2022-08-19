@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>【归】复习准备秋招第45天</title>
+    <link href="/2022/08/19/2022-08-19-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC45%E5%A4%A9/"/>
+    <url>/2022/08/19/2022-08-19-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC45%E5%A4%A9/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第45天，给爷学</p><h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><blockquote><p>来源：<a href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a></p></blockquote><h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><blockquote><p>来源：<a href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a></p></blockquote><h4 id="P61"><a href="#P61" class="headerlink" title="P61"></a><a href="https://www.bilibili.com/video/BV1YE411D7nH?p=61">P61</a></h4><blockquote><p>磁盘的管理</p></blockquote><p>只要双方约定好，端口可改</p><p>ok</p><p>O(N)</p><p>他是说网不好？</p><p>思路：</p><p>例如 3,20，最大的排列是320，而不是203</p><p>所以单纯的按大小排序失效（20&gt;3）</p><p>排序的方法可以用字典序，即拼接后的哪个字典序更大</p><p>所以排序的原则，用String.compare来比较</p><p>最后可能出现00开头的结果，要去掉前面的0</p><p>len-1是因为全0保留最后一个0</p><p>okk</p><p>import java.util.</p><p>或者写层成</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java">While()&#123;<br><br><br>  If(    != <span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br><br>  ​<span class="hljs-keyword">break</span>;<br><br>  &#125;<br><br>index++;<br><br>&#125;<br></code></pre></td></tr></table></figure><p>While(){</p><p>If(    != ‘0’){</p><p>​    break;</p><p>}</p><p>index++;</p><p>}</p><p>复杂度</p><p>排序</p><p>O(nlogn)</p><p>设置一个信号量，资源为1</p><p>当前模块占用这个写日志的资源，其它模块就不会在写日志</p><p>进程同步？</p><p>上面的是资源的互斥，这个是同步</p><p>全局变量？？</p><p>要哪些模块写日志，就那个全局变量置为true</p><p>感觉要结束了，放松聊吧</p><p>你的听力软件好像申请了专利</p><p>log日志</p><p>压力的</p><p>流程？</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java">Semaphore S = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br>Semaphore R = <span class="hljs-number">1</span>;<br>Semaphore RW = <span class="hljs-number">1</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Write</span><span class="hljs-params">()</span></span>&#123;<br>  P(RW);<br>  P(S);<br>  <span class="hljs-comment">// 写</span><br>  V(S);<br>  V(RW);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Read</span><span class="hljs-params">()</span></span>&#123;<br>  P(RW);<br>  P(R);<br>  <span class="hljs-keyword">if</span>(count==<span class="hljs-number">0</span>)&#123;<br>    P(S);<br>  &#125;<br>  count++;<br>  V(R);<br>  V(RW);<br>  <br>  <span class="hljs-comment">// 读</span><br>  <br>  P(R);<br>  count--;<br>  <span class="hljs-keyword">if</span>(count==<span class="hljs-number">0</span>)&#123;<br>    V(S);<br>  &#125;<br>  V(R);<br>  <br>  <br>  <br>&#125;<br><br></code></pre></td></tr></table></figure><p>产品设计</p><p>可以转型，将来再说</p><p>业务需求</p><p>开发，代码基本能力</p><p>最强的是 。。</p><p>较弱的是。。。但已经修炼了。。</p><p>对某个特定业务领域熟悉，能独当一面</p><p>理解</p><p>leader的能力</p><p>专业书籍，啃深的</p><p>业务的参与，理解，改进</p><p>指数增长</p><p>线性增长</p><p>对的</p><p>返回的编号是最大的那个，</p><p>保存，之后不要重发了</p><p>收到2，下一次接受方发送的编号就是5,6,7</p><p>会</p><p>接受窗口</p><p>四次是因为：  TCP是双工的，， 一个断开连接，只是断开该段的</p><p>不会断开？</p><p>第三次收到才断开？</p><p>前两次只是客户端到、发给服务器 断开</p><p>确实</p><p>重发一定次数，服务端 到 客户端 的连接 就断开</p><p>流程？还有下一面？</p><p>要不讲讲</p><p>1.0</p><p>开始随便聊了</p><p>华为的实习经历</p><p>书</p><p>视频</p><p>开发文档（arkUI）</p><p>大佬：廖雪峰的语言学习 网站</p><p>默认HR面了，恭喜。。。。</p><h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote><p>来源：<a href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p></blockquote><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第45天，整理 <a href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a> ，刷题如下：</p><ul><li><a href="https://leetcode.cn/problems/minimum-insertion-steps-to-make-a-string-palindrome/">1312. 让字符串成为回文串的最少插入次数</a></li><li><a href="https://leetcode.cn/problems/longest-palindromic-subsequence/">516. 最长回文子序列</a></li><li><a href="https://leetcode.cn/problems/partition-equal-subset-sum/">416. 分割等和子集</a></li><li><a href="https://leetcode.cn/problems/NUPfPr/">剑指 Offer II 101. 分割等和子集</a></li><li><a href="https://leetcode.cn/problems/coin-change-2/">518. 零钱兑换 II</a></li><li><a href="https://leetcode.cn/problems/target-sum/">494. 目标和</a></li><li><a href="https://leetcode.cn/problems/YaVDxD/">剑指 Offer II 102. 加减的目标值</a></li></ul><h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote><p>陈丹青 《我们这个时代的怕和爱》</p><p>没必要让所有人知道真实的你，或者是你没有必要不停地向人说其实我是-个什么样的人。因为这是无效的，人们还是只会愿意看到他们希望看到的。我甚至觉得你把真实的自己隐藏在这些误解背后还挺好的。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>程序缘的技能栽树</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Leetcode</tag>
+      
+      <tag>MySQL</tag>
+      
+      <tag>操作系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>【归】复习准备秋招第44天</title>
     <link href="/2022/08/18/2022-08-18-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC44%E5%A4%A9/"/>
     <url>/2022/08/18/2022-08-18-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC44%E5%A4%A9/</url>
@@ -1922,9 +1951,9 @@
     
     <tags>
       
-      <tag>GitHub / Gitee</tag>
-      
       <tag>Blog</tag>
+      
+      <tag>GitHub / Gitee</tag>
       
       <tag>Fluid主题</tag>
       
@@ -2005,13 +2034,13 @@
     
     <tags>
       
-      <tag>GitHub / Gitee</tag>
-      
       <tag>Blog</tag>
       
-      <tag>Next主题</tag>
-      
       <tag>Jekyll</tag>
+      
+      <tag>GitHub / Gitee</tag>
+      
+      <tag>Next主题</tag>
       
     </tags>
     
@@ -2121,13 +2150,13 @@
     
     <tags>
       
-      <tag>GitHub / Gitee</tag>
-      
       <tag>Blog</tag>
       
-      <tag>Next主题</tag>
-      
       <tag>Jekyll</tag>
+      
+      <tag>GitHub / Gitee</tag>
+      
+      <tag>Next主题</tag>
       
     </tags>
     
