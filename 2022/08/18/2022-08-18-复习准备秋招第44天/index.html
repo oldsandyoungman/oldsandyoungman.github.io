@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="沙路为">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="没必要让所有人知道真实的你，或者是你没有必要不停地向人说其实我是-个什么样的人。因为这是无效的，人们还是只会愿意看到他们希望看到的。我甚至觉得你把真实的自己隐藏在这些误解背后还挺好的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【归】复习准备秋招第44天">
+<meta property="og:url" content="https://oldsandyoungman.github.io/2022/08/18/2022-08-18-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC44%E5%A4%A9/index.html">
+<meta property="og:site_name" content="沙沙响">
+<meta property="og:description" content="没必要让所有人知道真实的你，或者是你没有必要不停地向人说其实我是-个什么样的人。因为这是无效的，人们还是只会愿意看到他们希望看到的。我甚至觉得你把真实的自己隐藏在这些误解背后还挺好的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-18-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC44%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103254.jpg">
+<meta property="article:published_time" content="2022-08-18T15:40:40.000Z">
+<meta property="article:modified_time" content="2022-08-19T09:49:40.882Z">
+<meta property="article:author" content="沙路为">
+<meta property="article:tag" content="Leetcode">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="操作系统">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-18-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC44%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103254.jpg">
+  
+  
+  <title>【归】复习准备秋招第44天 - 沙沙响</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"oldsandyoungman.github.io","root":"/","version":"1.8.13","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>沙沙响</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/assets/images_sha/2022-08-18-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC44%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103254.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="【归】复习准备秋招第44天">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-08-18 23:40" pubdate>
+        2022年8月18日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.7k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      32 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">【归】复习准备秋招第44天</h1>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>第44天，给爷学</p>
+<h2 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h2><h3 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1iq4y1u7vj">MySQL数据库教程天花板，mysql安装到mysql高级，强！硬！</a></p>
+</blockquote>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a></p>
+</blockquote>
+<h4 id="P61"><a href="#P61" class="headerlink" title="P61"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH?p=61">P61</a></h4><blockquote>
+<p>磁盘的管理</p>
+</blockquote>
+<p>只要双方约定好，端口可改</p>
+<p>ok</p>
+<p>O(N)</p>
+<p>他是说网不好？</p>
+<p>思路：</p>
+<p>例如 3,20，最大的排列是320，而不是203</p>
+<p>所以单纯的按大小排序失效（20&gt;3）</p>
+<p>排序的方法可以用字典序，即拼接后的哪个字典序更大</p>
+<p>所以排序的原则，用String.compare来比较</p>
+<p>最后可能出现00开头的结果，要去掉前面的0</p>
+<p>len-1是因为全0保留最后一个0</p>
+<p>okk</p>
+<p>import java.util.</p>
+<p>或者写层成</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java">While()&#123;<br><br><br>  If(    != <span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br><br>  ​	<span class="hljs-keyword">break</span>;<br><br>  &#125;<br><br>index++;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>While(){</p>
+<p>If(    != ‘0’){</p>
+<p>​    break;</p>
+<p>}</p>
+<p>index++;</p>
+<p>}</p>
+<p>复杂度</p>
+<p>排序</p>
+<p>O(nlogn)</p>
+<p>设置一个信号量，资源为1</p>
+<p>当前模块占用这个写日志的资源，其它模块就不会在写日志</p>
+<p>进程同步？</p>
+<p>上面的是资源的互斥，这个是同步</p>
+<p>全局变量？？</p>
+<p>要哪些模块写日志，就那个全局变量置为true</p>
+<p>感觉要结束了，放松聊吧</p>
+<p>你的听力软件好像申请了专利</p>
+<p>log日志</p>
+<p>压力的</p>
+<p>流程？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java">Semaphore S = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br>Semaphore R = <span class="hljs-number">1</span>;<br>Semaphore RW = <span class="hljs-number">1</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Write</span><span class="hljs-params">()</span></span>&#123;<br>  P(RW);<br>  P(S);<br>  <span class="hljs-comment">// 写</span><br>  V(S);<br>  V(RW);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Read</span><span class="hljs-params">()</span></span>&#123;<br>  P(RW);<br>  P(R);<br>  <span class="hljs-keyword">if</span>(count==<span class="hljs-number">0</span>)&#123;<br>    P(S);<br>  &#125;<br>  count++;<br>  V(R);<br>  V(RW);<br>  <br>  <span class="hljs-comment">// 读</span><br>  <br>  P(R);<br>  count--;<br>  <span class="hljs-keyword">if</span>(count==<span class="hljs-number">0</span>)&#123;<br>    V(S);<br>  &#125;<br>  V(R);<br>  <br>  <br>  <br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>产品设计</p>
+<p>可以转型，将来再说</p>
+<p>业务需求</p>
+<p>开发，代码基本能力</p>
+<p>最强的是 。。</p>
+<p>较弱的是。。。但已经修炼了。。</p>
+<p>对某个特定业务领域熟悉，能独当一面</p>
+<p>理解</p>
+<p>leader的能力</p>
+<p>专业书籍，啃深的</p>
+<p>业务的参与，理解，改进</p>
+<p>指数增长</p>
+<p>线性增长</p>
+<p>对的</p>
+<p>返回的编号是最大的那个，</p>
+<p>保存，之后不要重发了</p>
+<p>收到2，下一次接受方发送的编号就是5,6,7</p>
+<p>会</p>
+<p>接受窗口</p>
+<p>四次是因为：  TCP是双工的，， 一个断开连接，只是断开该段的</p>
+<p>不会断开？</p>
+<p>第三次收到才断开？</p>
+<p>前两次只是客户端到、发给服务器 断开</p>
+<p>确实</p>
+<p>重发一定次数，服务端 到 客户端 的连接 就断开</p>
+<p>流程？还有下一面？</p>
+<p>要不讲讲</p>
+<p>1.0</p>
+<p>开始随便聊了</p>
+<p>华为的实习经历</p>
+<p>书</p>
+<p>视频</p>
+<p>开发文档（arkUI）</p>
+<p>大佬：廖雪峰的语言学习 网站</p>
+<p>默认HR面了，恭喜。。。。</p>
+<h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
+<p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
+</blockquote>
+<h4 id="72-编辑距离"><a href="#72-编辑距离" class="headerlink" title="72. 编辑距离"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/edit-distance/">72. 编辑距离</a></h4><ul>
+<li>如果要记录过程，可以再建一个数组，存操作符</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><code class="hljs java">		<span class="hljs-function"><span class="hljs-keyword">public</span> ArrayDeque&lt;Integer&gt; <span class="hljs-title">minDistance2</span><span class="hljs-params">(String word1, String word2)</span> </span>&#123;<br>        <span class="hljs-keyword">char</span>[] s1 = word1.toCharArray();<br>        <span class="hljs-keyword">char</span>[] s2 = word2.toCharArray();<br><br>        <span class="hljs-keyword">int</span> n1 = s1.length;<br>        <span class="hljs-keyword">int</span> n2 = s2.length;<br><br>        <span class="hljs-comment">// 操作符：</span><br>        <span class="hljs-comment">// 增：0；</span><br>        <span class="hljs-comment">// 删：1；</span><br>        <span class="hljs-comment">// 改：2；</span><br>        <span class="hljs-comment">// 跳过：3</span><br><br>        <span class="hljs-comment">// dp[i][j]：s1[0~i]到s2[0~j]的变化</span><br>        Node[][] dp = <span class="hljs-keyword">new</span> Node[n1+<span class="hljs-number">1</span>][n2+<span class="hljs-number">1</span>];<br><br>        dp[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> Node(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);<br><br>        <span class="hljs-comment">// 初始化dp，dp[0][i]=i, dp[i][0]=i, dp[0][0]</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n1; i++)&#123;<br>            dp[i][<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> Node(i, <span class="hljs-number">1</span>);<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n2; i++)&#123;<br>            dp[<span class="hljs-number">0</span>][i] = <span class="hljs-keyword">new</span> Node(i, <span class="hljs-number">0</span>);<br>        &#125;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n1; i++)&#123;<br><br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>; j&lt;=n2; j++)&#123;<br><br>                <span class="hljs-keyword">if</span>(s1[i-<span class="hljs-number">1</span>]==s2[j-<span class="hljs-number">1</span>])&#123;<br>                    dp[i][j] = <span class="hljs-keyword">new</span> Node(dp[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>].val, <span class="hljs-number">3</span>);<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    <span class="hljs-keyword">int</span> min = -<span class="hljs-number">1</span>;<br>                    <span class="hljs-keyword">if</span>(dp[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>].val&lt;dp[i-<span class="hljs-number">1</span>][j].val &amp;&amp; dp[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>].val&lt;dp[i][j-<span class="hljs-number">1</span>].val)&#123;<br>                        min = dp[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>].val;<br>                        dp[i][j] = <span class="hljs-keyword">new</span> Node(min+<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);<br>                        <span class="hljs-keyword">continue</span>;<br>                    &#125;<br>                    <span class="hljs-keyword">if</span>(dp[i-<span class="hljs-number">1</span>][j].val&lt;dp[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>].val &amp;&amp; dp[i-<span class="hljs-number">1</span>][j].val&lt;dp[i][j-<span class="hljs-number">1</span>].val)&#123;<br>                        min = dp[i-<span class="hljs-number">1</span>][j].val;<br>                        dp[i][j] = <span class="hljs-keyword">new</span> Node(min+<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);<br>                        <span class="hljs-keyword">continue</span>;<br>                    &#125;<br><br>                    min = dp[i][j-<span class="hljs-number">1</span>].val;<br>                    dp[i][j] = <span class="hljs-keyword">new</span> Node(min+<span class="hljs-number">1</span>, <span class="hljs-number">0</span>);<br>                &#125;<br><br>            &#125;<br><br>        &#125;<br><br>        <span class="hljs-keyword">int</span> i = n1;<br>        <span class="hljs-keyword">int</span> j = n2;<br><br>        ArrayDeque&lt;Integer&gt; res = <span class="hljs-keyword">new</span> ArrayDeque&lt;&gt;();<br><br>        <span class="hljs-keyword">while</span>(i!=<span class="hljs-number">0</span> || j!=<span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-keyword">int</span> val = dp[i][j].option;<br>            res.addFirst(val);<br>            <span class="hljs-keyword">switch</span> (val)&#123;<br>                <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>                    i--;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:<br>                    j--;<br>                <span class="hljs-keyword">default</span>:<br>                    i--;<br>                    j--;<br>            &#125;<br>        &#125;<br>        System.out.println(dp[n1][n2].val);<br>        System.out.println(Arrays.deepToString(dp));<br><br>        <span class="hljs-keyword">return</span> res;<br><br>    &#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>&#123;<br><br>    <span class="hljs-keyword">int</span> val;<br>    <span class="hljs-keyword">int</span> option;<br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Node</span><span class="hljs-params">(<span class="hljs-keyword">int</span> val, <span class="hljs-keyword">int</span> option)</span></span>&#123;<br>        <span class="hljs-keyword">this</span>.val = val;<br>        <span class="hljs-keyword">this</span>.option = option;<br>    &#125;<br><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> option+<span class="hljs-string">&quot;&quot;</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h4 id="712-两个字符串的最小ASCII删除和"><a href="#712-两个字符串的最小ASCII删除和" class="headerlink" title="712. 两个字符串的最小ASCII删除和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/">712. 两个字符串的最小ASCII删除和</a></h4><ul>
+<li>这里的dp的定义：<ul>
+<li><code>dp[i][j]</code> ：s1[0<del>i] 和 s2[0</del>j] 删成相等字符串，一共删掉的ASCII值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minimumDeleteSum</span><span class="hljs-params">(String s1, String s2)</span> </span>&#123;<br>        <span class="hljs-keyword">char</span>[] ss1 = s1.toCharArray();<br>        <span class="hljs-keyword">char</span>[] ss2 = s2.toCharArray();<br><br>        <span class="hljs-keyword">int</span> n1 = ss1.length;<br>        <span class="hljs-keyword">int</span> n2 = ss2.length;<br><br>        <span class="hljs-comment">// dp[i][j]：s1[0~i], s2[0~j] 变成一样，要删除的ASCII值</span><br>        <span class="hljs-keyword">int</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n1+<span class="hljs-number">1</span>][n2+<span class="hljs-number">1</span>];<br><br>        <span class="hljs-comment">// dp[0][i] = 0, dp[i][0] = 0;</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n1; i++)&#123;<br>            dp[i][<span class="hljs-number">0</span>] = dp[i-<span class="hljs-number">1</span>][<span class="hljs-number">0</span>] + ss1[i-<span class="hljs-number">1</span>];<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n2; i++)&#123;<br>            dp[<span class="hljs-number">0</span>][i] = dp[<span class="hljs-number">0</span>][i-<span class="hljs-number">1</span>] + ss2[i-<span class="hljs-number">1</span>];<br>        &#125;<br><br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>; i&lt;=n1; i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">1</span>; j&lt;=n2; j++)&#123;<br>                <span class="hljs-keyword">if</span>(ss1[i-<span class="hljs-number">1</span>]==ss2[j-<span class="hljs-number">1</span>])&#123;<br>                    dp[i][j] = dp[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>];<br>                &#125;<span class="hljs-keyword">else</span>&#123;<br>                    dp[i][j] = Math.min(dp[i][j-<span class="hljs-number">1</span>]+ss2[j-<span class="hljs-number">1</span>], dp[i-<span class="hljs-number">1</span>][j]+ss1[i-<span class="hljs-number">1</span>]); <br>                &#125;<br>            &#125;<br>        &#125;<br><br>        <span class="hljs-keyword">return</span> dp[n1][n2];<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>恢复状态第44天，整理 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a> ，刷题如下：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-falling-path-sum/">931. 下降路径最小和</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/edit-distance/">72. 编辑距离</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-subarray/">53. 最大子数组和</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-common-subsequence/">1143. 最长公共子序列</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/delete-operation-for-two-strings/">583. 两个字符串的删除操作</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/">712. 两个字符串的最小ASCII删除和</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/qJnOS7/">剑指 Offer II 095. 最长公共子序列</a></li>
+</ul>
+<h2 id="渡何处"><a href="#渡何处" class="headerlink" title="渡何处"></a>渡何处</h2><blockquote>
+<p>陈丹青 《我们这个时代的怕和爱》</p>
+<p>没必要让所有人知道真实的你，或者是你没有必要不停地向人说其实我是-个什么样的人。因为这是无效的，人们还是只会愿意看到他们希望看到的。我甚至觉得你把真实的自己隐藏在这些误解背后还挺好的。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%A8%8B%E5%BA%8F%E7%BC%98%E7%9A%84%E6%8A%80%E8%83%BD%E6%A0%BD%E6%A0%91/">程序缘的技能栽树</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Leetcode/">Leetcode</a>
+                    
+                      <a class="hover-with-bg" href="/tags/MySQL/">MySQL</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/08/17/2022-08-17-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC43%E5%A4%A9/">
+                        <span class="hidden-mobile">【归】复习准备秋招第43天</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+        typing(title);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
