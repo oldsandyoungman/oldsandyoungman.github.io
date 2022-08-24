@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-19-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC45%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103142.jpg">
 <meta property="article:published_time" content="2022-08-19T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-08-20T04:08:12.482Z">
+<meta property="article:modified_time" content="2022-08-24T14:58:06.247Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.3k 字
+      632 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      19 分钟
+      6 分钟
     </span>
   
 
@@ -254,44 +254,6 @@
 <h4 id="P61"><a href="#P61" class="headerlink" title="P61"></a><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH?p=61">P61</a></h4><blockquote>
 <p>磁盘的管理</p>
 </blockquote>
-<p>只要双方约定好，端口可改</p>
-<p>ok</p>
-<p>O(N)</p>
-<p>他是说网不好？</p>
-<p>思路：</p>
-<p>例如 3,20，最大的排列是320，而不是203</p>
-<p>所以单纯的按大小排序失效（20&gt;3）</p>
-<p>排序的方法可以用字典序，即拼接后的哪个字典序更大</p>
-<p>所以排序的原则，用String.compare来比较</p>
-<p>最后可能出现00开头的结果，要去掉前面的0</p>
-<p>len-1是因为全0保留最后一个0</p>
-<p>okk</p>
-<p>import java.util.</p>
-<p>或者写层成</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java">While()&#123;<br><br><br>  If(    != <span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br><br>  ​	<span class="hljs-keyword">break</span>;<br><br>  &#125;<br><br>index++;<br><br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-<p>While(){</p>
-<p>If(    != ‘0’){</p>
-<p>​    break;</p>
-<p>}</p>
-<p>index++;</p>
-<p>}</p>
-<p>复杂度</p>
-<p>排序</p>
-<p>O(nlogn)</p>
-<p>设置一个信号量，资源为1</p>
-<p>当前模块占用这个写日志的资源，其它模块就不会在写日志</p>
-<p>进程同步？</p>
-<p>上面的是资源的互斥，这个是同步</p>
-<p>全局变量？？</p>
-<p>要哪些模块写日志，就那个全局变量置为true</p>
-<p>感觉要结束了，放松聊吧</p>
-<p>你的听力软件好像申请了专利</p>
-<p>log日志</p>
-<p>压力的</p>
-<p>流程？</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs java">Semaphore S = <span class="hljs-number">1</span>;<br><span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;<br>Semaphore R = <span class="hljs-number">1</span>;<br>Semaphore RW = <span class="hljs-number">1</span>;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Write</span><span class="hljs-params">()</span></span>&#123;<br>  P(RW);<br>  P(S);<br>  <span class="hljs-comment">// 写</span><br>  V(S);<br>  V(RW);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Read</span><span class="hljs-params">()</span></span>&#123;<br>  P(RW);<br>  P(R);<br>  <span class="hljs-keyword">if</span>(count==<span class="hljs-number">0</span>)&#123;<br>    P(S);<br>  &#125;<br>  count++;<br>  V(R);<br>  V(RW);<br>  <br>  <span class="hljs-comment">// 读</span><br>  <br>  P(R);<br>  count--;<br>  <span class="hljs-keyword">if</span>(count==<span class="hljs-number">0</span>)&#123;<br>    V(S);<br>  &#125;<br>  V(R);<br>  <br>  <br>  <br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 
@@ -318,130 +280,10 @@
 
 
 
-<p>产品设计</p>
-<p>可以转型，将来再说</p>
-<p>业务需求</p>
-<p>开发，代码基本能力</p>
-<p>最强的是 。。</p>
-<p>较弱的是。。。但已经修炼了。。</p>
-<p>对某个特定业务领域熟悉，能独当一面</p>
-<p>理解</p>
-<p>leader的能力</p>
-<p>专业书籍，啃深的</p>
-<p>业务的参与，理解，改进</p>
-<p>指数增长</p>
-<p>线性增长</p>
-<p>对的</p>
-<p>返回的编号是最大的那个，</p>
-<p>保存，之后不要重发了</p>
-<p>收到2，下一次接受方发送的编号就是5,6,7</p>
-<p>会</p>
-<p>接受窗口</p>
-<p>四次是因为：  TCP是双工的，， 一个断开连接，只是断开该段的</p>
-<p>不会断开？</p>
-<p>第三次收到才断开？</p>
-<p>前两次只是客户端到、发给服务器 断开</p>
-<p>确实</p>
-<p>重发一定次数，服务端 到 客户端 的连接 就断开</p>
-<p>流程？还有下一面？</p>
-<p>要不讲讲</p>
-<p>1.0</p>
-<p>开始随便聊了</p>
-<p>华为的实习经历</p>
-<p>书</p>
-<p>视频</p>
-<p>开发文档（arkUI）</p>
-<p>大佬：廖雪峰的语言学习 网站</p>
-<p>默认HR面了，恭喜。。。。</p>
-<blockquote>
-<p>面试题：12个球有1个球和别的球不一样，不确定是更轻还是更重，现在有一个秤，怎么3次称量找到那个球</p>
-</blockquote>
-<ul>
-<li>分三组，分别为 A1A2A3A4、B1B2B3B4、C1C2C3C4</li>
-<li>称A组和B组<ul>
-<li>如果天平平衡，坏球在C组里<ul>
-<li>称A1A2A3和C1C2C3<ul>
-<li>如果天平平衡，坏球是C4</li>
-<li>如果左边重，则确定坏球是轻球<ul>
-<li>称C1 和 C2<ul>
-<li>如果平衡，则坏球是C3</li>
-<li>如果是C1重，则坏球是C2</li>
-<li>如果是C2重，则坏球是C1</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果右边重，则确定坏球是重球<ul>
-<li>称C1 和 C2<ul>
-<li>如果平衡，则坏球是C3</li>
-<li>如果是C1重，则坏球是C1</li>
-<li>如果是C2重，则坏球是C2</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果 A 组重，则至少C全部是好球，<code>要么重球在A，要么轻球在B</code><ul>
-<li>称 A1B2B3B4 和 B1C2C3C4<ul>
-<li>如果平衡，则坏球在A2A3A4里，并且结合A组重，知道坏球是重球<ul>
-<li>称 A2 和 A3<ul>
-<li>如果平衡，则坏球是 A4</li>
-<li>如果是A2重，则坏球是A2</li>
-<li>如果是A3重，则坏球是A3</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果 A1B2B3B4 重，则结合大条件<code>要么重球在A，要么轻球在B</code><ul>
-<li>如果重球在A，那么在这个情况下只能是A1是重球（这次称量A组只有A1在这里面，如果是A2A3A4是重球，那么这组称量应该是平衡的）</li>
-<li>如果轻球在B，那么在这个情况下只能是B1是轻球（如果是B2B3B4是轻球，那么应该是A1B2B3B4 轻）</li>
-<li>因此综上：坏球只有可能A1是重球或者B1是轻球</li>
-<li>称 A1 和 C1<ul>
-<li>如果 A1 重，坏球是A1</li>
-<li>（不可能C1重）</li>
-<li>如果平衡，坏球是B1</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果 B1C2C3C4 重，则结合大条件<code>要么重球在A，要么轻球在B</code><ul>
-<li>如果重球在A，那么在这个情况下B1C2C3C4不可能更重（因为没有A），所以这个情况排除</li>
-<li>如果轻球在B，那么在这个情况下轻球在B2B3B4中</li>
-<li>因此综上：坏球只有可能在 B2B3B4 中，并且是个轻球</li>
-<li>称 B2 和 B3<ul>
-<li>如果 B2 重，坏球是 B3</li>
-<li>如果 B3 重，坏球是 B2</li>
-<li>如果平衡，坏球是B4</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>面试题：怎么用 8、5、3 ml 的容器，倒出 1 ml 的水</p>
-</blockquote>
-<ul>
-<li>思考过程<ul>
-<li>1 = ？- ？，并且第二个 ？是 5、3 中的一个</li>
-<li>尝试选取 5，因此第一个 ？是 6，那么怎么得到6，即 6 = ？+ ？，这里的问号要么是现成的，要么是差值</li>
-<li>因此尝试 6 = 3 + 3，例如可以倒两次 3ml 的水到 8ml 里</li>
-</ul>
-</li>
-<li>因此总体顺一遍<ul>
-<li>3ml容器倒两次到8ml容器里，里面现在是6ml</li>
-<li>再把6ml倒到5ml里，剩下的就是1ml</li>
-</ul>
-</li>
-</ul>
+
+
+
+
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>

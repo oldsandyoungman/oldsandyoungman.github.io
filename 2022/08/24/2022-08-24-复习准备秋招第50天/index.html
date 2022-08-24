@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://oldsandyoungman.github.io/assets/images_sha/2022-08-23-%E5%A4%8D%E4%B9%A0%E5%87%86%E5%A4%87%E7%A7%8B%E6%8B%9B%E7%AC%AC50%E5%A4%A9/QQ%E5%9B%BE%E7%89%8720220710103119.jpg">
 <meta property="article:published_time" content="2022-08-24T15:40:40.000Z">
-<meta property="article:modified_time" content="2022-08-24T07:18:38.409Z">
+<meta property="article:modified_time" content="2022-08-24T14:59:35.556Z">
 <meta property="article:author" content="沙路为">
 <meta property="article:tag" content="Leetcode">
 <meta property="article:tag" content="MySQL">
@@ -203,7 +203,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.6k 字
+      2.6k 字
     </span>
   
 
@@ -212,7 +212,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      31 分钟
+      22 分钟
     </span>
   
 
@@ -251,107 +251,6 @@
 <h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1YE411D7nH">王道计算机考研 操作系统</a></p>
 </blockquote>
-<h3 id="笔试面试题"><a href="#笔试面试题" class="headerlink" title="笔试面试题"></a>笔试面试题</h3><blockquote>
-<p>面试题：12个球有1个球和别的球不一样，不确定是更轻还是更重，现在有一个秤，怎么3次称量找到那个球</p>
-</blockquote>
-<ul>
-<li>分三组，分别为 A1A2A3A4、B1B2B3B4、C1C2C3C4</li>
-<li>称A组和B组<ul>
-<li>如果天平平衡，坏球在C组里<ul>
-<li>称A1A2A3和C1C2C3<ul>
-<li>如果天平平衡，坏球是C4</li>
-<li>如果左边重，则确定坏球是轻球<ul>
-<li>称C1 和 C2<ul>
-<li>如果平衡，则坏球是C3</li>
-<li>如果是C1重，则坏球是C2</li>
-<li>如果是C2重，则坏球是C1</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果右边重，则确定坏球是重球<ul>
-<li>称C1 和 C2<ul>
-<li>如果平衡，则坏球是C3</li>
-<li>如果是C1重，则坏球是C1</li>
-<li>如果是C2重，则坏球是C2</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果 A 组重，则至少C全部是好球，<code>要么重球在A，要么轻球在B</code><ul>
-<li>称 A1B2B3B4 和 B1C2C3C4<ul>
-<li>如果平衡，则坏球在A2A3A4里，并且结合A组重，知道坏球是重球<ul>
-<li>称 A2 和 A3<ul>
-<li>如果平衡，则坏球是 A4</li>
-<li>如果是A2重，则坏球是A2</li>
-<li>如果是A3重，则坏球是A3</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果 A1B2B3B4 重，则结合大条件<code>要么重球在A，要么轻球在B</code><ul>
-<li>如果重球在A，那么在这个情况下只能是A1是重球（这次称量A组只有A1在这里面，如果是A2A3A4是重球，那么这组称量应该是平衡的）</li>
-<li>如果轻球在B，那么在这个情况下只能是B1是轻球（如果是B2B3B4是轻球，那么应该是A1B2B3B4 轻）</li>
-<li>因此综上：坏球只有可能A1是重球或者B1是轻球</li>
-<li>称 A1 和 C1<ul>
-<li>如果 A1 重，坏球是A1</li>
-<li>（不可能C1重）</li>
-<li>如果平衡，坏球是B1</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>如果 B1C2C3C4 重，则结合大条件<code>要么重球在A，要么轻球在B</code><ul>
-<li>如果重球在A，那么在这个情况下B1C2C3C4不可能更重（因为没有A），所以这个情况排除</li>
-<li>如果轻球在B，那么在这个情况下轻球在B2B3B4中</li>
-<li>因此综上：坏球只有可能在 B2B3B4 中，并且是个轻球</li>
-<li>称 B2 和 B3<ul>
-<li>如果 B2 重，坏球是 B3</li>
-<li>如果 B3 重，坏球是 B2</li>
-<li>如果平衡，坏球是B4</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>A1A2 &gt; A3A4</p>
-<p>A1 A2 里有坏球</p>
-<blockquote>
-<p>面试题：怎么用 8、5、3 ml 的容器，倒出 1 ml 的水</p>
-</blockquote>
-<ul>
-<li>思考过程<ul>
-<li>1 = ？- ？，并且第二个 ？是 5、3 中的一个</li>
-<li>尝试选取 5，因此第一个 ？是 6，那么怎么得到6，即 6 = ？+ ？，这里的问号要么是现成的，要么是差值</li>
-<li>因此尝试 6 = 3 + 3，例如可以倒两次 3ml 的水到 8ml 里</li>
-</ul>
-</li>
-<li>因此总体顺一遍<ul>
-<li>3ml容器倒两次到8ml容器里，里面现在是6ml</li>
-<li>再把6ml倒到5ml里，剩下的就是1ml</li>
-</ul>
-</li>
-</ul>
-<p>activity</p>
-<p>删除原来的索引，</p>
-<p>数据的字段加完以后</p>
-<p>再生成新的索引</p>
-<p>这个人知识储备太搞了，别说懂一些一知半解的</p>
-<p>你男朋友的工资</p>
-<p>30万</p>
-<p>差不多，offer show 上30多万（只有31/2，没有35）</p>
-<p>上面都是C++，可能C++才更高？</p>
-<p>我知道，你就说再考虑</p>
 <h3 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h3><blockquote>
 <p>来源：<a target="_blank" rel="noopener" href="https://labuladong.github.io/algo">labuladong的算法小抄</a></p>
 </blockquote>
